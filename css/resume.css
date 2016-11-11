@@ -1,0 +1,5 @@
+.element-click{border: 1px dashed #b10000;}
+.error-wrap{position: relative; display: inline-block;}
+.error-wrap .explanation{position: absolute; width: 220px; color: #ffffff; top: -45px; z-index: 250; text-align: center; transform: translateY(-20px);}
+.error-wrap .explanation .exp-text{background-color: #12234a; padding: 2px 7px;}
+.explanation .popout-tip{width: 22px; height: 20px; bottom: -20px; left: 50px; background: url(../crops/main/pointer_issue_tip.png) 0 0 no-repeat; transform: translateX(-55px); display: inline-block;}

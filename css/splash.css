@@ -1,0 +1,10 @@
+/* Splash Page */
+
+.splash-bg{background: url(../crops/splash/bg_splash.png) left top no-repeat; background-size: cover; overflow: hidden; padding-top: 30px;}
+.splash-bg .vcg-header-logo{width: 100%; height: 81px; overflow: hidden; background: url(../crops/splash/logoBand.png) 0 0 no-repeat;}
+.splash-bg .splash-animation{width: 400px; height: 400px; background: url(../crops/splash/splashLogo_sprite/00100.png) 0 0 no-repeat; background-size: contain; margin: 0 auto;}
+.splash-bg .anim-div{margin-top: 35px;}
+.splash-bg .anim-div img{margin: 0 auto; display: block; width: 400px;}
+.splash-bg .enter-btn-wrap{width: 400px; margin: 5px auto 0px;}
+.splash-bg .btn-small{width: 103px; height: 51px; background: url(../crops/main/btn_done.png) 0 3px; border: none; color: #fff;}
+.splash-bg .btn-small:hover{background-position: 0 58px;}
