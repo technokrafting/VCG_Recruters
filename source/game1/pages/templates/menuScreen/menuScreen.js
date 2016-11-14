@@ -174,10 +174,16 @@
 						}
 						
 					}
+
+					loadResumePage((Object.keys(pagesData).length));
 					
 				}
+				else
+				{
+					loadResumePage(0);
+				}
 				
-				loadResumePage((Object.keys(pagesData).length));
+				
 
 				$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotResumePagesData);
 
