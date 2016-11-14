@@ -10,13 +10,15 @@
 		var resumesChoosen = [];
 		var resumesCompleted = [];
 
+		var $navController;
 
 		var totalScore = 0;
 
 		var init = function (xml,navController,eventObj,pageId)
 		{
 
-
+			$navController = navController;
+			
 			var mainDivId = "mainPageDiv_"+pageId;
 			var mainDiv = document.getElementById('mainPageDiv');
 			mainDiv.id = mainDivId;
@@ -195,8 +197,10 @@
 			$('#resume-'+(index+1)).removeClass('locked');
 				$('#resume-'+(index+1)).click(function() {
 
-					var eventObjToSend = {"pageId":resumesChoosen[(index)]};
-                    $eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
+					//var eventObjToSend = {"pageId":resumesChoosen[(index)]};
+                   // $eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
+
+                    $navController.navigate(resumesChoosen[(index)]);
 
 				});
 		}
