@@ -85,10 +85,11 @@
 #feedbackModal .feedback-modal-btn.continue:hover{background-position: 0 -44px;}
 #feedbackModal .feedback-modal-btn.continue .btn-text{line-height: 40px; font-size: 16px;}
 #feedbackModal .modal-content{width: 403px; height: 406px; background: url(../../../crops/main/feedback_postIt.png) 0 0 no-repeat; margin: 0 auto; padding-top: 25px;}
-#feedbackModal .modal-content .score-star{width: 205px; height: 66px; background: url(../../../crops/main/feedbackStars.png) 0 0 no-repeat; margin: 0 auto 10px;}
-#feedbackModal .modal-content .score-star.1-star{background-position: 0 -66px;}
-#feedbackModal .modal-content .score-star.2-star{background-position: 0 -132px}
-#feedbackModal .modal-content .score-star.3-star{background-position: 0 -198px;}
+#feedbackModal .modal-content .score-star{width: 205px; height: 66px; background-image: url(../../../crops/main/feedbackStars.png); background-repeat: no-repeat; margin: 0 auto 5px;}
+#feedbackModal .modal-content .modal-body .score-star.star-0{background-position: 0px 0px;}
+#feedbackModal .modal-content .modal-body .score-star.star-1{background-position: 0px -66px;}
+#feedbackModal .modal-content .modal-body .score-star.star-2{background-position: 0px -132px;}
+#feedbackModal .modal-content .modal-body .score-star.star-3{background-position: 0px -198px;}
 #feedbackModal .modal-content .modal-title{font-size: 25px; font-weight: bold; margin-bottom: 10px;}
 #feedbackModal .mistakes-score-wrapper{padding: 0px 35px 0px 25px;}
 #feedbackModal .mistakes-score-wrapper .score-wrap{padding: 4px 15px; border-bottom: 1px solid #ccc;}
