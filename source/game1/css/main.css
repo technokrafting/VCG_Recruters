@@ -29,21 +29,21 @@ body{width: 1014px; height: 652px; font-family: Arial;}
 .menu-bg .anim-div .resume-hand.hand3{width: 290px; height: 338px; background: url(../crops/menu/hand3.png) 0px 0px no-repeat; top: 20px; right: -50px; transform: scale(0.9, 0.9);}
 .menu-bg .anim-div .resume-hand.hand4{width: 324px; height: 376px; background: url(../crops/menu/hand4.png) 0px top no-repeat; bottom: -25px; left: -57px; transform: scale(0.9, 0.9);}
 .menu-bg .anim-div .resume-hand.hand5{width: 282px; height: 347px; background: url(../crops/menu/hand5.png) 0px top no-repeat; bottom: -25px; right: 0px; transform: scale(0.9, 0.9);}
-.menu-bg .anim-div .resume-hand.hand1.one-star{background-position: -400px 0px;}
-.menu-bg .anim-div .resume-hand.hand2.one-star{background-position: -220px 0px;}
-.menu-bg .anim-div .resume-hand.hand3.one-star{background-position: -290px 0px;}
-.menu-bg .anim-div .resume-hand.hand4.one-star{background-position: -324px 0px;}
-.menu-bg .anim-div .resume-hand.hand5.one-star{background-position: -282px 0px;}
-.menu-bg .anim-div .resume-hand.hand1.two-star{background-position: -800px 0px;}
-.menu-bg .anim-div .resume-hand.hand2.two-star{background-position: -440px 0px;}
-.menu-bg .anim-div .resume-hand.hand3.two-star{background-position: -580px 0px;}
-.menu-bg .anim-div .resume-hand.hand4.two-star{background-position: -648px 0px;}
-.menu-bg .anim-div .resume-hand.hand5.two-star{background-position: -564px 0px;}
-.menu-bg .anim-div .resume-hand.hand1.three-star{background-position: -1200px 0px;}
-.menu-bg .anim-div .resume-hand.hand2.three-star{background-position: -660px 0px;}
-.menu-bg .anim-div .resume-hand.hand3.three-star{background-position: -870px 0px;}
-.menu-bg .anim-div .resume-hand.hand4.three-star{background-position: -972px 0px;}
-.menu-bg .anim-div .resume-hand.hand5.three-star{background-position: -846px 0px;}
+.menu-bg .anim-div .resume-hand.hand1.1-star{background-position: -400px 0px;}
+.menu-bg .anim-div .resume-hand.hand2.1-star{background-position: -220px 0px;}
+.menu-bg .anim-div .resume-hand.hand3.1-star{background-position: -290px 0px;}
+.menu-bg .anim-div .resume-hand.hand4.1-star{background-position: -324px 0px;}
+.menu-bg .anim-div .resume-hand.hand5.1-star{background-position: -282px 0px;}
+.menu-bg .anim-div .resume-hand.hand1.2-star{background-position: -800px 0px;}
+.menu-bg .anim-div .resume-hand.hand2.2-star{background-position: -440px 0px;}
+.menu-bg .anim-div .resume-hand.hand3.2-star{background-position: -580px 0px;}
+.menu-bg .anim-div .resume-hand.hand4.2-star{background-position: -648px 0px;}
+.menu-bg .anim-div .resume-hand.hand5.2-star{background-position: -564px 0px;}
+.menu-bg .anim-div .resume-hand.hand1.3-star{background-position: -1200px 0px;}
+.menu-bg .anim-div .resume-hand.hand2.3-star{background-position: -660px 0px;}
+.menu-bg .anim-div .resume-hand.hand3.3-star{background-position: -870px 0px;}
+.menu-bg .anim-div .resume-hand.hand4.3-star{background-position: -972px 0px;}
+.menu-bg .anim-div .resume-hand.hand5.3-star{background-position: -846px 0px;}
 .menu-bg .anim-div .resume-hand.hand1.locked{background-position: -1600px 0px;}
 .menu-bg .anim-div .resume-hand.hand2.locked{background-position: -880px 0px;}
 .menu-bg .anim-div .resume-hand.hand3.locked{background-position: -1160px 0px;}
