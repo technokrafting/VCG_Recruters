@@ -1,0 +1,215 @@
+#contentDiv {
+  float: left;
+  width: 55%;
+  margin-left: 430px;
+  margin-top: 9%;
+  /* position: absolute; */
+}
+
+#header
+{
+	color:#3c3b3c;
+}
+
+
+
+#body {
+  position: absolute;
+  top: 150px;
+  left: 485px;
+}
+
+#mentorImg{
+	width: 312px;
+	height: 521px;
+	margin-left: -250px;
+  	margin-top: -21px;
+}
+
+.competencyList{
+
+	margin-bottom: 15px;
+  cursor: pointer;
+  color:#54075b;
+}
+
+#competencyData {
+  width: 295px;
+  float: left;
+  margin-top: 60px;
+}
+
+#competencyData li{
+
+	margin-bottom: 0px;
+}
+
+.compActive{
+
+  color:#58595b;
+  
+}
+
+.compScore{
+  color:#585a59;
+  font-weight: bold;
+}
+
+.eval{
+  color:#57585a;
+}
+
+#cycleTab{
+
+  position: absolute;
+  top: -50px;
+}
+
+.tabText{
+  color: #55075b;
+  top: 7px;
+  left: 31px;
+  position: relative;
+}
+
+#tabLine{
+
+    position: absolute;
+  top: -20px;
+  left: 0px;
+  height: 1px;
+  width: 528px;
+  background-color: #FFB23E;
+}
+
+#cycleScore{
+
+   position: absolute;
+  top: 5px;
+  color: #57585a;
+  font-size: 20px;
+}
+
+#cumulativeScore{
+
+   position: absolute;
+  top: 73px;
+  left: 82px;
+  color: white;
+  font-size: 60px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+
+}
+
+#cumGrp{
+
+  position: relative;
+  top: 40px;
+
+}
+
+#cumulativeMsg
+{
+  font-size: 30px;
+  float: inherit;
+}
+
+#cycleData{
+  float: left;
+  margin-top: 60px;
+  margin-right: 10px;
+  width: 210px;
+}
+
+.tab {
+  font-weight: bold;
+  cursor: pointer;
+  width: 115px;
+  height: 30px;
+}
+
+#tab_1 {
+  float: right;
+  position: absolute;
+  top: 0px;
+  left: 115px;
+}
+
+.exitButton #exitButton {
+  position: relative;
+  color: white;
+  top: 27%;
+  left: 39%;
+}
+
+.nextButtonText.replay {
+  left: 30%;
+}
+.nextButtonText.continue {
+  
+}
+
+#footer {
+  position: absolute;
+  top: 540px;
+}
+
+.nextButton {
+   left: 270px;
+  position: absolute;
+}
+
+.nextButtonDisabled{
+  pointer-events:none;
+}
+
+.exitButton {
+    cursor: pointer;
+  position: absolute;
+  left: 465px;
+  
+}
+
+#iText {
+    position: absolute;
+  left: 70px;
+  top: 7px;
+  width: 375px;
+  text-align: center;
+}
+
+#oerBtn {
+  position: absolute;
+  bottom: -28px;
+  left: -395px;
+  cusror:pointer;
+}
+
+.oerButton #oerIcon{
+
+}
+
+.oerButton #oerLabel{
+  color: #9a009a;
+  width: 100px;
+  vertical-align: middle;
+  /* line-height: 48px; */
+  width: 150px;
+  /* float: left; */
+  display: inline-block;
+  margin-top: 10px;
+}
+
+#oerLinks a{
+    color:#9a009a;
+
+}
+
+#oerLinks a.clicked{
+
+  color: #57585a;
+  text-decoration: none;
+
+}

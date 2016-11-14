@@ -1,0 +1,70 @@
+#popupContent{
+
+float:left;
+width:55%;
+margin-left:25px;
+margin-top:2%;
+
+}
+
+#popupHeader
+{
+	color:#3c3b3c;
+}
+
+
+#popupFooter {
+  position: absolute;
+  top: 505px;
+  left: 820px;
+}
+
+.quesPopupIText {
+  position: absolute;
+  left: -450px;
+}
+
+#popupBody {
+  position: inherit;
+  top: 0px;
+  left: 185px;
+  color: white;
+}
+
+#popupHeader {
+  color: #59595b;
+  left: 250px;
+  position: absolute;
+  width: 525px;
+}
+
+#notiDiv {
+  position: absolute;
+    bottom: 25px;
+  left: 0px;
+}
+
+#background {
+  background-image: url("../../../images/bar.png");
+  height: 50px;
+  width: 450px;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -1;
+  top: 0px;
+}
+
+#moreAbtTxt{
+
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+
+#excellTxt{
+
+  font-size: 40px;
+}
+
+
+

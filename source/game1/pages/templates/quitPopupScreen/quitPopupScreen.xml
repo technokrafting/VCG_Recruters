@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page type="quitPopupScreen" loadIn="popup">
+
+
+	<popupHeader><![CDATA[<span id="text">Are you sure you want to quit the course ?</span>]]></popupHeader>
+	<popupBody><![CDATA[
+
+		<div id="yesBtn" class='nextButton'>
+				<span id="yesBtnText" class="next-text-block nextButtonText">Yes</span>
+			</div>
+
+		<div id="noBtn" class='nextButton'>
+				<span id="noBtnText" class="next-text-block nextButtonText">No</span>
+			</div>
+
+		]]></popupBody>
+	
+
+
+</page>

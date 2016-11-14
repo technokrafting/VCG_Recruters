@@ -1,0 +1,34 @@
+#activityDiv{
+
+float:center;
+width:60%;
+margin-left:20%;
+margin-top:5%;
+
+}
+
+#question{
+
+	margin-left:100px;
+	max-width:400px;
+
+}
+
+#options
+{
+	margin-top:10%;
+	position: relative;
+}
+
+.options{
+	color.black;
+	cursor: pointer;
+}
+
+.optionActive{
+
+	color:blue;
+}
+
+
+

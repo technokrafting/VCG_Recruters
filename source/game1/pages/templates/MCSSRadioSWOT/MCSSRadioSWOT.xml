@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<page type="MCSSRadioSwot" zone="menuButton3">
+
+	<question competency="" ><![CDATA[Which skills does your analysis suggest are absent from the current team at Restaurant Supplies Unlimited and what skills will be required in order to enable the organization to grow in the next stages of its development?]]></question>
+
+	<options>
+		<option id="opt1" value="0"><![CDATA[a. Management should ignore cultural differences and treat all employees equally and in the same way.]]></option>
+		<option id="opt2" value="1"><![CDATA[b. Management should try to reduce the problems of cultural differences by reducing cultural diversity.]]></option>
+		<option id="opt3" value="0"><![CDATA[c. The organization should adopt a strategy of managing differences and train their managers and employees to recognize cultural differences and to use them to create advantages for the organization.]]></option>
+		<option id="opt4" value="0"><![CDATA[d. Acknowledging cultural differences only serves to exacerbate them and bring them into the open rather than allow them to be resolved by management.]]></option>
+	</options>
+
+
+
+	<swot page="m1_c1_2a">
+
+s
+		<heads tableHeadText="SWOT">
+			<head id="1"><![CDATA[Strengths]]></head>
+			<head id="2"><![CDATA[Weaknesses]]></head>
+			<head id="3"><![CDATA[Opportunities]]></head>
+			<head id="4"><![CDATA[Threats]]></head>
+		</heads>
+
+		<params tableHeadText="TEAM"> 
+			<param id="a"><![CDATA[<span>Purchasing</span>]]></param>
+			<param id="b"><![CDATA[<span>Strategy</span>]]></param>
+			<param id="c"><![CDATA[<span>Operations</span>]]></param>
+			<param id="d"><![CDATA[<span>Sales</span>]]></param>
+			<param id="e"><![CDATA[<span>Marketing</span>]]></param>
+			<param id="f"><![CDATA[<span>Finance</span>]]></param>
+			<param id="g"><![CDATA[<span>IT & Web</span>]]></param>
+			<param id="h"><![CDATA[<span>Logistics</span>]]></param>
+			<param id="i"><![CDATA[<span>Proj Mgmt</span>]]></param>
+			<param id="j"><![CDATA[<span>HR</span>]]></param>
+		</params>
+
+	</swot>	
+
+</page>

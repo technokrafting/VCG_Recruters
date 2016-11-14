@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page type="infoWithButton" zone="-1">
+
+
+	<header><![CDATA[<span id="welcome">Welcome to the </span><span id="title1">Operations</span><br/><span id="title2"> and </span><br/><span id="title3">Management</span> <span id="title4">module</span>]]></header>
+	<body><![CDATA[ <p>The main Different Between a Leader and a Manager is that the former have followers and the latter have people who work under them.The main Different Between a Leader and a Manager is that the former have followers and the latter have people who work under them.The main Different Between a Leader and a Manager is that the former have followers and the latter have people who work under them.</p>
+	
+	
+	<p>Managers need to understand interdependecy of Department, partnership allainces and team across the organisation.Managers need to understand interdependecy of Department, partnership allainces and team across the organisation.Managers need to understand interdependecy of Department, partnership allainces and team across the organisation.</p>]]></body>
+	
+	
+	<linkButtonText pageId="page3">More About Excell Services</linkButtonText>
+	
+
+	<iText><![CDATA[Select Continue to proceed.]]></iText>
+	<nextButton id="page1"><![CDATA[Continue]]></nextButton>
+
+
+</page>

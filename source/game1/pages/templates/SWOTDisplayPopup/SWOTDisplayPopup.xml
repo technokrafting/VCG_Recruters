@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<page type="SWOTDisplay">
+
+	
+	<swot page="m1_c1_2a">
+
+s
+		<heads tableHeadText="SWOT">
+			<head id="1"><![CDATA[Strengths]]></head>
+			<head id="2"><![CDATA[Weaknesses]]></head>
+			<head id="3"><![CDATA[Opportunities]]></head>
+			<head id="4"><![CDATA[Threats]]></head>
+		</heads>
+
+		<params tableHeadText="TEAM"> 
+			<param id="a"><![CDATA[<span>Purchasing</span>]]></param>
+			<param id="b"><![CDATA[<span>Strategy</span>]]></param>
+			<param id="c"><![CDATA[<span>Operations</span>]]></param>
+			<param id="d"><![CDATA[<span>Sales</span>]]></param>
+			<param id="e"><![CDATA[<span>Marketing</span>]]></param>
+			<param id="f"><![CDATA[<span>Finance</span>]]></param>
+			<param id="g"><![CDATA[<span>IT & Web</span>]]></param>
+			<param id="h"><![CDATA[<span>Logistics</span>]]></param>
+			<param id="i"><![CDATA[<span>Proj Mgmt</span>]]></param>
+			<param id="j"><![CDATA[<span>HR</span>]]></param>
+		</params>
+
+	</swot>	
+
+	<iText><![CDATA[Select Close to Proceed]]></iText>
+	<closeButton id="page1"><![CDATA[Close]]></closeButton>
+
+</page>

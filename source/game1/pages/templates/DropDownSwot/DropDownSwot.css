@@ -1,0 +1,50 @@
+#activityDiv{
+
+float:center;
+width:60%;
+margin-left:20%;
+margin-top:5%;
+
+}
+
+
+#options {
+   top: 140px;
+  left: 50px;
+  position: absolute;
+  width: 927px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 345px;
+  display: block;
+}
+
+
+.radioBtn{
+	cursor: pointer;
+}
+
+.radioActive{
+
+
+}
+
+#actTable{
+
+    width: 910px;
+  height: 260px;
+}
+
+td{
+	padding: 10px;
+}
+
+.selectDropDown{
+  color: #58595b;
+  border-color: #98019a;
+  border-top-width: 2px;
+}
+
+.tableHead{
+  text-align: center;
+}

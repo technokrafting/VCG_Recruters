@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page type="MCSSRadio" zone="menuButton3"  loadIn="decActContentDiv">
+
+	<question competency="Basic Accounting Concepts"><![CDATA[<div>Identify the method used to calculate Operating Cash Flow with explanation of the characteristics associated with this method.</div>
+
+	<div>
+	<span id="quesIText" class="quesIText"></span>
+	</div>]]></question>
+
+	<options>
+		<option id="opt1" value="1"><![CDATA[Direct Method: while not the most widely used method, it has the advantage of allowing the reader to see the actual cash expenditures within each expense category.]]></option>
+		<option id="opt2" value="0.5"><![CDATA[Indirect Method: this is the most widely used method and also offers the benefit of being the simplest method.]]></option>
+		<option id="opt3" value="0"><![CDATA[Straight-line Method: this is a method, especially popular among smaller companies, that allows for more predictable outcomes in the operational cash flow calculations.]]></option>
+	</options>
+
+	<initPopup><![CDATA[m1_c1_1_popup]]></initPopup>
+	
+</page>

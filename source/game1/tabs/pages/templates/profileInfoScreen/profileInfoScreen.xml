@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page type="popupInfoScreen" zone="-1">
+
+
+	<popupBody><![CDATA[<span id="moreAbtTxt"Management&nbsp;</span><span id="excellTxt">Profile</span>]]></popupBody>
+
+	
+	<dataPath><![CDATA[pages/adamstab6_person1.xml]]></dataPath>
+	
+	<iText><![CDATA[Select Close to Proceed]]></iText>
+	<closeButton id="page1"><![CDATA[Close]]></closeButton>
+
+
+</page>

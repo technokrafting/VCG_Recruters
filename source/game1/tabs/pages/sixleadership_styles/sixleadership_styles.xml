@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page type="popupInfoScreen" loadIn="popup">
+
+
+	<popupHeader><![CDATA[<span id="mainText">Six Leadership </span><span id="subText">Styles</span> ]]></popupHeader>
+	<popupBody><![CDATA[  	<table id="sixleadershipstyles_table"><tr class="tableRow"><th>&nbsp;</th><th>Coercive</th><th> 	Authoritative </th><th>	Affiliative </th><th>	Democratic </th><th>	Pacesetting </th><th>	Coaching </th></tr>
+<tr class="tableRow"><td class="textBold">The leader’s modus operandi </td><td>	Demands immediate compliance 	</td><td>Mobilizes people towards a vision </td><td>	Creates harmony and builds emotional bonds </td><td>	Forges consensus through participation</td><td> 	Sets high standards for performance </td><td>	Develops people for the future </td></tr>
+<tr class="tableRow"><td class="textBold">The style in a phrase </td><td>	“Do what I tell you.” </td><td>	“Come with me.” 	</td><td>“People come first.” </td><td>	“What do you think?” </td><td>	“Do as I do now.” </td><td>	“Try this.” </td></tr>
+<tr class="tableRow"><td class="textBold">Underlying emotional intelligence competencies </td><td>	Drive to achieve, initiative, self-control </td><td>	Self-confidence, empathy, change catalyst </td><td>	Empathy, building relationships, communication </td><td>	Collaboration, team leadership, communication </td><td>	Conscientiousness, drive to achieve, initiative 	</td><td>Developing others, empathy, self-awareness</td> </tr>
+<tr class="tableRow"><td class="textBold">When the style works best 	</td><td>In a crisis, to kick start a turnaround, or with problem employees </td><td>	When changes require a new vision, or when a clear direction is needed</td><td> 	To heal rifts in a team or to motivate people during stressful circumstances 	</td><td>To build buy-in or consensus, or to get input from valuable employees </td><td>	To get quick results from highly motivated and competent team </td><td>	To help employee improve performance or develop long-term strengths</td> </tr>
+<tr class="tableRow"><td class="textBold">Overall impact on climate </td><td>	Negative </td><td>	Most strongly positive </td><td>	Positive </td><td>	Positive </td><td>	Negative </td><td>	Positive </td></t></table>
+]]></popupBody>
+
+<iText><![CDATA[Select Close to proceed.]]></iText>
+	<closeButton id="page1"><![CDATA[Close]]></closeButton>
+
+</page>

@@ -1,0 +1,37 @@
+#activityDiv{
+
+float:center;
+width:60%;
+margin-left:20%;
+margin-top:5%;
+
+}
+
+
+#options {
+    top: 140px;
+  left: 190px;
+  position: absolute;
+}
+
+
+.radioBtn{
+	cursor: pointer;
+}
+
+.radioActive{
+
+
+}
+
+#actTable{
+
+  width: 670px;
+  height: 260px;
+}
+
+td{
+	padding: 10px;
+}
+
+

@@ -1,0 +1,45 @@
+#background
+{
+	background-image:url("images/bg.jpg");
+	width:1020px;
+	height:590px;
+	position: absolute;
+	z-index: -1
+}
+
+
+#mainPageDiv_scenerio #iText {
+    margin-top: -28px;
+    right: -88px;
+}
+
+#contentDiv {
+  float: left;
+  width: 55%;
+  margin-left: 430px;
+  margin-top: 9%;
+  /* position: absolute; */
+}
+
+#header {
+  margin-top: 50px;
+  margin-left: 40px;
+  width: 400px;
+}
+
+#scenerio{
+
+	color: white;
+	font-size: 40px;
+}
+
+#body {
+  float: left;
+  margin-left: -150px;
+  margin-top: 128px;
+}
+
+#footer {
+  top: 455px;
+  left: 560px;
+}

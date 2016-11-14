@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<page type="resumeScreen" zone="-1">
+
+
+	<attempts>10</attempts>
+	<issuesToFind>7</issuesToFind>
+	<resumeHtml>resume.html</resumeHtml>
+
+
+</page>

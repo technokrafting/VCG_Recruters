@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<page type="infoWithButton" zone="menuButton0">
+
+
+	<header><![CDATA[Introduction]]></header>
+
+	<body><![CDATA[ <p>In this simulation, you will play the role of a business consultant who has recently joined the consulting firm Excell Services in Boston. 
+	
+	<br/><br/>
+	You are enthusiastic about this new opportunity and are looking forward to making a contribution. You need to employ a strategic organizational mindset to the services Excell provides to its clients. This may include reviewing financial statements, evaluating competitors, and analyzing business practices, developing a business model or providing recommendations to the client.
+
+	
+	<br/><br/>
+	
+	In this simulation, you will assess the financial health of your client’s organization.</p>]]></body>
+	
+	
+	<linkButtonText pageId="more_about_popup">More About Excell Services</linkButtonText>
+	
+
+	<iText><![CDATA[Select Continue to proceed.]]></iText>
+	<nextButton pageId="page3"><![CDATA[Continue]]></nextButton>
+
+
+</page>

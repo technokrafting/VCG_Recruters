@@ -1,0 +1,31 @@
+#background
+{
+	background-image:url("images/bg.jpg");
+	width:400px;
+	float:left;
+	background-repeat:no-repeat;
+}
+
+#contentDiv{
+
+float:left;
+width:55%;
+margin-left:25px;
+margin-top:12%;
+
+}
+
+#header
+{
+	color:#3c3b3c;
+}
+
+
+#linkButton
+{
+	background:url('../../images/CommonSpriteSheet.png') no-repeat 0 -928px;
+	width:70px;
+}
+
+
+

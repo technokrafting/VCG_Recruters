@@ -1,0 +1,112 @@
+#tab_adamstab6_person1 .tabImg{background: url('images/ProfileSpriteSheet_02.png') no-repeat 0 0;
+  width: 50px;
+  height: 70px;}
+  #tab_adamstab6_person2 .tabImg{background: url('images/ProfileSpriteSheet_02.png') no-repeat 0 -210px;
+  width: 50px;
+  height: 70px;}
+  #tab_adamstab6_person3 .tabImg{background: url('images/ProfileSpriteSheet_02.png') no-repeat 0 -840px;
+  width: 50px;
+  height: 70px;}
+  #tab_adamstab6_person4 .tabImg{background: url('images/ProfileSpriteSheet_02.png') no-repeat 0 -1050px;
+  width: 50px;
+  height: 70px;}
+  #tab_adamstab6_person5 .tabImg{background: url('images/ProfileSpriteSheet_02.png') no-repeat 0 -630px;
+  width: 50px;
+  height: 70px;}
+  #tab_adamstab6_person6 .tabImg{background: url('images/ProfileSpriteSheet_02.png') no-repeat 0 -420px;
+  width: 50px;
+  height: 70px;}
+  #tab_adamstab6_person7 .tabImg{background: url('images/ProfileSpriteSheet_02.png') no-repeat 0 -1260px;
+  width: 50px;
+  height: 70px;}
+  #tab_adamstab6_person8 .tabImg{background: url('images/ProfileSpriteSheet_02.png') no-repeat 0 -1470px;
+  width: 50px;
+  height: 70px;}
+  #tab_adamstab6_person9 .tabImg{background: url('images/ProfileSpriteSheet_02.png') no-repeat 0 -1680px;
+  width: 50px;
+  height: 70px;}
+  #tab_adamstab6_person10 .tabImg{background: url('images/ProfileSpriteSheet_02.png') no-repeat 0 -1890px;
+  width: 50px;
+  height: 70px;}
+
+#tab_adamstab6_person1 .tabImg.tabActive{background: url('images/ProfileSpriteSheet_02.png') no-repeat -60px 0px;
+  width: 170px;
+  height: 200px;}
+  #tab_adamstab6_person2 .tabImg.tabActive{background: url('images/ProfileSpriteSheet_02.png') no-repeat -60px -210px;
+  width: 170px;
+  height: 200px;}
+  #tab_adamstab6_person3 .tabImg.tabActive{background: url('images/ProfileSpriteSheet_02.png') no-repeat -60px -840px;
+  width: 170px;
+  height: 200px;}
+  #tab_adamstab6_person4 .tabImg.tabActive{background: url('images/ProfileSpriteSheet_02.png') no-repeat -60px -1050px;
+  width: 170px;
+  height: 200px;}
+  #tab_adamstab6_person5 .tabImg.tabActive{background: url('images/ProfileSpriteSheet_02.png') no-repeat -60px -630px;
+  width: 170px;
+  height: 200px;}
+  #tab_adamstab6_person6 .tabImg.tabActive{background: url('images/ProfileSpriteSheet_02.png') no-repeat -60px -420px;
+  width: 170px;
+  height: 200px;}
+  #tab_adamstab6_person7 .tabImg.tabActive{background: url('images/ProfileSpriteSheet_02.png') no-repeat -60px -1260px;
+  width: 170px;
+  height: 200px;}
+  #tab_adamstab6_person8 .tabImg.tabActive{background: url('images/ProfileSpriteSheet_02.png') no-repeat -60px -1470px;
+  width: 170px;
+  height: 200px;}
+  #tab_adamstab6_person9 .tabImg.tabActive{background: url('images/ProfileSpriteSheet_02.png') no-repeat -60px -1680px;
+  width: 170px;
+  height: 200px;}
+  #tab_adamstab6_person10 .tabImg.tabActive{background: url('images/ProfileSpriteSheet_02.png') no-repeat -60px -1890px;
+  width: 170px;
+  height: 200px;}
+
+#mainPageDiv_adams_tab6 .tabImg{float: left; margin-top: 130px;  margin-right: 10px;}
+#mainPageDiv_adams_tab6 .tabImg.tabActive{margin-top: 0px}
+#mainPageDiv_adams_tab6 #tabList{width:100%;margin-top:0px;}
+#mainPageDiv_adams_tab6 #tabContent {padding: 0;}
+#tabContent #mainPageDiv_adams_tab6 .footer{display: none;}
+#tabContent #mainPageDiv_adams_tab6 #contentDiv{
+
+  margin:0;
+
+  width: 100%;
+  margin-top: 0px;
+  max-height: 500px;
+  overflow: hidden;
+
+}
+#tabContent #mainPageDiv_adams_tab6 #background
+{
+  background-image:url("");
+  height:0px;
+  width:0px;
+  float:left;
+  background-repeat:no-repeat;
+  position: absolute;
+  z-index: -1;
+}
+
+#mainPageDiv_adams_supply #mainPageDiv_adams_tab6 #tabList {
+   margin-top: 0px; 
+  float: left;
+  width: 100%;
+  height: auto;
+  /* overflow-y: auto; */
+  overflow-x: hidden;
+}
+
+#mainPageDiv_adams_supply #mainPageDiv_adams_tab6 #tabContent {
+    float: left;
+  /* padding-right: 0px; */
+  width: 702px;
+  max-width: 100%;
+  height: 280px;
+  overflow: auto;
+  margin-top: 8px;
+}
+
+#mainPageDiv_adams_supply #mainPageDiv_adams_tab6 #tabContent #body{
+
+   /* margin-top: -5px; */
+   
+}

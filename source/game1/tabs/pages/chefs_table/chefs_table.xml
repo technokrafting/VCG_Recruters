@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<page type="tabInfoScreenPopup" loadIn="popup">
+
+
+
+	<tabs>
+		<tab pageId="chefs_tab1"><![CDATA[About the Company]]></tab>
+		<tab pageId="chefs_tab2"><![CDATA[Organizational Structure]]></tab>
+		<tab pageId="chefs_tab3"><![CDATA[Management Profiles]]></tab>
+	</tabs>
+
+
+	<header><![CDATA[<span id="mainText">Chef's </span><span id="subText">Table</span>]]></header>
+
+	<body></body>
+	
+
+	<iText><![CDATA[Select Close to proceed.]]></iText>
+	<closeButton id="page1"><![CDATA[Close]]></closeButton>
+
+
+</page>

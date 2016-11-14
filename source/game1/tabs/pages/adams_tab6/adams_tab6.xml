@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page type="tabInfoScreenPopup" loadIn="tabContent">
+
+
+	<header></header>
+	<body></body>
+
+
+	<tabs>
+		<tab pageId="adamstab6_person1"><![CDATA[]]></tab>
+		<tab pageId="adamstab6_person2"><![CDATA[]]></tab>
+		<tab pageId="adamstab6_person3"><![CDATA[]]></tab>
+		<tab pageId="adamstab6_person4"><![CDATA[]]></tab>
+		<tab pageId="adamstab6_person5"><![CDATA[]]></tab>
+		<tab pageId="adamstab6_person6"><![CDATA[]]></tab>
+		<tab pageId="adamstab6_person7"><![CDATA[]]></tab>
+		<tab pageId="adamstab6_person8"><![CDATA[]]></tab>
+
+	</tabs>
+
+</page>

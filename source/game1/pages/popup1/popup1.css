@@ -1,0 +1,21 @@
+#mainPageDiv_popup1	 #background
+{
+	background-image:url("images/bg.jpg");
+	height:590px;
+	width:400px;
+	float:left;
+	background-repeat:no-repeat;
+}
+
+
+
+
+
+#mainPageDiv_popup1 #iText
+{
+	margin-top: 4%;
+	margin-right:150px;
+}
+
+
+

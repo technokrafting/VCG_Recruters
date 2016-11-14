@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page type="quitPopupScreen" loadIn="popup">
+
+
+	<popupHeader><![CDATA[<span id="text">Are you sure you want to exit the simulation?</span>]]></popupHeader>
+	<popupBody><![CDATA[
+
+		<div id="alertTxt">
+			<span>Alert</span>
+		</div>
+
+		<div id="yesBtn" class='nextButton'>
+				<span id="yesBtnText" class="nextButtonText">Yes</span>
+			</div>
+
+		<div id="noBtn" class='nextButton'>
+				<span id="noBtnText" class="nextButtonText">No</span>
+			</div>
+
+		]]></popupBody>
+	
+
+
+</page>
