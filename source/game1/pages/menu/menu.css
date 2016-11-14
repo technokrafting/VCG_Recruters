@@ -1,4 +1,5 @@
 /* Menu Page */
+.menu-bg .final-screen{display: none;}
 .menu-bg{background: url(images/bg_wood.png) left top no-repeat; background-size: initial; overflow: hidden; z-index: 0;}
 .menu-bg .menu-div{width: 464px; height: 100%; padding: 100px 50px 75px; color: #fff; background: url(images/bluePatch.png) top left no-repeat; z-index: 10; display: inline-block; top: 0; position: absolute;}
 .menu-div .heading{margin-bottom: 25px;}
@@ -31,3 +32,22 @@
 .menu-bg .anim-div .resume-hand.hand3.locked{background-position: -1160px 0px;}
 .menu-bg .anim-div .resume-hand.hand4.locked{background-position: -1296px 0px;}
 .menu-bg .anim-div .resume-hand.hand5.locked{background-position: -1128px 0px;}
+
+/* Final Feedback Screen */
+.menu-bg.final .final-screen{display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: rgba(0,0,0,0.85); z-index: 1000;}
+.menu-bg.final .final-screen .medal-wrapper{width: 513px; height: 239px; position: absolute; right: 0; top: calc(50% - 119px); background: url(images/bg_medal.png) 0 0 no-repeat;}
+.menu-bg.final .final-screen .medal-wrapper .medal{width: 170px; height: 247px; position: absolute; top: -25px;}
+.menu-bg.final .final-screen .medal-wrapper .medal.gold{background: url(images/medalGold.png) 0 0 no-repeat;}
+.menu-bg.final .final-screen .medal-wrapper .medal.silver{background: url(images/medalSilver.png) 0 0 no-repeat;}
+.menu-bg.final .final-screen .medal-wrapper .medal.bronze{background: url(images/medalBronze.png) 0 0 no-repeat;}
+.menu-bg.final .final-screen .medal-wrapper .feedback-msg{display: inline-block; position: absolute; top: 35px; left: 210px;}
+.menu-bg.final .final-screen .medal-wrapper .feedback-msg .feedback-title{font-size: 28px; color: #fff; font-weight: bold;}
+.menu-bg.final .final-screen .medal-wrapper .feedback-msg .feedback-result{color: #fff; font-size: 20px; font-weight: normal;}
+.menu-bg.final .final-screen .medal-wrapper .feedback-msg .feedback-medal{font-size: 30px; font-weight: bold; color: #fff;}
+.menu-bg.final .final-screen .medal-wrapper .feedback-msg .feedback-medal.gold{color: #ffc500;}
+.menu-bg.final .final-screen .btn-wrapper{padding: 4px 15px; position: absolute; bottom: 5px; right: 0px;}
+.menu-bg.final .final-screen .final-scr-btn{width: 117px; height: 44px; background-position: 0 0; background-repeat: no-repeat; display: inline-block;}
+.menu-bg.final .final-screen .final-scr-btn.replay{background-image: url(images/btn_continue.png);}
+.menu-bg.final .final-screen .final-scr-btn.exit{background-image: url(images/btn_exit.png);}
+.menu-bg.final .final-screen .final-scr-btn:hover{background-position: 0 -44px;}
+.menu-bg.final .final-screen .final-scr-btn .btn-text{color: #fff; font-size: 16px; line-height: 40px; font-weight: bold;}
