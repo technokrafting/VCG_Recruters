@@ -78,9 +78,9 @@
 #doneModal .modal-content .done-modal-close-btn:hover{background-position: -3px -54px;}
 #feedbackModal .modal-content{width: 403px; height: 406px; background: url(../crops/main/feedback_postIt.png) 0 0 no-repeat; margin: 0 auto; padding-top: 25px;}
 #feedbackModal .modal-content .score-star{width: 205px; height: 66px; background: url(../crops/main/feedbackStars.png) 0 0 no-repeat; margin: 0 auto 10px;}
-#feedbackModal .modal-content .score-star.one-star{background-position: 0 -66px;}
-#feedbackModal .modal-content .score-star.two-star{background-position: 0 -132px}
-#feedbackModal .modal-content .score-star.three-star{background-position: 0 -198px;}
+#feedbackModal .modal-content .score-star.1-star{background-position: 0 -66px;}
+#feedbackModal .modal-content .score-star.2-star{background-position: 0 -132px}
+#feedbackModal .modal-content .score-star.3-star{background-position: 0 -198px;}
 #feedbackModal .modal-content .modal-title{font-size: 25px; font-weight: bold; margin-bottom: 10px;}
 #feedbackModal .mistakes-score-wrapper{padding: 0px 35px 0px 25px;}
 #feedbackModal .mistakes-score-wrapper .score-wrap{padding: 4px 15px; border-bottom: 1px solid #ccc;}
