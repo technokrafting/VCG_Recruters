@@ -251,27 +251,23 @@
 
 						scrollTo = errorTop - 150;
 
-						$('.resume-content').animate({
+						console.log('scrollTo',scrollTo);
+
+						if(scrollTo >= -20 && scrollTo <= 20)
+						{
+							scrollAnimationComplete(nextErrorIndex);
+						}
+						else
+						{
+							$('.resume-content').animate({
 					        scrollTop: scrollTo
-					    }, 1500, function(){
+						    }, 1000, function(){
 
+						    	scrollAnimationComplete(nextErrorIndex);
 
-					    	var elementPos = $('#incorrect-'+nextErrorIndex).offset().top;
-					    	elementPos = elementPos - 100;
-
-					    	var hintClone = $('.hint-box-top').clone();
-							//hintClone.top = scrollTo;
-
-
-							hintClone.css('top',elementPos);
-
-							console.log('elementPos',elementPos);
-
-							hintClone.removeClass('hide-element');
-
-							$('#resume-content-container').append(hintClone);
-
-					    });
+						    });
+						}
+						
 					}
 
 					$(this).addClass('disabled');
@@ -319,6 +315,24 @@
 
 		}
 
+
+		function scrollAnimationComplete(nextErrorIndex)
+		{
+			var elementPos = $('#incorrect-'+nextErrorIndex).offset().top;
+	    	elementPos = elementPos - 100;
+
+	    	var hintClone = $('.hint-box-top').clone();
+			//hintClone.top = scrollTo;
+
+
+			hintClone.css('top',elementPos);
+
+			console.log('elementPos',elementPos);
+
+			hintClone.removeClass('hide-element');
+
+			$('#resume-content-container').append(hintClone);
+		}
 
 		function loadPageSizeData()
 		{
