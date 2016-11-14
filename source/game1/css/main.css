@@ -6,7 +6,7 @@ body{width: 1014px; height: 652px; font-family: Arial;}
 .light-blue-text{color: #a6c8ee;}
 /*.heading{font-size: 28px;}*/
 .wrapper{width: 1014px; height: 652px; overflow: hidden; position: absolute; left: 0; right: 0; background: none;}
-.setting-div{width: 45px; height: 45px; background: url(../crops/global/btn_setting.png) 0 0 no-repeat; z-index: 150; position: absolute; right: 0px;}
+.setting-div{width: 45px; height: 45px; background: url(../crops/global/btn_setting.png) 0 0 no-repeat; z-index: 2000; position: absolute; right: 0px;}
 .setting-div:hover{background-position: -45px 0px;}
 
 .splash-bg{background: url(../crops/splash/bg_splash.png) left top no-repeat; background-size: cover; overflow: hidden; padding-top: 30px;}
