@@ -105,6 +105,8 @@
 				else
 				{
 					var rand1 = easyResumesArr[Math.floor(Math.random() * easyResumesArr.length)];
+					rand1 = 'easy_1';
+					
 					var rand2 = easyResumesArr[Math.floor(Math.random() * easyResumesArr.length)];
 					while(rand2 == rand1)
 					{
@@ -121,7 +123,7 @@
 
 					console.log(rand1,rand2,rand3,rand4,rand5);
 
-					rand1 = 'easy_1';
+					
 
 					resumesChoosen[resumesChoosen.length] = rand1;
 					resumesChoosen[resumesChoosen.length] = rand2;
@@ -158,20 +160,22 @@
 
 							totalScore = totalScore + resumeScrore;
 
+							console.log('Setting i '+i);
+							$('#resume-'+(i+1)).removeClass('locked');
 
 							if(resumeScrore >= 800 && resumeScrore <= 899)
 							{
-								$('#resume-'+(i+1)).addClass('1-star');
+								$('#resume-'+(i+1)).addClass('star-1');
 							}
 
 							if(resumeScrore >= 900 && resumeScrore <= 999)
 							{
-								$('#resume-'+(i+1)).addClass('2-star');
+								$('#resume-'+(i+1)).addClass('star-2');
 							}
 
 							if(resumeScrore == 1000)
 							{
-								$('#resume-'+(i+1)).addClass('3-star');
+								$('#resume-'+(i+1)).addClass('star-3');
 							}
 						}
 						

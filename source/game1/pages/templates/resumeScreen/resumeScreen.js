@@ -405,19 +405,19 @@
 
 			if(intScore >= 800 && intScore <= 899)
 			{
-				$('.score-star').addClass('1-star');
+				$('.score-star').addClass('star-1');
 				saveData(intScore);
 			}
 
 			if(intScore >= 900 && intScore <= 999)
 			{
-				$('.score-star').addClass('2-star');
+				$('.score-star').addClass('star-2');
 				saveData(intScore);
 			}
 
 			if(intScore == 1000)
 			{
-				$('.score-star').addClass('3-star');
+				$('.score-star').addClass('star-3');
 				saveData(intScore);
 			}
 
