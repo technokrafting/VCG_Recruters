@@ -2,6 +2,8 @@
 
 .main-page-bg{background: url(../../../crops/menu/bg_wood.png) 0 0 no-repeat; z-index: 0;}
 .main-page-bg.info-tint .bg-dark-tint{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: url(../../../crops/howToPlay/bg_tint.png) 0 0 no-repeat;}
+
+/* Left Panel */
 .main-page-bg .left-panel{background: url(../../../crops/main/bg_leftPanel.png); z-index: 10; width: 194px; height: 652px; padding: 15px 0px;}
 .main-page-bg .left-panel .left-panel-wrapper{margin: 0 auto; margin-bottom: 11px;}
 .main-page-bg .ink-remaining-wrapper{width: 140px; height: 55px; margin: 0 auto 25px; background: url(../../../crops/main/inkSlot.png) left bottom no-repeat; position: relative;}
@@ -15,6 +17,7 @@
 .main-page-bg .issues-found-wrapper .issue-content-wrap{margin-top: 12px;}
 .main-page-bg .issues-found-wrapper .issue-content-wrap .count{line-height: 43px; font-size: 32px; vertical-align: top;}
 .main-page-bg .pages-wrapper{max-width: 168px;}
+.main-page-bg .pages-wrapper .page-indicator-wrapper{height: 174px;}
 .main-page-bg .pages-wrapper .pages-bg{width: 81px; height: 87px; display: inline-block;}
 .main-page-bg .pages-wrapper .pages-bg.page-up{background: url(../../../crops/main/pageStatusSmall.png) 0 0 no-repeat;}
 .main-page-bg .pages-wrapper .pages-bg.page-down{background: url(../../../crops/main/pageStatusSmall.png) -162px 0 no-repeat;}
@@ -25,8 +28,32 @@
 .main-page-bg .hint-wrapper .hint-btn.disabled{background-position: -3px -56px;}
 .main-page-bg .guidelines-wrapper .guidelines-btn{width: 122px; height: 65px; border: none; word-wrap: break-word; color: #fff; font-size: 16px; background: url(../../../crops/menu/btn_guidlines.png) 0 0 no-repeat;}
 .main-page-bg .guidelines-wrapper .guidelines-btn:hover{background-position: 0px -70px;}
+
+/* Right Panel Tint */
+.main-page-bg.info-tint .resume-wrapper, .main-page-bg.info-tint .blue-strip, .main-page-bg.info-tint .btn-done{display: none;}
+.main-page-bg.info-tint .label-arrow-bg{width: 99px; height: 100%; background: url(../../../crops/howToPlay/pointers.png) center center no-repeat; margin-left: -15px; position: absolute; left: 0px;}
+.main-page-bg.info-tint .challenge-note{width: 286px; height: 283px; position: absolute; right: 15px; top: calc(50% - 151px); background: url(../../../crops/howToPlay/bluePostit.png) 0 0 no-repeat; padding: 12px 15px;}
+.main-page-bg.info-tint .challenge-note .challenge-title{font-size: 25px; font-weight: bold; margin-bottom: 15px;}
+.main-page-bg.info-tint .challenge-note .challenge-text{font-size: 16px; font-weight: normal;}
+.main-page-bg.info-tint .challenge-note .challenge-continue-btn{width: 117px; height: 44px; background: url(../../../crops/global/btn_continue.png) 0 0 no-repeat; position: absolute; right: 15px; bottom: 12px;}
+.main-page-bg.info-tint .challenge-note .challenge-continue-btn:hover{background-position: 0 -44px;}
+.main-page-bg.info-tint .challenge-note .challenge-continue-btn .challenge-continue-text{color: #fff; font-size: 16px; font-weight: bold; line-height: 40px;}
+.main-page-bg.info-tint .arrow-desc-wrapper{width: 375px; height: 100%; padding: 20px; position: absolute; left: 90px;}
+.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc{position: absolute; left: 20px;}
+.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.ink{top: 20px;}
+.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.score{top: 120px;}
+.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.issues-found{top: 220px;}
+.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.current-location{top: 340px;}
+.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.hint{top: 455px;}
+.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.guidelines{top: 560px;}
+.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc-title{font-size: 16px; font-weight: bold; color: #9acbdd;}
+.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc-text{font-size: 14px; font-weight: normal; color: #fff;}
+
+/* Right Panel Resume */
+.main-page-bg.resume .info-bg-tint{display: none;}
 .main-page-bg .main-content{width: 820px; height: 100%; position: absolute; left: 195px; top: 0; padding: 4px 10px 25px;}
-.main-page-bg .main-content .resume-div{width: 100%; height: 100%; background: url(../../../crops/main/bg_paper.png) 0 0 no-repeat; position: relative; padding: 50px 20px 0px;}
+.main-page-bg .main-content .resume-wrapper{width: 100%; height: calc(100% - 30px); background: url(../../../crops/main/bg_paper.png) 0 0 no-repeat; position: relative; padding: 50px 20px 0px;}
+.main-page-bg .main-content .blue-strip{height: 30px; background: #12234a; margin-right: -10px; margin-left: -12px;}
 .main-page-bg .main-content .resume-div .paper-fold{position: absolute; width: 118px; height: 106px; background: url(../../../crops/main/bg_paper_corner.png) 0 0 no-repeat; right: 0; top: 0; z-index: 100;}
 .main-page-bg .main-content .resume-div .resume-content{width: 100%; height: 100%; padding: 25px; padding-left: 15px; border: 2px solid #9da2a2; border-left: 15px solid #9da2a2; border-bottom: none; position: relative; overflow: auto;}
 .main-page-bg .main-content .resume-div .resume-content .ok-popout{width: 90px; height: 57px; background: url(../../../crops/main/pointer_ok.png) 0 0 no-repeat;  position: absolute; top: 0; left: 0;}
@@ -53,11 +80,14 @@
 #doneModal .modal-content .close-btn-wrapper{float: left;}
 #doneModal .modal-content .done-modal-close-btn{width: 97px; height: 52px; background: url(../../../crops/main/btn_done.png) -3px 0px no-repeat; color: #fff; border: none; font-weight: bold; padding: 0px;}
 #doneModal .modal-content .done-modal-close-btn:hover{background-position: -3px -54px;}
+#feedbackModal .feedback-modal-btn.continue{position: fixed; bottom: 10px; right: 25px; width: 117px; height: 44px; background: url(../../../crops/global/btn_continue.png) 0px 0px no-repeat; color: #fff; border: none; font-weight: bold;}
+#feedbackModal .feedback-modal-btn.continue:hover{background-position: 0 -44px;}
+#feedbackModal .feedback-modal-btn.continue .btn-text{line-height: 40px; font-size: 16px;}
 #feedbackModal .modal-content{width: 403px; height: 406px; background: url(../../../crops/main/feedback_postIt.png) 0 0 no-repeat; margin: 0 auto; padding-top: 25px;}
 #feedbackModal .modal-content .score-star{width: 205px; height: 66px; background: url(../../../crops/main/feedbackStars.png) 0 0 no-repeat; margin: 0 auto 10px;}
-#feedbackModal .modal-content .score-star.one-star{background-position: 0 -66px;}
-#feedbackModal .modal-content .score-star.two-star{background-position: 0 -132px}
-#feedbackModal .modal-content .score-star.three-star{background-position: 0 -198px;}
+#feedbackModal .modal-content .score-star.1-star{background-position: 0 -66px;}
+#feedbackModal .modal-content .score-star.2-star{background-position: 0 -132px}
+#feedbackModal .modal-content .score-star.3-star{background-position: 0 -198px;}
 #feedbackModal .modal-content .modal-title{font-size: 25px; font-weight: bold; margin-bottom: 10px;}
 #feedbackModal .mistakes-score-wrapper{padding: 0px 35px 0px 25px;}
 #feedbackModal .mistakes-score-wrapper .score-wrap{padding: 4px 15px; border-bottom: 1px solid #ccc;}

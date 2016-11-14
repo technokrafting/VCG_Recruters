@@ -17,6 +17,7 @@
 .main-page-bg .issues-found-wrapper .issue-content-wrap{margin-top: 12px;}
 .main-page-bg .issues-found-wrapper .issue-content-wrap .count{line-height: 43px; font-size: 32px; vertical-align: top;}
 .main-page-bg .pages-wrapper{max-width: 168px;}
+.main-page-bg .pages-wrapper .page-indicator-wrapper{height: 174px;}
 .main-page-bg .pages-wrapper .pages-bg{width: 81px; height: 87px; display: inline-block;}
 .main-page-bg .pages-wrapper .pages-bg.page-up{background: url(../crops/main/pageStatusSmall.png) 0 0 no-repeat;}
 .main-page-bg .pages-wrapper .pages-bg.page-down{background: url(../crops/main/pageStatusSmall.png) -162px 0 no-repeat;}
@@ -51,7 +52,7 @@
 /* Right Panel Resume */
 .main-page-bg.info-tint .resume-wrapper, .main-page-bg.info-tint .blue-strip, .main-page-bg.info-tint .btn-done{display: none;}
 .main-page-bg .main-content{width: 820px; height: 100%; position: absolute; left: 195px; top: 0; padding: 4px 10px 0px;}
-.main-page-bg .main-content .resume-wrapper{width: 100%; height: calc(100% - 30px); background: url(../crops/main/bg_paper.png) 0 0 no-repeat; position: relative; padding: 50px 20px 0px;}
+.main-page-bg .main-content .resume-div{width: 100%; height: calc(100% - 30px); background: url(../crops/main/bg_paper.png) 0 0 no-repeat; position: relative; padding: 50px 20px 0px;}
 .main-page-bg .main-content .blue-strip{height: 30px; background: #12234a; margin-right: -10px; margin-left: -12px;}
 .main-page-bg .main-content .resume-wrapper .paper-fold{position: absolute; width: 118px; height: 106px; background: url(../crops/main/bg_paper_corner.png) 0 0 no-repeat; right: 0; top: 0; z-index: 100;}
 .main-page-bg .main-content .resume-wrapper .resume-content{width: 100%; height: 100%; padding: 25px; padding-left: 15px; border: 2px solid #9da2a2; border-left: 15px solid #9da2a2; border-bottom: none; position: relative; overflow: auto; overflow-x: hidden;}
@@ -76,6 +77,9 @@
 #doneModal .modal-content .close-btn-wrapper{float: left;}
 #doneModal .modal-content .done-modal-close-btn{width: 97px; height: 52px; background: url(../crops/main/btn_done.png) -3px 0px no-repeat; color: #fff; border: none; font-weight: bold; padding: 0px;}
 #doneModal .modal-content .done-modal-close-btn:hover{background-position: -3px -54px;}
+#feedbackModal .feedback-modal-btn.continue{position: fixed; bottom: 10px; right: 25px; width: 117px; height: 44px; background: url(../crops/global/btn_continue.png) 0px 0px no-repeat; color: #fff; border: none; font-weight: bold;}
+#feedbackModal .feedback-modal-btn.continue:hover{background-position: 0 -44px;}
+#feedbackModal .feedback-modal-btn.continue .btn-text{line-height: 40px; font-size: 16px;}
 #feedbackModal .modal-content{width: 403px; height: 406px; background: url(../crops/main/feedback_postIt.png) 0 0 no-repeat; margin: 0 auto; padding-top: 25px;}
 #feedbackModal .modal-content .score-star{width: 205px; height: 66px; background: url(../crops/main/feedbackStars.png) 0 0 no-repeat; margin: 0 auto 10px;}
 #feedbackModal .modal-content .score-star.1-star{background-position: 0 -66px;}
