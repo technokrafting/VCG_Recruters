@@ -115,14 +115,6 @@
 
 			});
 
-			// incorrectArr[0] = 0; 
-			// incorrectArr[1] = 1; 
-			// incorrectArr[2] = 2; 
-			// incorrectArr[7] = 7; 
-			// incorrectArr[9] = 9; 
-			// incorrectArr[10] = 10; 
-			// incorrectArr[11] = 11; 
-
 			$( ".correct" ).each(function( index ) {
 				
 				var id = 'correct-'+index;
@@ -139,22 +131,13 @@
 
 			});
 
-
-			console.log(incorrectArr);
-
 			var finalInCorrectShowArr = [];
 
 
 			for (var a = incorrectArr, i = $issueToIdentify; i--; ) {
 			    var random = a.splice(Math.floor(Math.random() * (incorrectArr.length)), 1)[0];
-
 			    finalInCorrectShowArr[finalInCorrectShowArr.length] = random;
-			    
-
 			}
-
-
-			console.log('finalInCorrectShowArr',finalInCorrectShowArr);
 
 			$( ".incorrect" ).each(function( index ) {
 
@@ -230,39 +213,6 @@
 
 			});
 
-			$('#resume-content-container').on('click',function(e){
-
-				console.log('Body CLick ',e);
-
-				var top = $(this).offset().top;
-
-				var clientX = e.offsetX;
-				var clientY = e.clientY - top - 20;
-
-				console.log('top',top);
-
-				$completedAttempts++;
-
-				if($completedAttempts == $totalAttempts)
-				{
-
-					alert('Game Over');
-
-					$(this).off();
-				}
-
-				var callout = $('.ok-popout').clone();
-
-					callout.css('top',clientY);
-					callout.css('left',clientX);
-
-					callout.removeClass('hide-element');
-
-					$(this).append(callout);
-
-				setProgressBar();
-
-			});
 
 			$('.hint-btn').on('click',function(){
 
@@ -321,23 +271,24 @@
 
 							$('#resume-content-container').append(hintClone);
 
-					    	
-
-					    	// if(section == '1')
-					    	// {
-					    		
-					    	// }
-					    	// else
-					    	// {
-					    	// 	$('.hint-box-bottom').removeClass('hide-element');
-					    	// }
-
-
 					    });
 					}
 
 
 				}
+			});
+
+
+			$('#done-btn').on('click',function(){
+
+				stopResumeClick();
+
+			});
+
+			$('#back-btn').on('click',function(){
+
+				startResumeClick();
+
 			});
 
 			$('#questions-submit').on('click',function(){
@@ -362,6 +313,8 @@
 
 
 			loadPageSizeData();
+
+			startResumeClick();
 
 		}
 
@@ -462,6 +415,47 @@
 			$('#total-score').html(($previousScore+intScore));
 
 
+		}
+
+
+		function startResumeClick()
+		{
+			$('#resume-content-container').on('click',function(e){
+
+				var top = $(this).offset().top;
+
+				var clientX = e.offsetX;
+				var clientY = e.clientY - top - 20;
+
+				console.log('top',top);
+
+				$completedAttempts++;
+
+				if($completedAttempts == $totalAttempts)
+				{
+
+					alert('Game Over');
+
+					$(this).off();
+				}
+
+				var callout = $('.ok-popout').clone();
+
+					callout.css('top',clientY);
+					callout.css('left',clientX);
+
+					callout.removeClass('hide-element');
+
+					$(this).append(callout);
+
+				setProgressBar();
+
+			});
+		}
+
+		function stopResumeClick()
+		{
+			$('#resume-content-container').off();
 		}
 
 		function getSectionByTop(top)

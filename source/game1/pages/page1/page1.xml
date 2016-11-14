@@ -2,18 +2,6 @@
 <page type="splashScreen" zone="menuButton0">
 
 
-	<header><![CDATA[<span id="welcome">Welcome to the </span><span id="title1">Accounting</span><br/><span id="title2"> and </span><br/><span id="title3">Finance</span> <span id="title4"> &nbsp;module</span>]]></header>
-	<body><![CDATA[ <p>Accounting and finance information lie at the heart of business management. 
-Good accounting and financial management are needed because it’s the only way for business to grow and flourish. They are the backbone of the business and help keep the business under control, provides the owners, management and others with the information and the confidence to make the bold decisions and take the opportunities to help the enterprise grow.
-</p>
-	
-	
-	<p>While accounting is concerned with the recording and provision of financial information to the individuals who run firms and to outsiders, finance is concerned with the process of raising capital from the financial markets. 
-</p>
-
-
-	
-	]]></body>
 	
 	<nextButton pageId="menu"><![CDATA[Enter]]></nextButton>
 

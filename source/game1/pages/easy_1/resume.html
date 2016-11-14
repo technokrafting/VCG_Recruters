@@ -144,3 +144,60 @@
 		<li>Stock market knowledge</li>
 	</ul>
 </div>
+
+
+<div id="doneModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-body">
+						<h4 class="modal-title">In this resume you have found...</h4>
+						<ul class="mistakes-summary">
+							<li>Grammatical mistakes</li>
+							<li>Short work history (under experience)</li>
+						</ul>
+						<div class="mistakes-ques-wrapper">
+							<div class="mistake-ques">Do you think the formatting of this resume is OK?</div>
+							<div class="options">
+								<input type='radio' name="1" class="radio-btn"></input>
+								<span>Yes</span>
+								<input type='radio' name="1" class="radio-btn" correct='yes'></input>
+								<span>No</span>
+								<input type='radio' name="1" class="radio-btn selected"></input>
+								<span>There are minor issues but acceptable.</span>
+							</div>
+						</div>
+						<div class="mistakes-ques-wrapper">
+							<div class="mistake-ques">Did you find all the vital information?</div>
+							<div class="ques-desc">(Such as qualifications, work experience etc.)</div>
+							<div class="options">
+								<input type='radio' name="2" class="radio-btn"></input>
+								<span>Yes</span>
+								<input type='radio' name="2" class="radio-btn" correct='yes'></input>
+								<span>No</span>
+								<input type='radio' name="2" class="radio-btn selected"></input>
+								<span>There are minor issues but acceptable.</span>
+							</div>
+						</div>
+						<div class="mistakes-ques-wrapper">
+							<div class="mistake-ques">Did you find this resume complete?</div>
+							<div class="options">
+								<input type='radio' name="3" class="radio-btn"></input>
+								<span>Yes</span>
+								<input type='radio' name="3" class="radio-btn" correct='yes'></input>
+								<span>No</span>
+								<input type='radio' name="3" class="radio-btn selected"></input>
+								<span>There are minor issues but acceptable.</span>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<span class="close-btn-wrapper">
+							<button id='back-btn' type="button" class="btn-left done-modal-close-btn text-uppercase" data-dismiss="modal">Go Back</button>
+							<span> and check again.</span>
+						</span>
+						<button type="button" id='questions-submit' class="btn-done text-uppercase done-modal-submit-btn" data-toggle="modal" data-dismiss="modal" data-target="#feedbackModal">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
