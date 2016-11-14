@@ -439,12 +439,13 @@
 		{
 			$('#resume-content-container').on('click',function(e){
 
+				//console.log(e);
 				var top = $(this).offset().top;
 
-				var clientX = e.offsetX;
+				var clientX = e.clientX - 275;
 				var clientY = e.clientY - top - 20;
 
-				console.log('top',top);
+				//console.log('top',top);
 
 				$completedAttempts++;
 
