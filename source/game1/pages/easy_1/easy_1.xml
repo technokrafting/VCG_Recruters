@@ -7,4 +7,6 @@
 	<resumeHtml>resume.html</resumeHtml>
 
 
+	<nextButton pageId="menu"><![CDATA[Menu]]></nextButton>
+
 </page>

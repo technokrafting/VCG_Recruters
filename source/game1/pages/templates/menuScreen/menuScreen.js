@@ -10,6 +10,9 @@
 		var resumesChoosen = [];
 		var resumesCompleted = [];
 
+
+		var totalScore = 0;
+
 		var init = function (xml,navController,eventObj,pageId)
 		{
 
@@ -39,7 +42,7 @@
 			var resumes = xml.find('resumes');
 			
 			var easyResumes = resumes.find('easy');
-			console.log(easyResumes);
+			//console.log(easyResumes);
 			easyResumes.children('resume').each(function() 
 			{
 				easyResumesArr[easyResumesArr.length] = $(this).attr('pageId');
@@ -68,7 +71,7 @@
 
 		function getData()
 		{
-			//console.log("Get Data Feedback");
+			console.log("Get Data Menu");
 			$eventObj.registerForEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotPagesData);
 
 			var eventObjToSend = {"pageId":$pageId,"getPageIds":[$pageId]};
@@ -77,19 +80,25 @@
 
 		function gotPagesData(eventObj)
 		{
-			//console.log("gotPagesData "+eventObj);
+			console.log("got Menu Page Data ",eventObj);
 			var pageId = eventObj["pageId"];
 			if(pageId == $pageId)
 			{
 				//console.log("Into If "+eventObj["pagesData"]);
 
-				//$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotPagesData);
+				$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotPagesData);
 
 				var pagesData = eventObj["pagesData"];
 				if(pagesData)
 				{
-					
+					var gotDataObj = pagesData[$pageId];
 
+					resumesChoosen = gotDataObj['resumesChoosen'].split(',');
+
+					$eventObj.registerForEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotResumePagesData);
+
+					var eventObjToSend = {"pageId":$pageId,"getPageIds":[resumesChoosen[0],resumesChoosen[1],resumesChoosen[2],resumesChoosen[3],resumesChoosen[4]]};
+					$eventObj.trigger($eventObj.eventVariables.GIVE_PAGE_DATA,eventObjToSend);
 				}
 				else
 				{
@@ -119,27 +128,86 @@
 					resumesChoosen[resumesChoosen.length] = rand5;
 
 					console.log(resumesChoosen);
+
+					loadResumePage(0);
 				}
 
-				$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotPagesData);
 
-				loadPageEntities();
+				saveData();
 			}
 		}
 
-		function loadPageEntities()
+		function gotResumePagesData(eventObj)
 		{
-			if(resumesCompleted.length == 0)
+			console.log('gotResumePagesData',eventObj);
+			var pageId = eventObj["pageId"];
+			if(pageId == $pageId)
 			{
-				$('#resume-1').removeClass('locked');
-				$('#resume-1').click(function() {
+				var pagesData = eventObj["pagesData"];
+				if(pagesData)
+				{	
+					for(var i=0;i<resumesChoosen.length;i++)
+					{
+						var gotDataObj = pagesData[resumesChoosen[i]];
 
-					var eventObjToSend = {"pageId":resumesChoosen[0]};
+						if(gotDataObj)
+						{
+							var resumeScrore = parseInt(gotDataObj['score']);
+
+							totalScore = totalScore + resumeScrore;
+
+
+							if(resumeScrore >= 800 && resumeScrore <= 899)
+							{
+								$('#resume-'+(i+1)).addClass('1-star');
+							}
+
+							if(resumeScrore >= 900 && resumeScrore <= 999)
+							{
+								$('#resume-'+(i+1)).addClass('2-star');
+							}
+
+							if(resumeScrore == 1000)
+							{
+								$('#resume-'+(i+1)).addClass('3-star');
+							}
+						}
+						
+					}
+					
+				}
+				
+				loadResumePage((Object.keys(pagesData).length));
+
+				$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotResumePagesData);
+
+			}
+		}
+
+		function loadResumePage(index)
+		{
+			$('#resume-'+(index+1)).removeClass('locked');
+				$('#resume-'+(index+1)).click(function() {
+
+					var eventObjToSend = {"pageId":resumesChoosen[(index)]};
                     $eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
 
 				});
-			}
+		}
 
+
+
+		function saveData()
+		{
+
+			var resumesChoosenStr = resumesChoosen.join();
+
+			var saveObj = {};
+			saveObj["resumesChoosen"] = resumesChoosenStr;
+			saveObj["totalScore"] = totalScore;
+
+			var eventObjToSend = {"pageId":$pageId,"pageData":saveObj};
+			$eventObj.trigger($eventObj.eventVariables.SAVE_PAGE_DATA,eventObjToSend);
 		}
 
 		function loadTemplateCss()
@@ -179,6 +247,8 @@
 		function destroyPage()
 		{
 			//console.log("Into Page Destroy");
+			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotPagesData);
+			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotResumePagesData);
 		}
 		
 		App.register( {init:init,destroyPage:destroyPage});

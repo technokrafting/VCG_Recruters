@@ -2,12 +2,6 @@
 <page type="menuScreen" zone="menuButton0">
 
 
-	<heading><![CDATA[Menu]]></heading>
-	<paragraph_1><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.]]></paragraph_1>
-	<paragraph_2><![CDATA[Contrary to popular belief, Lorem Ipsum is not simply random text.]]></paragraph_2>
-	<guideline_text>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</guideline_text>
-
-
 	<resumes>
 		<easy>
 			<resume pageId="easy_1" />
@@ -27,8 +21,7 @@
 		</difficult>
 
 	</resumes>
-	
-	<nextButton pageId="page2"><![CDATA[Enter]]></nextButton>
+
 
 
 </page>

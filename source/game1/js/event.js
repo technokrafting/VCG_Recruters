@@ -79,7 +79,7 @@
 				    var callback = callbackArr[i];
 
 				    ////console.log(eventName+" Triggering Event "+callback);
-				    //console.log(callbackArr.length+" Got Callback "+i+" "+eventName);
+				    console.log(callbackArr.length+" Got Callback "+i+" "+eventName);
 
 					callback(dataObj);
 

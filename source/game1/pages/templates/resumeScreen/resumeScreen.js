@@ -391,16 +391,19 @@
 			if(intScore >= 800 && intScore <= 899)
 			{
 				$('.score-star').addClass('1-star');
+				saveData(intScore);
 			}
 
 			if(intScore >= 900 && intScore <= 999)
 			{
 				$('.score-star').addClass('2-star');
+				saveData(intScore);
 			}
 
 			if(intScore == 1000)
 			{
 				$('.score-star').addClass('3-star');
+				saveData(intScore);
 			}
 
 			$('#issues-identified').html($totalIssueIdentified);
@@ -413,7 +416,6 @@
 			$('#current-score').html(intScore);
 
 			$('#total-score').html(($previousScore+intScore));
-
 
 		}
 
@@ -547,6 +549,16 @@
 
 			}
 
+		}
+
+
+		function saveData(score)
+		{
+			var saveObj = {};
+			saveObj["score"] = score;
+
+			var eventObjToSend = {"pageId":$pageId,"pageData":saveObj};
+			$eventObj.trigger($eventObj.eventVariables.SAVE_PAGE_DATA,eventObjToSend);
 		}
 
 
