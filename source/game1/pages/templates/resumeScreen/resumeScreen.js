@@ -451,7 +451,9 @@
 				if($completedAttempts == $totalAttempts)
 				{
 
-					alert('Game Over');
+					//alert('Game Over');
+
+					$('#questions-submit').click();
 
 					$(this).off();
 				}
