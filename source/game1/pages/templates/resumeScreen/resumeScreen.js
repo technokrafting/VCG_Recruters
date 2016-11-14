@@ -12,7 +12,7 @@
 		var $issuesToIdentifyHm = {};
 		var $score = '0000';
 		var $scoreBoard;
-		var $pageBreak = 573;
+		var $pageBreak = 518;
 
 		var $hintTaken = 0;
 
@@ -274,6 +274,7 @@
 					    });
 					}
 
+					$(this).addClass('disabled');
 
 				}
 			});
@@ -332,7 +333,7 @@
 
 			var numofPages = Math.ceil((resumeHeight/$pageBreak)/2);
 
-			var pageCut = 573;
+			var pageCut = 518;
 
 			var start = 90;
 
