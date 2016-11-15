@@ -44,18 +44,30 @@
 					<p>A resume is a formal document that creates the first impression of the applicant on the person reading it.</p>
 					<p></p>
 				</div>
+				<div class="guideline-slide cover">
+					<span class="slide-close-btn"></span>
+					<h4>Grammar</h4>
+					<p>A resume is a formal document that creates the first impression of the applicant on the person reading it.</p>
+					<p></p>
+				</div>
 			</div>
 		</div>
 
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 		<script src="js/vendor/bootstrap.min.js"></script>
 		<script src="js/vendor/powerful-coverflow/jquery.coverflow.js"></script>
 		<script src="js/vendor/powerful-coverflow/jquery.interpolate.min.js"></script>
 		<script src="js/vendor/powerful-coverflow/jquery.touchSwipe.min.js"></script>
 		<script src="js/vendor/powerful-coverflow/reflection.js"></script>
-		<script src="js/main.js"></script>
 		<script>
-			$('.coverflow').coverflow();
+			$(function(){
+				$('.coverflow').coverflow({
+					outerAngle: -10,
+					outerScale: 0.75,
+					index: 2
+				});	
+			})
 		</script>
 	</body>
 </html>

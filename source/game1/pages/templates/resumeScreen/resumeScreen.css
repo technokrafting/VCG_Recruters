@@ -51,7 +51,7 @@
 .main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc-text{font-size: 14px; font-weight: normal; color: #fff;}
 
 /* Right Panel Resume */
-.red-text-bg{background-color: #b10000;}
+.red-text-bg{background-color: #b10000; color: #fff; padding: 1px 3px;}
 .element-click{border: 1px dashed #b10000;}
 .error-wrap{position: relative; display: inline-block;}
 .error-wrap .explanation{visibility:hidden; position: absolute; background-color: #12234a; width: 220px; color: #ffffff; top: -45px; z-index: 250; text-align: center; padding: 2px 7px;}
