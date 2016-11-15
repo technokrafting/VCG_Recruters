@@ -51,7 +51,11 @@
 .main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc-text{font-size: 14px; font-weight: normal; color: #fff;}
 
 /* Right Panel Resume */
-
+.red-text-bg{background-color: #b10000;}
+.element-click{border: 1px dashed #b10000;}
+.error-wrap{position: relative; display: inline-block;}
+.error-wrap .explanation{position: absolute; background-color: #12234a; width: 220px; color: #ffffff; top: -45px; z-index: 250; text-align: center; padding: 2px 7px;}
+.error-wrap .explanation.fade-in-out{animation: fade-in-out 3s 1; -webkit-animation: fade-in-out 3s 1;}
 .main-page-bg .main-content{width: 820px; height: 100%; position: absolute; left: 195px; top: 0; padding: 4px 10px 25px;}
 .main-page-bg .main-content .resume-div{width: 100%; height: calc(100% - 30px); background: url(../../../crops/main/bg_paper.png) 0 0 no-repeat; position: relative; padding: 50px 20px 0px;}
 .main-page-bg .main-content .blue-strip{height: 30px; background: #12234a; margin-right: -10px; margin-left: -12px;}
@@ -76,12 +80,12 @@
 #doneModal .modal-content .mistakes-ques-wrapper .radio-btn{width: 20px; height: 20px; background: url(../../../crops/main/radioBtn.png) 0 0 no-repeat; transform: scale(0.75,0.75); margin-right: 1px; vertical-align: bottom; margin-left: 3px;}
 #doneModal .modal-content .mistakes-ques-wrapper .radio-btn.selected{background-position: -40px 0px;}
 #doneModal .modal-content .mistakes-ques-wrapper .radio-btn:first-child{margin-left: 0px;}
-#doneModal .modal-content .done-modal-submit-btn{width: 103px; height: 52px; background: url(../../../crops/main/btn_done.png) 0 0px no-repeat; color: #fff; border: none; font-weight: bold; padding: 0px;}
+#doneModal .modal-content .done-modal-submit-btn{width: 103px; height: 52px; background: url(../../../crops/main/btn_done.png) 0 0px no-repeat; color: #fff; border: none; font-weight: bold; padding: 0px; font-size: 16px;}
 #doneModal .modal-content .done-modal-submit-btn:hover{background-position: 0 -54px;}
 #doneModal .modal-content .close-btn-wrapper{float: left;}
 #doneModal .modal-content .done-modal-close-btn{width: 97px; height: 52px; background: url(../../../crops/main/btn_done.png) -3px 0px no-repeat; color: #fff; border: none; font-weight: bold; padding: 0px;}
 #doneModal .modal-content .done-modal-close-btn:hover{background-position: -3px -54px;}
-#feedbackModal .feedback-modal-btn.continue{position: fixed; bottom: 10px; right: 25px; width: 117px; height: 44px; background: url(../../../crops/global/btn_continue.png) 0px 0px no-repeat; color: #fff; border: none; font-weight: bold;}
+#feedbackModal .feedback-modal-btn.continue{position: fixed; bottom: 30px; left: 0; right: 0; margin: auto; width: 117px; height: 44px; background: url(../../../crops/global/btn_continue.png) 0px 0px no-repeat; color: #fff; border: none; font-weight: bold;}
 #feedbackModal .feedback-modal-btn.continue:hover{background-position: 0 -44px;}
 #feedbackModal .feedback-modal-btn.continue .btn-text{line-height: 40px; font-size: 16px;}
 #feedbackModal .modal-content{width: 403px; height: 406px; background: url(../../../crops/main/feedback_postIt.png) 0 0 no-repeat; margin: 0 auto; padding-top: 25px;}
@@ -90,7 +94,7 @@
 #feedbackModal .modal-content .modal-body .score-star.star-1{background-position: 0px -66px;}
 #feedbackModal .modal-content .modal-body .score-star.star-2{background-position: 0px -132px;}
 #feedbackModal .modal-content .modal-body .score-star.star-3{background-position: 0px -198px;}
-#feedbackModal .modal-content .modal-title{font-size: 25px; font-weight: bold; margin-bottom: 10px;}
+#feedbackModal .modal-content .modal-title{font-size: 25px; font-weight: bold; margin-bottom: 5px;}
 #feedbackModal .mistakes-score-wrapper{padding: 0px 35px 0px 25px;}
 #feedbackModal .mistakes-score-wrapper .score-wrap{padding: 4px 15px; border-bottom: 1px solid #ccc;}
 #feedbackModal .mistakes-score-wrapper .score-wrap .score.labels{font-size: 16px; margin-top: 2px;}
@@ -98,3 +102,9 @@
 #feedbackModal .mistakes-score-wrapper .score-wrap.total{font-weight: bold; color: #0080ac; border-bottom: none;}
 #feedbackModal .mistakes-score-wrapper .score-wrap.total .score.labels{font-size: 18px; margin-top: 5px;}
 #feedbackModal .mistakes-score-wrapper .score-wrap.total .score.num{font-size: 25px;}
+@keyframes fade-in-out {
+    0%   {opacity: 0;}
+    25%  {opacity: 1;}
+    75%  {opacity: 1;}
+    100% {opacity: 0;}
+}
