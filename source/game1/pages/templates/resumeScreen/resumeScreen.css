@@ -54,7 +54,7 @@
 .red-text-bg{background-color: #b10000;}
 .element-click{border: 1px dashed #b10000;}
 .error-wrap{position: relative; display: inline-block;}
-.error-wrap .explanation{position: absolute; background-color: #12234a; width: 220px; color: #ffffff; top: -45px; z-index: 250; text-align: center; padding: 2px 7px;}
+.error-wrap .explanation{visibility:hidden; position: absolute; background-color: #12234a; width: 220px; color: #ffffff; top: -45px; z-index: 250; text-align: center; padding: 2px 7px;}
 .error-wrap .explanation.fade-in-out{animation: fade-in-out 3s 1; -webkit-animation: fade-in-out 3s 1;}
 .main-page-bg .main-content{width: 820px; height: 100%; position: absolute; left: 195px; top: 0; padding: 4px 10px 25px;}
 .main-page-bg .main-content .resume-div{width: 100%; height: calc(100% - 30px); background: url(../../../crops/main/bg_paper.png) 0 0 no-repeat; position: relative; padding: 50px 20px 0px;}
@@ -103,14 +103,14 @@
 #feedbackModal .mistakes-score-wrapper .score-wrap.total .score.labels{font-size: 18px; margin-top: 5px;}
 #feedbackModal .mistakes-score-wrapper .score-wrap.total .score.num{font-size: 25px;}
 @keyframes fade-in-out {
-    0%   {opacity: 0;}
+    0%   {opacity: 0;visibility: visible;}
     25%  {opacity: 1;}
     75%  {opacity: 1;}
-    100% {opacity: 0;}
+    100% {opacity: 0;visibility: hidden;}
 }
 @-webkit-keyframes fade-in-out {
-    0%   {opacity: 0;}
+    0%   {opacity: 0;visibility: visible;}
     25%  {opacity: 1;}
     75%  {opacity: 1;}
-    100% {opacity: 0;}
+    100% {opacity: 0;visibility: hidden;}
 }

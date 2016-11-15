@@ -173,7 +173,7 @@
 
 				var id = $(this).attr('index');
 
-				//console.log(id);
+				console.log(id);
 
 				var tempObj = $issuesToIdentifyHm[id];
 				//console.log('tempObj',tempObj);
@@ -183,7 +183,8 @@
 
 					//alert(id);
 
-					$('#explanation-'+id).show();
+					
+
 					$(this).addClass('red-text-bg');
 
 					tempObj.found = 1;
@@ -204,8 +205,26 @@
 					setScore();
 
 				}
+				else
+				{	
+					
+					
+					
+					//$('#explanation-'+id).show();
+					//$('#explanation-'+id).addClass('fade-in-out');
+				}
 				
 
+				$('#explanation-'+id).show();
+					
+					$('#explanation-'+id).addClass('fade-in-out');
+					var len = parseInt($('#explanation-'+id).css("animation-duration").split("s")[0])*1000;
+					console.log("anim dur: ", len);
+					setTimeout(function(){
+						$('#explanation-'+id).removeClass('fade-in-out');
+						
+					}, len);
+				
 				e.stopPropagation();
 
 
