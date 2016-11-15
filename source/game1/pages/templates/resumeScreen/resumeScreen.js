@@ -37,9 +37,6 @@
 
 			loadTemplateCss();
 
-
-			
-
 			renderTextElements(mainDivId,xml,eventObj,navController); //Call in utils.js
 
 
@@ -187,6 +184,7 @@
 					//alert(id);
 
 					$('#explanation-'+id).show();
+					$(this).addClass('red-text-bg');
 
 					tempObj.found = 1;
 
@@ -307,7 +305,6 @@
 			showFinalScore(questionScore);
 
 			});
-
 
 			loadPageSizeData();
 
