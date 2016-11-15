@@ -19,38 +19,56 @@
 	</head>
 	<body>
 		<div class="wrapper guidelines-wrapper">
+			<div class="close-guidelines-btn"></div>
+			<div class="carousel-nav-btn prev"></div>
 			<div class="coverflow" id="guidelines-carousel">
 				<div class="guideline-slide cover">
 					<span class="slide-close-btn"></span>
-					<h4>Grammar</h4>
+					<h4>Grammar1</h4>
 					<p>A resume is a formal document that creates the first impression of the applicant on the person reading it.</p>
 					<p></p>
+					<div class="guidelines-btn more text-center" role="button">
+						<span class="btn-text text-uppercase next-text-block">Show More</span>
+					</div>
 				</div>
 				<div class="guideline-slide cover">
 					<span class="slide-close-btn"></span>
-					<h4>Grammar</h4>
+					<h4>Grammar2</h4>
 					<p>A resume is a formal document that creates the first impression of the applicant on the person reading it.</p>
 					<p></p>
+					<div class="guidelines-btn more text-center" role="button">
+						<span class="btn-text text-uppercase next-text-block">Show More</span>
+					</div>
 				</div>
 				<div class="guideline-slide cover">
 					<span class="slide-close-btn"></span>
-					<h4>Grammar</h4>
+					<h4>Grammar3</h4>
 					<p>A resume is a formal document that creates the first impression of the applicant on the person reading it.</p>
 					<p></p>
+					<div class="guidelines-btn more text-center" role="button">
+						<span class="btn-text text-uppercase next-text-block">Show More</span>
+					</div>
 				</div>
 				<div class="guideline-slide cover">
 					<span class="slide-close-btn"></span>
-					<h4>Grammar</h4>
+					<h4>Grammar4</h4>
 					<p>A resume is a formal document that creates the first impression of the applicant on the person reading it.</p>
 					<p></p>
+					<div class="guidelines-btn more text-center" role="button">
+						<span class="btn-text text-uppercase next-text-block">Show More</span>
+					</div>
 				</div>
 				<div class="guideline-slide cover">
 					<span class="slide-close-btn"></span>
-					<h4>Grammar</h4>
+					<h4>Grammar5</h4>
 					<p>A resume is a formal document that creates the first impression of the applicant on the person reading it.</p>
 					<p></p>
+					<div class="guidelines-btn more text-center" role="button">
+						<span class="btn-text text-uppercase next-text-block">Show More</span>
+					</div>
 				</div>
 			</div>
+			<div class="carousel-nav-btn next"></div>
 		</div>
 
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
@@ -62,10 +80,14 @@
 		<script src="js/vendor/powerful-coverflow/reflection.js"></script>
 		<script>
 			$(function(){
-				$('.coverflow').coverflow({
-					outerAngle: -10,
-					outerScale: 0.75,
-					index: 2
+					$('.coverflow').coverflow({
+					outerAngle: -5,
+					outerScale: 0.8,
+					index: 2,
+					enableClick:true,
+					change:function(event,cover,index){
+						console.log(cover,":::",index)
+					}
 				});	
 			})
 		</script>

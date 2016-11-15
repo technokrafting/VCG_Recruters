@@ -51,3 +51,8 @@
 .menu-bg.final .final-screen .final-scr-btn.exit{background-image: url(images/btn_exit.png);}
 .menu-bg.final .final-screen .final-scr-btn:hover{background-position: 0 -44px;}
 .menu-bg.final .final-screen .final-scr-btn .btn-text{color: #fff; font-size: 16px; line-height: 40px; font-weight: bold;}
+
+/* Animation CSS */
+/*@keyframes move-left-right{
+	0%{transform: translate(-50px, 0);}
+}*/

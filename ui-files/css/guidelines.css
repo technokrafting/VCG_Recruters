@@ -1,3 +1,15 @@
 .guidelines-wrapper{background: url(../crops/guidelines/blueTint.png) 0 0 no-repeat;}
+.guidelines-wrapper .close-guidelines-btn{width: 28px; height: 28px; background-image: url(../crops/guidelines/btn_close.png); background-position: 0 0; background-repeat: no-repeat; position: absolute; right: 25px; top: 15px;}
+.guidelines-wrapper .close-guidelines-btn:hover{background-position: -28px 0px;}
+.guidelines-wrapper .carousel-nav-btn{width: 41px; height: 41px; background-image: url(../crops/guidelines/btn_nextBack.png); background-repeat: no-repeat; position: absolute; top: calc(50% - 20px);}
+.guidelines-wrapper .carousel-nav-btn.next{background-position: 0 0; right: 100px;}
+.guidelines-wrapper .carousel-nav-btn.next:hover{background-position: -41px 0px;}
+.guidelines-wrapper .carousel-nav-btn.next.disabled{background-position: -82px 0px;}
+.guidelines-wrapper .carousel-nav-btn.prev{background-position: 0 -41px; left: 100px;}
+.guidelines-wrapper .carousel-nav-btn.prev:hover{background-position: -41px -41px;}
+.guidelines-wrapper .carousel-nav-btn.prev.disabled{background-position: -82px -41px;}
 .guidelines-wrapper #guidelines-carousel{width: 639px; padding: 0px 15px; margin: 24px auto; position: relative;}
-.guidelines-wrapper .guideline-slide{width: 609px; height: 604px; background: url(../crops/guidelines/bg_guidlines.png) 0 0 no-repeat;}
+.guidelines-wrapper .guideline-slide{width: 609px; height: 604px; background: url(../crops/guidelines/bg_guidlines.png) 0 0 no-repeat; padding: 25px 40px;}
+.guidelines-btn{width: 101px; height: 30px; background-image: url(../crops/guidelines/btn-showMore.png); background-position: 0 0; background-repeat: no-repeat; position: absolute; bottom: 25px; left: 40px;}
+.guidelines-btn:hover{background-position: 0 -30px;}
+.guidelines-btn .btn-text{font-weight: bold; color: #fff; line-height: 28px;}
