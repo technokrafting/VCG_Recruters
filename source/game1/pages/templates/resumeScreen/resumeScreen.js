@@ -527,7 +527,7 @@
 
 			if(intScore < 800)
 			{
-				$('.score-star').addClass('0-star');
+				$('.score-star').addClass('star-0');
 			}
 
 			if(intScore >= 800 && intScore <= 899)
