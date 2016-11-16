@@ -184,7 +184,7 @@
 
 			  	 $issuesToIdentifyHm[index] = tempObj;
 
-			  	 //$('#incorrect-'+index).addClass('red-text-bg');
+			  	 $('#incorrect-'+index).addClass('red-text-bg');
 
 			  }
 
@@ -323,19 +323,15 @@
 						errorTop = errorTop;
 						console.log('errorTop',errorTop);
 
-						var section = getSectionByTop(errorTop);
-
-						var pageObj = $resumePagesObj[nextErrorIndex];
-
 						var scrollTo = 0;
 
-						scrollTo = errorTop - 150;
+						scrollTo = errorTop - 100;
 
 						console.log('scrollTo',scrollTo);
 
 						if(scrollTo >= -20 && scrollTo <= 20)
 						{
-							scrollAnimationComplete(nextErrorIndex);
+							scrollAnimationComplete(nextErrorIndex,scrollTo);
 						}
 						else
 						{
@@ -343,7 +339,7 @@
 					        scrollTop: scrollTo
 						    }, 1000, function(){
 
-						    	scrollAnimationComplete(nextErrorIndex);
+						    	scrollAnimationComplete(nextErrorIndex,scrollTo);
 
 						    });
 						}
@@ -416,18 +412,21 @@
 		}
 
 
-		function scrollAnimationComplete(nextErrorIndex)
+		function scrollAnimationComplete(nextErrorIndex, oldTop)
 		{
-			var elementPos = $('#incorrect-'+nextErrorIndex).offset().top;
-	    	elementPos = elementPos - 100;
+			//var elementPos = $('#incorrect-'+nextErrorIndex).offset().top;
+
+			//console.log('elementPos top ',elementPos);
+
+	    	//elementPos = elementPos - 100;
 
 	    	var hintClone = $('.hint-box-top').clone();
 			//hintClone.top = scrollTo;
 
 
-			hintClone.css('top',elementPos);
+			hintClone.css('top',oldTop);
 
-			console.log('elementPos',elementPos);
+			//console.log('elementPos',elementPos);
 
 			hintClone.removeClass('hide-element');
 
