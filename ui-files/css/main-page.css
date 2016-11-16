@@ -87,9 +87,13 @@
 #feedbackModal .modal-content .score-star.3-star{background-position: 0 -198px;}
 #feedbackModal .modal-content .modal-title{font-size: 25px; font-weight: bold; margin-bottom: 10px;}
 #feedbackModal .mistakes-score-wrapper{padding: 0px 35px 0px 25px;}
-#feedbackModal .mistakes-score-wrapper .score-wrap{padding: 4px 15px; border-bottom: 1px solid #ccc;}
+#feedbackModal .mistakes-score-wrapper .score-wrap{padding: 4px 15px; border-bottom: 1px solid #ccc; visibility: hidden;}
 #feedbackModal .mistakes-score-wrapper .score-wrap .score.labels{font-size: 16px; margin-top: 2px;}
 #feedbackModal .mistakes-score-wrapper .score-wrap .score.num{font-size: 18px; font-weight: bold;}
-#feedbackModal .mistakes-score-wrapper .score-wrap.total{font-weight: bold; color: #0080ac; border-bottom: none;}
+#feedbackModal .mistakes-score-wrapper .score-wrap.issues{animation-delay: 0s; -webkit-animation-delay: 0s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+#feedbackModal .mistakes-score-wrapper .score-wrap.missed{animation-delay: 0.8s; -webkit-animation-delay: 0.8s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+#feedbackModal .mistakes-score-wrapper .score-wrap.current{animation-delay: 1.6s; -webkit-animation-delay: 1.6s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+#feedbackModal .mistakes-score-wrapper .score-wrap.previous{animation-delay: 2.4s; -webkit-animation-delay: 2.4s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+#feedbackModal .mistakes-score-wrapper .score-wrap.total{font-weight: bold; color: #0080ac; border-bottom: none; animation-delay: 3.2s; -webkit-animation-delay: 3.2s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
 #feedbackModal .mistakes-score-wrapper .score-wrap.total .score.labels{font-size: 18px; margin-top: 5px;}
 #feedbackModal .mistakes-score-wrapper .score-wrap.total .score.num{font-size: 25px;}
