@@ -1,0 +1,8 @@
+.settings-wrapper{background: url(../../../crops/global/bg_setting.png) 0 0 no-repeat;}
+.settings-wrapper .settings-btn{width: 117px; height: 44px; background-position: 0 0; background-repeat: no-repeat; margin: 0 auto 7px; transform: translate(20px, 315px);}
+.settings-wrapper .settings-btn.exit{margin-bottom: 35px;}
+.settings-wrapper .settings-btn.btn-blue{background-image: url(../../../crops/global/btn_continue.png);}
+.settings-wrapper .settings-btn.btn-red{background-image: url(../../../crops/global/btn_exit.png);}
+.settings-wrapper .settings-btn.btn-green{background-image: url(../../../crops/global/btn_resume.png);}
+.settings-wrapper .settings-btn:hover{background-position: 0 -44px;}
+.settings-wrapper .settings-btn .settings-btn-label{line-height: 40px; color: #ffffff; font-size: 16px; font-weight: bold;}

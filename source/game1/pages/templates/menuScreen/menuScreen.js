@@ -46,6 +46,14 @@
 				$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
 
 			});
+
+			var settingsId = xml.find('settingsPageId').text();
+			$('.setting-div').on('click',function(){
+
+				var eventObjToSend = {"pageId":settingsId};
+				$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
+
+			});
 		}
 
 		function generateResumes(xml)

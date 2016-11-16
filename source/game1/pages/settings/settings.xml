@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page type="settingsScreen" loadIn="popup">
+
+
+	
+	
+
+	<iText><![CDATA[Select Close to Proceed]]></iText>
+	<closeButton id="page1"><![CDATA[Close]]></closeButton>
+
+
+</page>

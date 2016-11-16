@@ -22,7 +22,6 @@
 
 		var $previousScore = 0;
 
-		var $guidelinesPageId = '';
 
 		var init = function (xml,navController,eventObj,pageId)
 		{
@@ -59,7 +58,7 @@
 			$completedAttempts = 0;
 			$totalIssueIdentified = 0;
 
-			$guidelinesPageId = xml.find('guidelinesPageId').text();
+			
 
 			setIssueText();
 
@@ -71,9 +70,18 @@
 			loadResume();
 
 
+			var guidelinesPageId = xml.find('guidelinesPageId').text();
 			$('#resume-guidelines-btn').on('click',function(){
 
-				var eventObjToSend = {"pageId":$guidelinesPageId};
+				var eventObjToSend = {"pageId":guidelinesPageId};
+				$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
+
+			});
+
+			var settingsId = xml.find('settingsPageId').text();
+			$('.setting-div').on('click',function(){
+
+				var eventObjToSend = {"pageId":settingsId};
 				$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
 
 			});
