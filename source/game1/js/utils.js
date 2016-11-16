@@ -117,11 +117,12 @@ function renderTextElements(divId,xml,event,navigator)
 
  function setDelay(delay, callback)
     {
-        setTimeout(function(){
+        var t = setTimeout(function(){
             
             if(callback)
             {
                 callback();
+                clearTimeout(t);
             }
             
         }, delay);

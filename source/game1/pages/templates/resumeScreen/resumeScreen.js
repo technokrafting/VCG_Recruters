@@ -366,7 +366,11 @@
 
 				e.stopPropagation();
 
-				startResumeClick();
+				if($completedAttempts != $totalAttempts)
+				{
+					startResumeClick();
+				}
+				
 
 				$('#doneModal').modal('hide');
 
@@ -550,12 +554,14 @@
 
 					//alert('Game Over');
 
-					$('#questions-submit').click();
+					$('#done-btn').click();
 
-					$(this).off();
+					stopResumeClick();
+					//$(this).off();
+
 				}
 
-					var callout = $('.ok-popout').clone();
+					var callout = $('.ok-popout').eq(0).clone();
 
 					callout.css('top',clientY);
 					callout.css('left',clientX);
@@ -568,13 +574,14 @@
 
 					var len = parseInt(callout.css("animation-duration").split("s")[0])*1000;
 
-					console.log("anim dur 1: ", len);
-					setTimeout(function(){
+					setDelay(len,function(){
 
 						callout.removeClass('fade-in-out');
 						callout.addClass('hide-element');
-						
-					}, len);
+
+					});
+					console.log("anim dur 1: ", len);
+					
 
 				setProgressBar();
 
