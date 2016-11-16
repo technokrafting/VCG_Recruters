@@ -321,28 +321,56 @@
 						var errorTop = $('#incorrect-'+nextErrorIndex).offset().top;
 
 						errorTop = errorTop;
+
+						var parentScroll = $('#resume-content-container').offset().top;
+
+						if(parentScroll > errorTop)
+						{
+							errorTop = parentScroll - errorTop;
+						}
+						else
+						{
+							errorTop = errorTop - parentScroll;
+						}
+						
+
 						console.log('errorTop',errorTop);
 
 						var scrollTo = 0;
 
-						scrollTo = errorTop - 100;
+						scrollTo = errorTop;
 
 						console.log('scrollTo',scrollTo);
 
-						if(scrollTo >= -20 && scrollTo <= 20)
-						{
-							scrollAnimationComplete(nextErrorIndex,scrollTo);
-						}
-						else
-						{
-							$('.resume-content').animate({
+						// if(scrollTo >= -20 && scrollTo <= 20)
+						// {
+						// 	scrollAnimationComplete(nextErrorIndex,scrollTo);
+						// }
+						// else
+						// {
+							
+						// }
+
+						$('.resume-content').animate({
 					        scrollTop: scrollTo
 						    }, 1000, function(){
 
+
+						    	scrollTo = scrollTo;
 						    	scrollAnimationComplete(nextErrorIndex,scrollTo);
+						    	
+						    	// if(scrollTo < 0)
+						    	// {
+						    	// 	scrollTo = $('#resume-content-container').offset().top;
+						    	// 	scrollAnimationComplete(nextErrorIndex,scrollTo);
+						    	// }
+						    	// else
+						    	// {
+						    		
+						    	// }
+						    	
 
 						    });
-						}
 						
 					}
 
@@ -483,7 +511,7 @@
 
 			  setPageSection(section);
 
-			  //console.log('section', section);
+			  //console.log('top Page', top);
 
 
 			});
