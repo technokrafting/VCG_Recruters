@@ -49,6 +49,8 @@
 .main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.guidelines{top: 560px;}
 .main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc-title{font-size: 16px; font-weight: bold; color: #9acbdd;}
 .main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc-text{font-size: 14px; font-weight: normal; color: #fff;}
+.main-page-bg.info-tint .label-arrow-bg{width: 99px; height: 100%; background: url(../../../crops/howToPlay/pointers.png) center center no-repeat; margin-left: -15px;}
+.main-page-bg.info-tint .challenge-note{width: 302px; height: 302px; position: absolute; right: 15px; top: calc(50% - 151px); background: url(../../../crops/howToPlay/bluePostit.png) 0 0 no-repeat;}
 
 /* Right Panel Resume */
 .red-text-bg{background-color: #b10000; color: #fff; padding: 1px 3px;}
@@ -60,13 +62,11 @@
 .main-page-bg .main-content .resume-div{width: 100%; height: calc(100% - 30px); background: url(../../../crops/main/bg_paper.png) 0 0 no-repeat; position: relative; padding: 50px 20px 0px;}
 .main-page-bg .main-content .blue-strip{height: 30px; background: #12234a; margin-right: -10px; margin-left: -12px;}
 .main-page-bg .main-content .resume-div .paper-fold{position: absolute; width: 118px; height: 106px; background: url(../../../crops/main/bg_paper_corner.png) 0 0 no-repeat; right: 0; top: 0; z-index: 100;}
-.main-page-bg .main-content .resume-div .resume-content{width: 100%; height: 100%; padding: 25px; padding-left: 15px; border: 2px solid #9da2a2; border-left: 15px solid #9da2a2; border-bottom: none; position: relative; overflow: auto;}
+.main-page-bg .main-content .resume-div .resume-content{width: 100%; height: 100%; padding: 25px; padding-left: 15px; border: 2px solid #9da2a2; border-left: 15px solid #9da2a2; border-bottom: none; position: relative; overflow: auto; overflow-x: hidden;}
 .main-page-bg .main-content .resume-div .resume-content .ok-popout{width: 90px; height: 57px; background: url(../../../crops/main/pointer_ok.png) 0 0 no-repeat;  position: absolute; top: 0; left: 0;}
 .main-page-bg .main-content .resume-div .resume-content .ok-popout .ok-text{color: #fff; line-height: 37px;}
 .main-page-bg .main-content .resume-div .resume-content .hint-box-top{width: 100%; height: 50%; position: absolute; z-index: 0; border: 2px solid #b10000; background: url(../../../crops/main/Icon_hintOnPage.png) 0 0 no-repeat; left: 0px; top: 0px; pointer-events: none}
 .main-page-bg .main-content .resume-div .resume-content .hint-box-bottom{width: 100%; height: 50%; position: absolute; z-index: 0; border: 2px solid #b10000; background: url(../../../crops/main/Icon_hintOnPage.png) 0 0 no-repeat; left: 0px; top: 0px;}
-.main-page-bg.info-tint .label-arrow-bg{width: 99px; height: 100%; background: url(../../../crops/howToPlay/pointers.png) center center no-repeat; margin-left: -15px;}
-.main-page-bg.info-tint .challenge-note{width: 302px; height: 302px; position: absolute; right: 15px; top: calc(50% - 151px); background: url(../../../crops/howToPlay/bluePostit.png) 0 0 no-repeat;}
 .main-page-bg .main-content .btn-done{width: 103px; height: 52px; background: url(../../../crops/main/btn_done.png) 0 0px no-repeat; color: #fff; position: absolute; border: none; font-weight: bold; font-size: 18px; bottom: 2px; right: 5px;}
 .main-page-bg .main-content .btn-done:hover{background-position: 0 -54px;}
 .modal-content{border: none; box-shadow: none;}
@@ -85,7 +85,7 @@
 #doneModal .modal-content .close-btn-wrapper{float: left;}
 #doneModal .modal-content .done-modal-close-btn{width: 97px; height: 52px; background: url(../../../crops/main/btn_done.png) -3px 0px no-repeat; color: #fff; border: none; font-weight: bold; padding: 0px;}
 #doneModal .modal-content .done-modal-close-btn:hover{background-position: -3px -54px;}
-#feedbackModal .feedback-modal-btn.continue{position: fixed; bottom: 30px; left: 0; right: 0; margin: auto; width: 117px; height: 44px; background: url(../../../crops/global/btn_continue.png) 0px 0px no-repeat; color: #fff; border: none; font-weight: bold;}
+#feedbackModal .feedback-modal-btn.continue{visibility: hidden; position: fixed; bottom: 30px; left: 0; right: 0; margin: auto; width: 117px; height: 44px; background: url(../../../crops/global/btn_continue.png) 0px 0px no-repeat; color: #fff; border: none; font-weight: bold; animation-delay: 4s; -webkit-animation-delay: 4s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
 #feedbackModal .feedback-modal-btn.continue:hover{background-position: 0 -44px;}
 #feedbackModal .feedback-modal-btn.continue .btn-text{line-height: 40px; font-size: 16px;}
 #feedbackModal .modal-content{width: 403px; height: 406px; background: url(../../../crops/main/feedback_postIt.png) 0 0 no-repeat; margin: 0 auto; padding-top: 25px;}
