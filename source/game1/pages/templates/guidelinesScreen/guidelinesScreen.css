@@ -1,0 +1,27 @@
+#popupContent{
+
+float:left;
+margin-left:0px;
+margin-top:0%;
+
+}
+
+#popupHeader
+{
+	color:#3c3b3c;
+}
+
+
+#popupFooter {
+  position: absolute;
+  top: 505px;
+  left: 820px;
+}
+
+.quesPopupIText {
+  position: absolute;
+  left: -450px;
+}
+
+
+

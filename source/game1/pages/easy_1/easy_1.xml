@@ -6,6 +6,7 @@
 	<issuesToFind>7</issuesToFind>
 	<resumeHtml>resume.html</resumeHtml>
 
+	<guidelinesPageId>guidelines</guidelinesPageId>
 
 	<nextButton pageId="menu"><![CDATA[Continue]]></nextButton>
 

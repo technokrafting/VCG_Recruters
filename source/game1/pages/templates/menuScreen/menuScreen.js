@@ -37,6 +37,15 @@
 			generateResumes(xml);
 
 			getData();
+
+
+			var guidelinesId = xml.find('guidelinesPageId').text();
+			$('.menu-icon-brochure').on('click',function(){
+
+				var eventObjToSend = {"pageId":guidelinesId};
+				$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
+
+			});
 		}
 
 		function generateResumes(xml)

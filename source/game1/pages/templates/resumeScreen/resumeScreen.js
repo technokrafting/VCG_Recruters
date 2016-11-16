@@ -22,6 +22,8 @@
 
 		var $previousScore = 0;
 
+		var $guidelinesPageId = '';
+
 		var init = function (xml,navController,eventObj,pageId)
 		{
 
@@ -43,6 +45,8 @@
 			$progressBar = $('.progress-bg');
 			$scoreBoard = $('.score-count');
 
+			
+
 			renderData(xml);
 			
 
@@ -55,6 +59,8 @@
 			$completedAttempts = 0;
 			$totalIssueIdentified = 0;
 
+			$guidelinesPageId = xml.find('guidelinesPageId').text();
+
 			setIssueText();
 
 			setProgressBar();
@@ -63,6 +69,14 @@
 
 
 			loadResume();
+
+
+			$('#resume-guidelines-btn').on('click',function(){
+
+				var eventObjToSend = {"pageId":$guidelinesPageId};
+				$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
+
+			});
 
 			console.log($totalAttempts);
 		}
