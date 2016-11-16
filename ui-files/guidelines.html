@@ -85,32 +85,29 @@
 					outerScale: 0.8,
 					index: 2,
 					enableClick:true,
+					enableKeyboard: true,
 					change:function(event,cover,index){
 						console.log(cover,":::",index)
 						console.log("max index = ",$('#guidelines-carousel .cover').length);
 						//var currIndex = $(".coverflow").coverflow('index');
 						var maxIndex = $('#guidelines-carousel .cover').length - 1;
 						if(index>0){
+							$('.carousel-nav-btn.prev').removeClass('disabled');
 							$('.carousel-nav-btn.prev').click(function(){
 								$(".coverflow").coverflow('index',index-1);
 							});
 						}
 						if(index<maxIndex){
+							$('.carousel-nav-btn.next').removeClass('disabled');
 							$('.carousel-nav-btn.next').click(function(){
 								$(".coverflow").coverflow('index',index+1);
 							});
 						}
 						if(index == 0){
 							$('.carousel-nav-btn.prev').addClass('disabled');
-							$('.carousel-nav-btn.next').click(function(){
-								$('.carousel-nav-btn.prev').removeClass('disabled');
-							})
 						}
 						if(index == maxIndex){
 							$('.carousel-nav-btn.next').addClass('disabled');
-							$('.carousel-nav-btn.prev').click(function(){
-								$('.carousel-nav-btn.next').removeClass('disabled');
-							});
 						}
 					}
 				});

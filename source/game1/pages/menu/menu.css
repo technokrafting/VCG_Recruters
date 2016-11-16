@@ -8,10 +8,10 @@
 .menu-bg .anim-div{display: inline-block; position: relative; height: 100%; width: 550px; left: 463px;}
 .menu-bg .anim-div .resume-hand{position: absolute; visibility: hidden;}
 .menu-bg .anim-div .resume-hand.hand1{width: 400px; height: 300px; background: url(images/hand1.png) 0 0 no-repeat; top: 45px; left: -232px; transform: scale(0.9, 0.9); animation: left-right-move 0.6s 1 forwards; -webkit-animation: left-right-move 0.6s 1 forwards;}
-.menu-bg .anim-div .resume-hand.hand2{width: 220px; height: 352px; background: url(images/hand2.png) 0px 0px no-repeat; top: -23px; left: 115px; transform: scale(0.9, 0.9); animation: up-down-move 0.6s 0.6s 1 forwards; -webkit-animation: up-down-move 0.6s 0.6s 1 forwards;}
-.menu-bg .anim-div .resume-hand.hand3{width: 290px; height: 338px; background: url(images/hand3.png) 0px 0px no-repeat; top: 20px; right: -50px; transform: scale(0.9, 0.9); animation: right-left-move 0.6s 1.2s 1 forwards; -webkit-animation: right-left-move 0.6s 1.2s 1 forwards;}
-.menu-bg .anim-div .resume-hand.hand4{width: 324px; height: 376px; background: url(images/hand4.png) 0px top no-repeat; bottom: -25px; left: -57px; transform: scale(0.9, 0.9); animation: left-right-diagonal 0.6s 1.8s 1 forwards; -webkit-animation: left-right-diagonal 0.6s 1.8s 1 forwards;}
-.menu-bg .anim-div .resume-hand.hand5{width: 282px; height: 347px; background: url(images/hand5.png) 0px top no-repeat; bottom: -25px; right: 0px; transform: scale(0.9, 0.9); animation: down-up-move 0.6s 2.4s 1 forwards; -webkit-animation: down-up-move 0.6s 2.4s 1 forwards;}
+.menu-bg .anim-div .resume-hand.hand2{width: 220px; height: 352px; background: url(images/hand2.png) 0px 0px no-repeat; top: -23px; left: 115px; transform: scale(0.9, 0.9); animation: up-down-move 0.6s 0.4s 1 forwards; -webkit-animation: up-down-move 0.6s 0.4s 1 forwards;}
+.menu-bg .anim-div .resume-hand.hand3{width: 290px; height: 338px; background: url(images/hand3.png) 0px 0px no-repeat; top: 20px; right: -50px; transform: scale(0.9, 0.9); animation: right-left-move 0.6s 0.8s 1 forwards; -webkit-animation: right-left-move 0.6s 0.8s 1 forwards;}
+.menu-bg .anim-div .resume-hand.hand4{width: 324px; height: 376px; background: url(images/hand4.png) 0px top no-repeat; bottom: -25px; left: -57px; transform: scale(0.9, 0.9); animation: left-right-diagonal 0.6s 1.2s 1 forwards; -webkit-animation: left-right-diagonal 0.6s 1.2s 1 forwards;}
+.menu-bg .anim-div .resume-hand.hand5{width: 282px; height: 347px; background: url(images/hand5.png) 0px top no-repeat; bottom: -25px; right: 0px; transform: scale(0.9, 0.9); animation: down-up-move 0.6s 1.6s 1 forwards; -webkit-animation: down-up-move 0.6s 1.6s 1 forwards;}
 .menu-bg .anim-div .resume-hand.hand1.star-1{background-position: -400px 0px;}
 .menu-bg .anim-div .resume-hand.hand2.star-1{background-position: -220px 0px;}
 .menu-bg .anim-div .resume-hand.hand3.star-1{background-position: -290px 0px;}
