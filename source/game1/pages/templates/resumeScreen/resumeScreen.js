@@ -91,8 +91,12 @@
 			
 			$('#resume-content-container').load("pages/"+$pageId+"/resume.html",function(){
 
-			
+
+
 			loadResumeData();
+
+			
+
 		});
 
 		}
@@ -158,6 +162,8 @@
 
 			  	 $issuesToIdentifyHm[index] = tempObj;
 
+			  	 $('#incorrect-'+index).addClass('red-text-bg');
+
 			  }
 
 			});
@@ -173,7 +179,7 @@
 
 				var id = $(this).attr('index');
 
-				console.log(id);
+				//console.log(id);
 
 				var tempObj = $issuesToIdentifyHm[id];
 				//console.log('tempObj',tempObj);
@@ -189,9 +195,6 @@
 
 					tempObj.found = 1;
 
-					setIssueText();
-
-
 					var intScore = parseInt($score);
 					intScore = intScore + 100;
 
@@ -202,12 +205,58 @@
 					}
 
 					$score = intScore;
-					setScore();
+
+
+					var elementOffset = $(this).offset();
+
+					var exclamationClone = $('.answer-exclamation').clone();
+					//hintClone.top = scrollTo;
+					exclamationClone.removeClass('hide-element');
+
+					exclamationClone.css('top',elementOffset.top - 10);
+					exclamationClone.css('left',elementOffset.left - 50);
+
+					$('body').append(exclamationClone);
+
+					$('#explanation-'+id).show();
+					
+					$('#explanation-'+id).addClass('fade-in-out');
+					
+					var len = parseInt($('#explanation-'+id).css("animation-duration").split("s")[0])*1000;
+
+
+					setDelay(len, function(){
+
+						$('#explanation-'+id).removeClass('fade-in-out');
+					
+					});
+
+					exclamationClone.addClass('animate-exclamation');
+					setDelay(400,function(){
+
+								setScore();
+								setIssueText();
+
+								exclamationClone.removeClass().empty();
+
+						});
 
 				}
 				else
 				{	
 					
+					$('#explanation-'+id).show();
+					
+					$('#explanation-'+id).addClass('fade-in-out');
+					
+					var len = parseInt($('#explanation-'+id).css("animation-duration").split("s")[0])*1000;
+
+					setDelay(len, function(){
+
+						$('#explanation-'+id).removeClass('fade-in-out');
+					});
+
+					console.log("anim dur: ", len);
 					
 					
 					//$('#explanation-'+id).show();
@@ -215,15 +264,7 @@
 				}
 				
 
-				$('#explanation-'+id).show();
-					
-					$('#explanation-'+id).addClass('fade-in-out');
-					var len = parseInt($('#explanation-'+id).css("animation-duration").split("s")[0])*1000;
-					console.log("anim dur: ", len);
-					setTimeout(function(){
-						$('#explanation-'+id).removeClass('fade-in-out');
-						
-					}, len);
+				
 				
 				e.stopPropagation();
 
@@ -299,9 +340,13 @@
 
 			});
 
-			$('#back-btn').on('click',function(){
+			$('#back-btn').on('click',function(e){
+
+				e.stopPropagation();
 
 				startResumeClick();
+
+				$('#doneModal').modal('hide');
 
 			});
 
@@ -327,7 +372,20 @@
 
 			loadPageSizeData();
 
-			startResumeClick();
+
+			$('.main-page-bg').removeClass('resume');
+			$('.main-page-bg').addClass('info-tint');
+
+			$('.challenge-continue-btn').on('click',function(){
+
+
+				$('.main-page-bg').removeClass('info-tint');
+				$('.main-page-bg').addClass('resume');
+				startResumeClick();
+
+			});
+
+			
 
 		}
 
@@ -455,7 +513,7 @@
 		{
 			$('#resume-content-container').on('click',function(e){
 
-				//console.log(e);
+				console.log(e);
 				var top = $(this).offset().top;
 
 				var clientX = e.clientX - 275;
@@ -475,14 +533,26 @@
 					$(this).off();
 				}
 
-				var callout = $('.ok-popout').clone();
+					var callout = $('.ok-popout').clone();
 
 					callout.css('top',clientY);
 					callout.css('left',clientX);
 
 					callout.removeClass('hide-element');
+					callout.addClass('fade-in-out');
+
 
 					$(this).append(callout);
+
+					var len = parseInt(callout.css("animation-duration").split("s")[0])*1000;
+
+					console.log("anim dur 1: ", len);
+					setTimeout(function(){
+
+						callout.removeClass('fade-in-out');
+						callout.addClass('hide-element');
+						
+					}, len);
 
 				setProgressBar();
 
@@ -491,6 +561,7 @@
 
 		function stopResumeClick()
 		{
+			console.log('stopResumeClick');
 			$('#resume-content-container').off();
 		}
 

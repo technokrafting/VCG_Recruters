@@ -115,6 +115,17 @@ function renderTextElements(divId,xml,event,navigator)
    
 }
 
+ function setDelay(delay, callback)
+    {
+        setTimeout(function(){
+            
+            if(callback)
+            {
+                callback();
+            }
+            
+        }, delay);
+    }
 
 
 
@@ -180,6 +191,7 @@ function Timer(){
         var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]); 
         timerCounter = seconds;
     }
+
 
 }
 

@@ -55,7 +55,7 @@
 .element-click{border: 1px dashed #b10000;}
 .error-wrap{position: relative; display: inline-block;}
 .error-wrap .explanation{visibility:hidden; position: absolute; background-color: #12234a; width: 220px; color: #ffffff; top: -45px; z-index: 250; text-align: center; padding: 2px 7px;}
-.error-wrap .explanation.fade-in-out{animation: fade-in-out 3s 1; -webkit-animation: fade-in-out 3s 1;}
+.fade-in-out{animation: fade-in-out 3s 1 forwards; -webkit-animation: fade-in-out 3s 1 forwards;}
 .main-page-bg .main-content{width: 820px; height: 100%; position: absolute; left: 195px; top: 0; padding: 4px 10px 25px;}
 .main-page-bg .main-content .resume-div{width: 100%; height: calc(100% - 30px); background: url(../../../crops/main/bg_paper.png) 0 0 no-repeat; position: relative; padding: 50px 20px 0px;}
 .main-page-bg .main-content .blue-strip{height: 30px; background: #12234a; margin-right: -10px; margin-left: -12px;}
@@ -117,4 +117,19 @@
     25%  {opacity: 1;}
     75%  {opacity: 1;}
     100% {opacity: 0;visibility: hidden;}
+}
+.answer-exclamation{
+	position: fixed;    
+	width: 43px;
+    height: 43px;
+    display: inline-block;
+    background: url(../../../crops/main/Icon_issue.png) left top no-repeat;
+    margin-right: 3px;}
+
+.animate-exclamation {
+  position:fixed;
+  top:224px !important;
+  left:50px !important;
+    -moz-transition: all 0.4s ease;
+        transition: all 0.4s ease;
 }
