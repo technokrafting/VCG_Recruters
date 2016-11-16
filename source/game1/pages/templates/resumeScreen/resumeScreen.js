@@ -184,7 +184,7 @@
 
 			  	 $issuesToIdentifyHm[index] = tempObj;
 
-			  	 $('#incorrect-'+index).addClass('red-text-bg');
+			  	 //$('#incorrect-'+index).addClass('red-text-bg');
 
 			  }
 
