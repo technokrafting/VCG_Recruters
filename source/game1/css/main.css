@@ -9,17 +9,31 @@ body{width: 1014px; height: 652px; font-family: Arial;}
 .wrapper{width: 1014px; height: 652px; overflow: hidden; position: absolute; left: 0; right: 0; background: none;}
 .setting-div{width: 45px; height: 45px; background: url(../crops/global/btn_setting.png) 0 0 no-repeat; z-index: 2000; position: absolute; right: 0px;}
 .setting-div:hover{background-position: -45px 0px;}
+.hide-element{display:none !important;}
+.infinite-glow{animation-name: infinite-glow; animation-duration: 1.5s; animation-iteration-count:infinite;}
 
-.splash-bg{background: url(../crops/splash/bg_splash.png) left top no-repeat; background-size: cover; overflow: hidden; padding-top: 30px;}
+@keyframes infinite-glow{
+	0%   {box-shadow: none; border-radius: 5px;}
+	50%  {box-shadow: 0 0 10px #fff inset;}
+	100% {box-shadow: none; border-radius: 5px;}
+}
+
+@-webkit-keyframes infinite-glow{
+	0%   {box-shadow: none; border-radius: 5px;}
+	50%  {box-shadow: 0 0 10px #fff inset;}
+	100% {box-shadow: none; border-radius: 5px;}
+}
+
+/*.splash-bg{background: url(../crops/splash/bg_splash.png) left top no-repeat; background-size: cover; overflow: hidden; padding-top: 30px;}
 .splash-bg .vcg-header-logo{width: 100%; height: 81px; overflow: hidden;}
 .splash-bg .anim-div{margin-top: 35px;}
 .splash-bg .anim-div img{margin: 0 auto; display: block; width: 400px;}
 .enter-btn-wrap{width: 400px; margin: 5px auto 0px;}
 .btn-small{width: 103px; height: 51px; background: url(../crops/main/btn_done.png) 0 3px; border: none; color: #fff;}
-.btn-small:hover{background-position: 0 58px;}
+.btn-small:hover{background-position: 0 58px;}*/
 
 /* Menu Page */
-.menu-bg{background: url(../crops/menu/bg_wood.png) left top no-repeat; background-size: initial; overflow: hidden; z-index: 0;}
+/*.menu-bg{background: url(../crops/menu/bg_wood.png) left top no-repeat; background-size: initial; overflow: hidden; z-index: 0;}
 .menu-bg .menu-div{width: 464px; height: 100%; padding: 100px 50px 75px; color: #fff; background: url(../crops/menu/bluePatch.png) top left no-repeat; z-index: 10; display: inline-block; top: 0; position: absolute;}
 .menu-div .heading{margin-bottom: 25px;}
 .menu-bg .menu-div .menu-upper{width: 225px;}
@@ -49,10 +63,10 @@ body{width: 1014px; height: 652px; font-family: Arial;}
 .menu-bg .anim-div .resume-hand.hand2.locked{background-position: -880px 0px;}
 .menu-bg .anim-div .resume-hand.hand3.locked{background-position: -1160px 0px;}
 .menu-bg .anim-div .resume-hand.hand4.locked{background-position: -1296px 0px;}
-.menu-bg .anim-div .resume-hand.hand5.locked{background-position: -1128px 0px;}
+.menu-bg .anim-div .resume-hand.hand5.locked{background-position: -1128px 0px;}*/
 
 /* Main Page */
-.main-page-bg{background: url(../crops/menu/bg_wood.png) 0 0 no-repeat; z-index: 0;}
+/*.main-page-bg{background: url(../crops/menu/bg_wood.png) 0 0 no-repeat; z-index: 0;}
 .main-page-bg .left-panel{background: url(../crops/main/bg_leftPanel.png); z-index: 10; width: 194px; height: 652px; padding: 15px 0px;}
 .main-page-bg .left-panel .left-panel-wrapper{margin: 0 auto; margin-bottom: 11px;}
 .main-page-bg .ink-remaining-wrapper{width: 140px; height: 55px; margin: 0 auto 25px; background: url(../crops/main/inkSlot.png) left bottom no-repeat; position: relative;}
@@ -71,5 +85,4 @@ body{width: 1014px; height: 652px; font-family: Arial;}
 .main-page-bg .hint-wrapper .hint-btn{width: 53px; height: 55px; margin: 0 auto; background: url(../crops/main/MagnifyingGlass.png) -3px 0 no-repeat;}
 .main-page-bg .hint-wrapper .hint-btn.disabled{background-position: -3px -56px;}
 .main-page-bg .guidelines-wrapper .guidelines-btn{width: 122px; height: 65px; border: none; word-wrap: break-word; color: #fff; font-size: 16px; background: url(../crops/menu/btn_guidlines.png) 0 0 no-repeat;}
-.main-page-bg .guidelines-wrapper .guidelines-btn:hover{background-position: 0px -70px;}
-.hide-element{display:none !important;}
+.main-page-bg .guidelines-wrapper .guidelines-btn:hover{background-position: 0px -70px;}*/
