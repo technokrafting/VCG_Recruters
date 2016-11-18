@@ -94,6 +94,7 @@
 					//console.log('i = ',i);
 					if(i > 99){
 						clearInterval(t);
+						$('.enter-btn-wrap').addClass('appear');
 					}
 					else{
 						$('.anim-div .splash-animation img').removeClass("active");

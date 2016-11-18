@@ -41,5 +41,7 @@
 .splash-bg .anim-div{margin-top: 35px;}
 .splash-bg .anim-div img{margin: 0 auto; display: block; width: 400px;}
 .splash-bg .enter-btn-wrap{width: 400px; margin: 5px auto 0px;}
-.splash-bg .btn-small{width: 103px; height: 51px; background: url(../../crops/main/btn_done.png) 0 3px; border: none; color: #fff;}
-.splash-bg .btn-small:hover{background-position: 0 58px;}
+.splash-bg .btn-small{width: 93px; height: 44px; background: url(../../crops/main/btn_done.png) 0 0; border: none; color: #fff;}
+.splash-bg .btn-small:hover{background-position: 0 -44px;}
+.splash-bg #nextButton{display: inline-block; text-align: center; font-weight: bold; font-size: 16px;}
+.splash-bg #nextButton .btn-text{line-height: 40px;}

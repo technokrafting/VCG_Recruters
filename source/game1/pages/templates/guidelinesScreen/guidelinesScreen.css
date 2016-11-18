@@ -23,5 +23,7 @@ margin-top:0%;
   left: -450px;
 }
 
-
+.cover.current{
+	box-shadow: rgb(199, 208, 216) 0px 0px 6px 0px;
+}
 

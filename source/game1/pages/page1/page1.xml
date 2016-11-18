@@ -3,7 +3,7 @@
 
 
 	
-	<nextButton pageId="menu"><![CDATA[Enter]]></nextButton>
+	<nextButton pageId="menu"><![CDATA[<span class="btn-text">Enter</span>]]></nextButton>
 
 
 </page>

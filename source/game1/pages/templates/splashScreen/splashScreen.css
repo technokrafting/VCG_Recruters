@@ -15,3 +15,5 @@ margin-top:12%;
 }
 
 */
+.splash-bg .enter-btn-wrap{display: none; transition: display 0.8s;}
+.splash-bg .enter-btn-wrap.appear{display: block;}
