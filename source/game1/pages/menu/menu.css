@@ -1,12 +1,12 @@
 /* Menu Page */
 .menu-bg .final-screen{display: none;}
 .menu-bg{background: url(images/bg_wood.png) left top no-repeat; background-size: initial; overflow: hidden; z-index: 0;}
-.menu-bg .menu-div{width: 464px; height: 100%; padding: 100px 50px 75px; color: #fff; background: url(images/bluePatch.png) top left no-repeat; z-index: 10; display: inline-block; top: 0; position: absolute;}
-.menu-div .heading{margin-bottom: 25px;}
+.menu-bg .menu-div{width: 464px; height: 100%; padding: 75px 30px; color: #fff; background: url(images/bluePatch.png) top left no-repeat; z-index: 10; display: inline-block; top: 0; position: absolute;}
+.menu-div .heading{margin-bottom: 20px;}
 .menu-bg .menu-div .menu-upper{width: 225px;}
 .menu-bg .menu-div .menu-icon-brochure{width: 111px; height: 142px; background: url(images/icon_brochure.png) 0 0 no-repeat;}
 .menu-bg .anim-div{display: inline-block; position: relative; height: 100%; width: 550px; left: 463px;}
-.menu-bg .anim-div .resume-hand{position: absolute; visibility: hidden;}
+.menu-bg .anim-div .resume-hand{position: absolute; visibility: hidden; cursor: pointer;}
 .menu-bg .anim-div .resume-hand.hand1{width: 400px; height: 300px; background: url(images/hand1.png) 0 0 no-repeat; top: 45px; left: -232px; transform: scale(0.9, 0.9); animation: left-right-move 0.6s 1 forwards; -webkit-animation: left-right-move 0.6s 1 forwards;}
 .menu-bg .anim-div .resume-hand.hand2{width: 220px; height: 352px; background: url(images/hand2.png) 0px 0px no-repeat; top: -23px; left: 115px; transform: scale(0.9, 0.9); animation: up-down-move 0.6s 0.4s 1 forwards; -webkit-animation: up-down-move 0.6s 0.4s 1 forwards;}
 .menu-bg .anim-div .resume-hand.hand3{width: 290px; height: 338px; background: url(images/hand3.png) 0px 0px no-repeat; top: 20px; right: -50px; transform: scale(0.9, 0.9); animation: right-left-move 0.6s 0.8s 1 forwards; -webkit-animation: right-left-move 0.6s 0.8s 1 forwards;}
@@ -32,6 +32,8 @@
 .menu-bg .anim-div .resume-hand.hand3.locked{background-position: -1160px 0px;}
 .menu-bg .anim-div .resume-hand.hand4.locked{background-position: -1296px 0px;}
 .menu-bg .anim-div .resume-hand.hand5.locked{background-position: -1128px 0px;}
+.menu-bg .anim-div .resume-hand.locked, .menu-bg .anim-div .resume-hand.star-1,
+.menu-bg .anim-div .resume-hand.star-2, .menu-bg .anim-div .resume-hand.star-3{cursor: default;}
 
 /* Final Feedback Screen */
 .menu-bg.final .final-screen{display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: rgba(0,0,0,0.85); z-index: 1000;}
