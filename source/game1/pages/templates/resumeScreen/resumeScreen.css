@@ -44,9 +44,9 @@
 .main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.ink{top: 20px;}
 .main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.score{top: 120px;}
 .main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.issues-found{top: 220px;}
-.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.current-location{top: 340px;}
-.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.hint{top: 455px;}
-.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.guidelines{top: 560px;}
+.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.current-location{top: 330px;}
+.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.hint{top: 440px;}
+.main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc.guidelines{top: 570px;}
 .main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc-title{font-size: 16px; font-weight: bold; color: #9acbdd;}
 .main-page-bg.info-tint .arrow-desc-wrapper .arrow-desc-text{font-size: 14px; font-weight: normal; color: #fff;}
 .main-page-bg.info-tint .label-arrow-bg{width: 99px; height: 100%; background: url(../../../crops/howToPlay/pointers.png) center center no-repeat; margin-left: -15px;}

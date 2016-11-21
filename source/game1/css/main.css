@@ -14,13 +14,13 @@ body{width: 1014px; height: 652px; font-family: Arial;}
 
 @keyframes infinite-glow{
 	0%   {box-shadow: none; border-radius: 5px;}
-	50%  {box-shadow: 0 0 10px #fff inset;}
+	50%  {box-shadow: 0 0 10px #31c2ca inset;}
 	100% {box-shadow: none; border-radius: 5px;}
 }
 
 @-webkit-keyframes infinite-glow{
 	0%   {box-shadow: none; border-radius: 5px;}
-	50%  {box-shadow: 0 0 10px #fff inset;}
+	50%  {box-shadow: 0 0 10px #31c2ca inset;}
 	100% {box-shadow: none; border-radius: 5px;}
 }
 
