@@ -596,6 +596,8 @@
 					callout.removeClass('hide-element');
 					callout.addClass('fade-in-out');
 
+					addCirleMark(clientY,clientX);
+
 
 					$(this).append(callout);
 
@@ -619,6 +621,20 @@
 		{
 			console.log('stopResumeClick');
 			$('#resume-content-container').off();
+		}
+
+		function addCirleMark(top,left)
+		{
+			var circle = $('.click-mark-circle').eq(0).clone();
+
+			circle.css('top',top + 25);
+			circle.css('left',left);
+
+			circle.removeClass('hide-element');
+			//circle.addClass('fade-in-out');
+
+
+			$('#resume-content-container').append(circle);
 		}
 
 		function getSectionByTop(top)
