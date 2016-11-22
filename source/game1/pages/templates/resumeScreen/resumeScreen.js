@@ -489,8 +489,9 @@
 			  //console.log(e);
 
 			  var top = $('#resume-content-container').offset().top;
-			  //console.log('top',top);
+			  console.log('top',top);
 
+			 top = top - 300;
 			 var section = getSectionByTop(top);
 
 			  setPageSection(section);
