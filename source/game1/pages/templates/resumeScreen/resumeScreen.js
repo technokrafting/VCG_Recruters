@@ -128,15 +128,37 @@
 		{
 			//console.log($('.incorrect').length);
 
+			var sameIdObj = {};
 			var incorrectArr = [];
 			$( ".incorrect" ).each(function( index ) {
 				incorrectArr[index] = index;
 
 				var id = 'incorrect-'+index;
+
+				if($(this).hasClass('is_same'))
+				{
+					var tempArr;
+					var sameId = $(this).attr('sameId');
+					if(sameIdObj[sameId])
+					{
+						tempArr = sameIdObj[sameId];
+					}
+					else
+					{
+						tempArr = [];
+
+					}
+
+					tempArr[tempArr.length] = index;
+					sameIdObj[sameId] = tempArr;
+				}
+
 			    $(this).attr('id',id);
 			    $(this).attr('index',index);
 
 			});
+
+			console.log('sameIdObj',sameIdObj);
 
 			$( ".correct" ).each(function( index ) {
 				
@@ -155,9 +177,34 @@
 			});
 
 			var finalInCorrectShowArr = [];
+			var totalIssuesToIdentify = $issueToIdentify;
+
+			var sameKeys = Object.keys(sameIdObj);
+			for(var i=0;i<sameKeys.length;i++)
+			{
+
+				var idsArr = sameIdObj[sameKeys[i]];
+
+				var isToShow = Math.round(Math.random() * 1);
+				for(var j=0;j<idsArr.length;j++)
+				{
+					if(isToShow == 1)
+					{
+						finalInCorrectShowArr[finalInCorrectShowArr.length] = idsArr[j];
+						totalIssuesToIdentify--;
+					}
+					
+					incorrectArr.splice(incorrectArr.indexOf(idsArr[j]),1);
+				}
+				
+				
+				
+			}
+
+			console.log('finalInCorrectShowArr',finalInCorrectShowArr);
 
 
-			for (var a = incorrectArr, i = $issueToIdentify; i--; ) {
+			for (var a = incorrectArr, i = totalIssuesToIdentify; i--; ) {
 			    var random = a.splice(Math.floor(Math.random() * (incorrectArr.length)), 1)[0];
 			    finalInCorrectShowArr[finalInCorrectShowArr.length] = random;
 			}
