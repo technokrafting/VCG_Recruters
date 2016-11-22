@@ -6,3 +6,4 @@ div.error-wrap{display: block;}
 .explanation .popout-tip{width: 22px; height: 20px; bottom: -20px; left: 50px; background: url(../../crops/main/pointer_issue_tip.png) 0 0 no-repeat; transform: translateX(-55px); display: inline-block;}
 .info-section .section-heading{font-weight: bold; font-size: 18px; color: rgb(159, 184, 205); font-family: 'Bookman Old Style';}
 .info-section .list-heading{color: rgb(114,124,163); font-family: 'Bookman Old Style';}
+div.incorrect{display: inline-block;}
