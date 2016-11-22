@@ -338,6 +338,14 @@
 
 						});
 
+
+					var top = $('#resume-content-container').offset().top;
+
+					var clientX = e.clientX - 275;
+					var clientY = e.clientY - top - 20;
+
+					addCirleMark(clientY,clientX);
+
 				}
 				else
 				{	
