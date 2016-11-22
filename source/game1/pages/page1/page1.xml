@@ -4,6 +4,6 @@
 
 	
 	<nextButton pageId="menu"><![CDATA[<span class="btn-text">Enter</span>]]></nextButton>
-
+	<bgAudio>audio/bg_splash.mp3</bgAudio>
 
 </page>

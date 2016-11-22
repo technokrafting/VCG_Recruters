@@ -21,6 +21,7 @@
 		var $totalResumeHeight = 0;
 
 		var $previousScore = 0;
+		var $bgAudio;
 
 
 		var init = function (xml,navController,eventObj,pageId)
@@ -36,6 +37,9 @@
 			$eventObj = eventObj;
 
 
+			$bgAudio = xml.find('bgAudio').text();
+			loadBgAudio();
+
 			loadTemplateCss();
 
 			renderTextElements(mainDivId,xml,eventObj,navController); //Call in utils.js
@@ -49,6 +53,30 @@
 			renderData(xml);
 			
 
+		}
+
+		function loadBgAudio()
+		{
+			$eventObj.registerForEvent($eventObj.eventVariables.BG_AUDIO_LOADED,bgAudioLoaded);
+
+			var eventObjToSend = {"pageId":$pageId,"audioPath":$bgAudio};
+			$eventObj.trigger($eventObj.eventVariables.LOAD_BACKGROUND_AUDIO,eventObjToSend);
+		}
+
+		function bgAudioLoaded(eventObj)
+		{
+			var pageId = eventObj['pageId'];
+			if(pageId == $pageId)
+			{
+				var audioPath = eventObj['audioPath'];
+				if(audioPath == $bgAudio)
+				{
+					$eventObj.unRegisterEvent($eventObj.eventVariables.BG_AUDIO_LOADED,bgAudioLoaded);
+					
+					var eventObjToSend = {"pageId":$pageId,"audioPath":$bgAudio};
+					$eventObj.trigger($eventObj.eventVariables.PLAY_BACKGROUND_AUDIO,eventObjToSend);
+				}
+			}
 		}
 
 		function renderData(xml)
@@ -823,6 +851,8 @@
 		function destroyPage()
 		{
 			//console.log("Into Page Destroy");
+			var eventObjToSend = {"pageId":$pageId,"audioPath":$bgAudio};
+			$eventObj.trigger($eventObj.eventVariables.STOP_BACKGROUND_AUDIO,eventObjToSend);
 		}
 		
 		App.register( {init:init,destroyPage:destroyPage});

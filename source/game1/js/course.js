@@ -8,7 +8,7 @@ var App = (function() {
 
 	var $uiObj;
 
-	var $eventObj,$popupObj;
+	var $eventObj,$popupObj, $audioObj;
 
 	var $currentPageId,$lastPageLoadedId;
 
@@ -232,6 +232,12 @@ var App = (function() {
 	var registerApiObj = function(apiObj){
 
 		$api = apiObj;
+		$api.init($eventObj);
+	}
+
+	var registerAudioObj = function(audioObj){
+
+		$audioObj = audioObj;
 		$api.init($eventObj);
 	}
 

@@ -25,5 +25,6 @@
 
 	<guidelinesPageId>guidelines</guidelinesPageId>
 	<settingsPageId>settings</settingsPageId>
+	<bgAudio>audio/bg_menu.mp3</bgAudio>
 
 </page>

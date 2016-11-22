@@ -14,6 +14,8 @@
 
 		var totalScore = 0;
 
+		var $bgAudio;
+
 		var init = function (xml,navController,eventObj,pageId)
 		{
 
@@ -27,6 +29,9 @@
 
 			$eventObj = eventObj;
 
+
+			$bgAudio = xml.find('bgAudio').text();
+			loadBgAudio();
 
 			loadTemplateCss();
 
@@ -54,6 +59,30 @@
 				$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
 
 			});
+		}
+
+		function loadBgAudio()
+		{
+			$eventObj.registerForEvent($eventObj.eventVariables.BG_AUDIO_LOADED,bgAudioLoaded);
+
+			var eventObjToSend = {"pageId":$pageId,"audioPath":$bgAudio};
+			$eventObj.trigger($eventObj.eventVariables.LOAD_BACKGROUND_AUDIO,eventObjToSend);
+		}
+
+		function bgAudioLoaded(eventObj)
+		{
+			var pageId = eventObj['pageId'];
+			if(pageId == $pageId)
+			{
+				var audioPath = eventObj['audioPath'];
+				if(audioPath == $bgAudio)
+				{
+					$eventObj.unRegisterEvent($eventObj.eventVariables.BG_AUDIO_LOADED,bgAudioLoaded);
+					
+					var eventObjToSend = {"pageId":$pageId,"audioPath":$bgAudio};
+					$eventObj.trigger($eventObj.eventVariables.PLAY_BACKGROUND_AUDIO,eventObjToSend);
+				}
+			}
 		}
 
 		function generateResumes(xml)
@@ -280,10 +309,49 @@
 			//console.log("Into Page Destroy");
 			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotPagesData);
 			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotResumePagesData);
-		}
-		
-		App.register( {init:init,destroyPage:destroyPage});
 
+			var eventObjToSend = {"pageId":$pageId,"audioPath":$bgAudio};
+			$eventObj.trigger($eventObj.eventVariables.STOP_BACKGROUND_AUDIO,eventObjToSend);
+		}
+
+		$('#content').addClass('hide-element');
+		var imagesLoaded = 0;
+
+		$('.image').each(function(){
+
+			//console.log($('.menu-bg .anim-div .resume-hand.hand1').css('background'));
+
+			var bgImg = new Image();
+			bgImg.onload = function(){
+
+				imagesLoaded++;
+				if(imagesLoaded == $('.image').length)
+				{
+					//alert('all loaded');
+			   		App.register( {init:init,destroyPage:destroyPage});
+			   		$('#content').removeClass('hide-element');
+				}
+			   //myDiv.style.backgroundImage = 'url(' + bgImg.src + ')';
+			   
+
+			};
+
+			bgImg.src = $(this).attr('src');
+
+		});
+
+		// $('#content').imagesLoaded().always(function() {
+		//   alert('images loaded');
+		//   App.register( {init:init,destroyPage:destroyPage});
+		// });
+
+		// $('#content').waitForImages(function() {
+		// 	alert('images loaded');
+		//     
+		// });
+
+		
+		
 
 })();
 

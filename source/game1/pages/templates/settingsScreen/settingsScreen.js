@@ -4,6 +4,7 @@
 
 		var $pageId;
 		var $eventObj;
+		var $audioOff;
 
 		var init = function (xml,navController,eventObj,pageId)
 		{
@@ -32,8 +33,58 @@
 				window.close();
 			});
 
-			
+			$eventObj.registerForEvent($eventObj.eventVariables.TAKE_AUDIO_STATUS,gotAudioStatus);
 
+			
+			var eventObjToSend = {"pageId":$pageId};
+			$eventObj.trigger($eventObj.eventVariables.GET_AUDIO_STATUS,eventObjToSend);
+
+
+
+		}
+
+		function gotAudioStatus(eventObj)
+		{
+			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_AUDIO_STATUS,gotAudioStatus);
+			var pageId = eventObj['pageId'];
+			if(pageId == $pageId)
+			{
+				$audioOff = eventObj['audioOff'];
+
+				setAudioControl();
+
+			}
+		}
+
+		function setAudioControl()
+		{
+			if($audioOff == true)
+			{
+				$('.audio span').html('Audio On');
+				$('.audio').on('click',function(){
+
+					$audioOff = false;
+					$('.audio span').html('Audio Off');
+					var eventObjToSend = {"pageId":$pageId};
+					$eventObj.trigger($eventObj.eventVariables.SET_AUDIO_ON,eventObjToSend);
+
+					setAudioControl();
+				});
+			}
+			else
+			{
+				$('.audio span').html('Audio Off');
+				$('.audio').on('click',function(){
+
+					$audioOff = true;
+					$('.audio span').html('Audio On');
+					var eventObjToSend = {"pageId":$pageId};
+					$eventObj.trigger($eventObj.eventVariables.SET_AUDIO_OFF,eventObjToSend);
+
+					setAudioControl();
+
+				});
+			}
 		}
 
 		function loadTemplateCss()

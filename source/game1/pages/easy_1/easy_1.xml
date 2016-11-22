@@ -11,4 +11,7 @@
 
 	<nextButton pageId="menu"><![CDATA[Continue]]></nextButton>
 
+
+	<bgAudio>audio/bg_resume.mp3</bgAudio>
+
 </page>
