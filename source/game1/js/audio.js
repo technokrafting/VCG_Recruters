@@ -26,7 +26,7 @@
 
 		function stopAudio(eventObj)
 		{
-			console.log('stopAudio');
+			//console.log('stopAudio');
 			$audioOff = true;
 			var keys = Object.keys($bgAudioElements);
 			for(var i=0;i<keys.length;i++)
@@ -35,7 +35,7 @@
 				//audioElement.volume = 0;
 				$(audioElement).prop('volume',0);
 
-				console.log(audioElement.volume);
+				//console.log(audioElement.volume);
 			}
 		}
 
@@ -52,7 +52,7 @@
 
 		function loadBgAudio(eventObj)
 		{
-			console.log('loadBgAudio',eventObj);
+			//console.log('loadBgAudio',eventObj);
 			var pageId = eventObj["pageId"];
 			var audioPath = eventObj['audioPath'];
 
@@ -72,7 +72,7 @@
 			var audioElement = new Audio(audioPath);
 
 			audioElement.addEventListener("canplay",function(){
-				console.log('canPlay');
+				//console.log('canPlay');
 
 				var eventObjToSend = {"pageId":pageId,"audioPath":audioPath};
 				$eventObj.trigger($eventObj.eventVariables.BG_AUDIO_LOADED,eventObjToSend);
@@ -82,7 +82,7 @@
 			//$('#content').append(audioElement);
 
 			audioElement.setAttribute('src', audioPath);
-			console.log('src Set',audioPath);
+			//console.log('src Set',audioPath);
 
 			audioElement.load();
 
@@ -94,7 +94,7 @@
 
 		function playBgAudio(eventObj)
 		{
-			console.log('playBgAudio',eventObj);
+			//console.log('playBgAudio',eventObj);
 			var pageId = eventObj["pageId"];
 			var audioPath = eventObj['audioPath'];
 
@@ -114,7 +114,7 @@
 
 					audioElement.addEventListener("ended",function(){
 						
-						console.log('Ended');
+						//console.log('Ended');
 
 						audioElement.pause();
 						audioElement.currentTime = 0;

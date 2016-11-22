@@ -186,7 +186,7 @@
 
 			});
 
-			console.log('sameIdObj',sameIdObj);
+			//console.log('sameIdObj',sameIdObj);
 
 			$( ".correct" ).each(function( index ) {
 				
@@ -214,6 +214,7 @@
 				var idsArr = sameIdObj[sameKeys[i]];
 
 				var isToShow = Math.round(Math.random() * 1);
+				isToShow = 1;
 				for(var j=0;j<idsArr.length;j++)
 				{
 					if(isToShow == 1)
@@ -259,7 +260,7 @@
 
 			  	 $issuesToIdentifyHm[index] = tempObj;
 
-			  	 //$('#incorrect-'+index).addClass('red-text-bg');
+			  	 $('#incorrect-'+index).addClass('red-text-bg');
 
 			  }
 
@@ -270,111 +271,6 @@
 
 			$('.explanation').hide();
 
-			$('.incorrect').on('click',function(e){
-
-				//alert('Issue Identified');
-
-				var id = $(this).attr('index');
-
-				//console.log(id);
-
-				var tempObj = $issuesToIdentifyHm[id];
-				//console.log('tempObj',tempObj);
-				if(tempObj.found == 0)
-				{
-					$totalIssueIdentified++;
-
-					//alert(id);
-
-					
-
-					$(this).addClass('red-text-bg');
-
-					tempObj.found = 1;
-
-					var intScore = parseInt($score);
-					intScore = intScore + 100;
-
-					console.log('intScore',intScore.length);
-					if(intScore.toString().length == 3)
-					{
-						intScore = '0'+ intScore;
-					}
-
-					$score = intScore;
-
-
-					var elementOffset = $(this).offset();
-
-					var exclamationClone = $('.answer-exclamation').clone();
-					//hintClone.top = scrollTo;
-					exclamationClone.removeClass('hide-element');
-
-					exclamationClone.css('top',elementOffset.top - 10);
-					exclamationClone.css('left',elementOffset.left - 50);
-
-					$('body').append(exclamationClone);
-
-					$('#explanation-'+id).show();
-					
-					$('#explanation-'+id).addClass('fade-in-out');
-					
-					var len = parseInt($('#explanation-'+id).css("animation-duration").split("s")[0])*1000;
-
-
-					setDelay(len, function(){
-
-						$('#explanation-'+id).removeClass('fade-in-out');
-					
-					});
-
-					exclamationClone.addClass('animate-exclamation');
-					setDelay(400,function(){
-
-								setScore();
-								setIssueText();
-
-								exclamationClone.removeClass().empty();
-
-						});
-
-
-					var top = $('#resume-content-container').offset().top;
-
-					var clientX = e.clientX - 275;
-					var clientY = e.clientY - top - 20;
-
-					addCirleMark(clientY,clientX);
-
-				}
-				else
-				{	
-					
-					$('#explanation-'+id).show();
-					
-					$('#explanation-'+id).addClass('fade-in-out');
-					
-					var len = parseInt($('#explanation-'+id).css("animation-duration").split("s")[0])*1000;
-
-					setDelay(len, function(){
-
-						$('#explanation-'+id).removeClass('fade-in-out');
-					});
-
-					console.log("anim dur: ", len);
-					
-					
-					//$('#explanation-'+id).show();
-					//$('#explanation-'+id).addClass('fade-in-out');
-				}
-				
-
-				
-				
-				e.stopPropagation();
-
-
-			});
 
 
 			$('.hint-btn').on('click',function(){
@@ -582,7 +478,7 @@
 			}
 
 
-			console.log('$resumePagesObj',$resumePagesObj);
+			//console.log('$resumePagesObj',$resumePagesObj);
 
 			$( ".resume-content" ).on('scroll',function(e) {
 			  //console.log(e);
@@ -698,12 +594,120 @@
 				setProgressBar();
 
 			});
+
+
+			$('.incorrect').on('click',function(e){
+
+				//alert('Issue Identified');
+
+				var id = $(this).attr('index');
+
+				//console.log(id);
+
+				var tempObj = $issuesToIdentifyHm[id];
+				//console.log('tempObj',tempObj);
+				if(tempObj.found == 0)
+				{
+					$totalIssueIdentified++;
+
+					//alert(id);
+
+					
+
+					$(this).addClass('red-text-bg');
+
+					tempObj.found = 1;
+
+					var intScore = parseInt($score);
+					intScore = intScore + 100;
+
+					console.log('intScore',intScore.length);
+					if(intScore.toString().length == 3)
+					{
+						intScore = '0'+ intScore;
+					}
+
+					$score = intScore;
+
+
+					var elementOffset = $(this).offset();
+
+					var exclamationClone = $('.answer-exclamation').clone();
+					//hintClone.top = scrollTo;
+					exclamationClone.removeClass('hide-element');
+
+					exclamationClone.css('top',elementOffset.top - 10);
+					exclamationClone.css('left',elementOffset.left - 50);
+
+					$('body').append(exclamationClone);
+
+					$('#explanation-'+id).show();
+					
+					$('#explanation-'+id).addClass('fade-in-out');
+					
+					var len = parseInt($('#explanation-'+id).css("animation-duration").split("s")[0])*1000;
+
+
+					setDelay(len, function(){
+
+						$('#explanation-'+id).removeClass('fade-in-out');
+					
+					});
+
+					exclamationClone.addClass('animate-exclamation');
+					setDelay(400,function(){
+
+								setScore();
+								setIssueText();
+
+								exclamationClone.removeClass().empty();
+
+						});
+
+
+					var top = $('#resume-content-container').offset().top;
+
+					var clientX = e.clientX - 275;
+					var clientY = e.clientY - top - 20;
+
+					addCirleMark(clientY,clientX);
+
+				}
+				else
+				{	
+					
+					$('#explanation-'+id).show();
+					
+					$('#explanation-'+id).addClass('fade-in-out');
+					
+					var len = parseInt($('#explanation-'+id).css("animation-duration").split("s")[0])*1000;
+
+					setDelay(len, function(){
+
+						$('#explanation-'+id).removeClass('fade-in-out');
+					});
+
+					console.log("anim dur: ", len);
+					
+					
+					//$('#explanation-'+id).show();
+					//$('#explanation-'+id).addClass('fade-in-out');
+				}
+				
+
+				
+				
+				e.stopPropagation();
+
+
+			});
 		}
 
 		function stopResumeClick()
 		{
 			console.log('stopResumeClick');
 			$('#resume-content-container').off();
+			$('.incorrect').off();
 		}
 
 		function addCirleMark(top,left)
