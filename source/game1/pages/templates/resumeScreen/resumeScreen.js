@@ -440,6 +440,11 @@
 			$('#resume-content-container').append(hintClone);
 		}
 
+		function hideHintBox()
+		{
+			$('.hint-box-top').addClass('hide-element');
+		}
+
 		function loadPageSizeData()
 		{
 			var resumeHeight = $('#resume-content-container').css('height');
@@ -507,23 +512,27 @@
 			if(intScore < 800)
 			{
 				$('.score-star').addClass('star-0');
+				$('.congrats').addClass('hide-element');
 			}
 
 			if(intScore >= 800 && intScore <= 899)
 			{
 				$('.score-star').addClass('star-1');
+				$('.hard-luck').addClass('hide-element');
 				saveData(intScore);
 			}
 
 			if(intScore >= 900 && intScore <= 999)
 			{
 				$('.score-star').addClass('star-2');
+				$('.hard-luck').addClass('hide-element');
 				saveData(intScore);
 			}
 
 			if(intScore == 1000)
 			{
 				$('.score-star').addClass('star-3');
+				$('.hard-luck').addClass('hide-element');
 				saveData(intScore);
 			}
 
@@ -544,6 +553,8 @@
 		function startResumeClick()
 		{
 			$('#resume-content-container').on('click',function(e){
+
+				hideHintBox();
 
 				console.log(e);
 				var top = $(this).offset().top;
@@ -600,6 +611,7 @@
 
 				//alert('Issue Identified');
 
+				hideHintBox();
 				var id = $(this).attr('index');
 
 				//console.log(id);
