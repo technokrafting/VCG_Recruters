@@ -219,7 +219,7 @@
 								$('#resume-'+(i+1)).addClass('star-2');
 							}
 
-							if(resumeScrore == 1000)
+							if(resumeScrore >= 1000)
 							{
 								$('#resume-'+(i+1)).addClass('star-3');
 							}

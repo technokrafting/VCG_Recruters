@@ -530,7 +530,7 @@
 				saveData(intScore);
 			}
 
-			if(intScore == 1000)
+			if(intScore >= 1000)
 			{
 				$('.score-star').addClass('star-3');
 				$('.hard-luck').addClass('hide-element');
