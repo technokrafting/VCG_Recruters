@@ -32,6 +32,7 @@
 .main-page-bg .guidelines-wrapper .guidelines-btn:hover{background-position: 0px -70px;}
 
 /* Right Panel Tint */
+.italics{font-style: italic;}
 .main-page-bg.info-tint .label-arrow-bg{width: 99px; height: 100%; background: url(../../../crops/howToPlay/pointers.png) center center no-repeat; margin-left: -15px; position: absolute; left: 0px;}
 .main-page-bg.info-tint .challenge-note{width: 286px; height: 283px; position: absolute; right: 15px; top: calc(50% - 151px); background: url(../../../crops/howToPlay/bluePostit.png) 0 0 no-repeat; padding: 12px 30px 12px 15px;}
 .main-page-bg.info-tint .challenge-note .challenge-title{font-size: 25px; font-weight: bold; margin-bottom: 15px;}
@@ -53,11 +54,11 @@
 .main-page-bg.info-tint .challenge-note{width: 302px; height: 302px; position: absolute; right: 15px; top: calc(50% - 151px); background: url(../../../crops/howToPlay/bluePostit.png) 0 0 no-repeat;}
 
 /* Right Panel Resume */
-.red-text-bg{background-color: #b10000; color: #fff; padding: 1px 3px;}
+.red-text-bg .text-highlight{background-color: #eac7c7; padding: 1px 3px;}
 .element-click{border: 1px dashed #b10000;}
 .error-wrap{position: relative; display: inline-block;}
 .error-wrap .explanation{visibility:hidden; position: absolute; background-color: #12234a; width: 220px; color: #ffffff; top: -45px; z-index: 250; text-align: center; padding: 2px 7px;}
-.fade-in-out{animation: fade-in-out 3s 1 forwards; -webkit-animation: fade-in-out 3s 1 forwards;}
+.fade-in-out{animation: fade-in-out 4s 1 forwards; -webkit-animation: fade-in-out 4s 1 forwards;}
 .main-page-bg .main-content{width: 820px; height: 100%; position: absolute; left: 195px; top: 0; padding: 4px 10px 25px;}
 .main-page-bg .main-content .resume-div{width: 100%; height: calc(100% - 30px); background: url(../../../crops/main/bg_paper.png) 0 0 no-repeat; position: relative; padding: 50px 20px 0px;}
 .main-page-bg .main-content .blue-strip{height: 30px; background: #12234a; margin-right: -10px; margin-left: -12px;}
@@ -65,7 +66,7 @@
 .main-page-bg .main-content .resume-div .resume-content{width: 100%; height: 100%; padding: 25px; padding-left: 15px; border: 2px solid #9da2a2; border-left: 15px solid #9da2a2; border-bottom: none; position: relative; overflow: auto; overflow-x: hidden; cursor: url(../../../crops/main/eval_pointer.png) 8 22, default;}
 .main-page-bg .main-content .resume-div .resume-content .ok-popout{width: 90px; height: 57px; background: url(../../../crops/main/pointer_ok.png) 0 0 no-repeat;  position: absolute; top: 0; left: 0;}
 .main-page-bg .main-content .resume-div .resume-content .ok-popout .ok-text{color: #fff; line-height: 37px;}
-.main-page-bg .main-content .resume-div .resume-content .click-mark-circle{width: 100px; height: 45px; background-image: url(../../../crops/main/click_marker.png); background-position: 0 0; background-repeat: no-repeat; background-size: contain; position: absolute;}
+.main-page-bg .main-content .resume-div .resume-content .click-mark-circle{width: 100px; height: 45px; background-image: url(../../../crops/main/click_marker.png); background-position: 0 0; background-repeat: no-repeat; background-size: contain; position: absolute; pointer-events: none;}
 .main-page-bg .main-content .resume-div .resume-content .hint-box-top{width: 100%; height: 50%; position: absolute; z-index: 0; border: 2px solid #b10000; background: url(../../../crops/main/Icon_hintOnPage.png) 0 0 no-repeat; left: 0px; top: 0px; pointer-events: none;}
 .main-page-bg .main-content .resume-div .resume-content .hint-box-bottom{width: 100%; height: 50%; position: absolute; z-index: 0; border: 2px solid #b10000; background: url(../../../crops/main/Icon_hintOnPage.png) 0 0 no-repeat; left: 0px; top: 0px;}
 .main-page-bg .main-content .btn-done{width: 93px; height: 44px; background: url(../../../crops/main/btn_done.png) 0 0px no-repeat; color: #fff; position: absolute; border: none; font-weight: bold; font-size: 18px; bottom: 2px; right: 5px;}
