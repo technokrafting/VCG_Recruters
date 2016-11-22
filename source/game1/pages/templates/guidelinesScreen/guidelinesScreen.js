@@ -86,13 +86,13 @@
 							});
 						}
 						if(index<maxIndex){
-							$('.carousel-nav-btn.next').click(function(){
+							$('.carousel-nav-btn.next , .guidelines-btn').click(function(){
 								$(".coverflow").coverflow('index',index+1);
 							});
 						}
 						if(index == 0){
 							$('.carousel-nav-btn.prev').addClass('disabled');
-							$('.carousel-nav-btn.next').click(function(){
+							$('.carousel-nav-btn.next , .guidelines-btn').click(function(){
 								$('.carousel-nav-btn.prev').removeClass('disabled');
 							})
 						}

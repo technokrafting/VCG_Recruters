@@ -53,7 +53,7 @@
 .main-page-bg.info-tint .challenge-note{width: 302px; height: 302px; position: absolute; right: 15px; top: calc(50% - 151px); background: url(../../../crops/howToPlay/bluePostit.png) 0 0 no-repeat;}
 
 /* Right Panel Resume */
-/*.red-text-bg{background-color: #b10000; color: #fff; padding: 1px 3px;}*/
+.red-text-bg{background-color: #b10000; color: #fff; padding: 1px 3px;}
 .element-click{border: 1px dashed #b10000;}
 .error-wrap{position: relative; display: inline-block;}
 .error-wrap .explanation{visibility:hidden; position: absolute; background-color: #12234a; width: 220px; color: #ffffff; top: -45px; z-index: 250; text-align: center; padding: 2px 7px;}

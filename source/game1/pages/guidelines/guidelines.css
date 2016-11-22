@@ -10,6 +10,12 @@
 #mainPageDiv_guidelines .guidelines-wrapper .carousel-nav-btn.prev.disabled{background-position: -82px -41px;}
 #mainPageDiv_guidelines .guidelines-wrapper #guidelines-carousel{width: 639px; padding: 0px 15px; margin: 24px auto; position: relative;}
 #mainPageDiv_guidelines .guidelines-wrapper .guideline-slide{width: 609px; height: 604px; background: url(images/bg_guidlines.png) 0 0 no-repeat; padding: 25px 40px;}
-#mainPageDiv_guidelines .guidelines-btn{width: 101px; height: 30px; background-image: url(images/btn-showMore.png); background-position: 0 0; background-repeat: no-repeat; position: absolute; bottom: 25px; left: 40px;}
+#mainPageDiv_guidelines .guidelines-btn{width: 101px; height: 30px; background-image: url(images/btn-showMore.png); background-position: 0 0; background-repeat: no-repeat; position: absolute; bottom: 25px; right: 40px;}
 #mainPageDiv_guidelines .guidelines-btn:hover{background-position: 0 -30px;}
 #mainPageDiv_guidelines .guidelines-btn .btn-text{font-weight: bold; color: #fff; line-height: 28px;}
+#mainPageDiv_guidelines .guidelines-wrapper .guideline-slide .guidelines-visual{margin: 20px auto 0px; display: block;}
+#mainPageDiv_guidelines .checklist {list-style: none; padding: 0;}
+
+li.check-points {padding-left: 1.3em;}
+li.check-points:before {content: "\f00c"; font-family: FontAwesome; font-size: 12px; display: inline-block; margin-left: -1.3em; width: 1.3em;}
+.nested-checklist{list-style-type: initial;}
