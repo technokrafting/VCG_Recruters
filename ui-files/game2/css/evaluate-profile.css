@@ -1,0 +1,10 @@
+.eval-profile-page{background: url(../img/bg_wood.png) 0 0 no-repeat;}
+.eval-profile-page .resume-wrap{width: 611px; height: 646px; background: url(../img/paperBg_step1.png) 0 0 no-repeat; position: absolute; right: 0; top: 10px; padding: 12px 35px 63px 65px;}
+.eval-profile-page .resume-wrap .eval-step{height: 32px; padding-left: 45px;}
+.eval-profile-page .page-foot{width: 1003px; height: 59px; background: url(../img/bottomBand.png) 0 0 no-repeat; position: absolute; bottom: 0; left: 0; right: 0; margin: 0 auto;}
+.eval-profile-page .job-desc-wrapper{width: 453px; height: 616px; background: url(../img/tab.png) 0 0 no-repeat; position: absolute; top: 30px; left: 8px; z-index: 100; padding: 45px;}
+.eval-profile-page .job-desc-wrapper .job-desc-heading{height: 35px; font-size: 18px; font-weight: bold;padding: 6px 15px;}
+.eval-profile-page .job-desc-wrapper .job-desc{padding: 15px;}
+.eval-profile-page .btn-wrapper{display: inline-block; position: absolute; top: 10px; right: 150px; color: #fff;}
+.eval-profile-page .button-wide.accept{background-image: url(../img/btn_accept.png);}
+.eval-profile-page .button-wide.reject{background-image: url(../img/btn_reject.png);}
