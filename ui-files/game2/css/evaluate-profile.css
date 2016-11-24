@@ -1,6 +1,15 @@
 .eval-profile-page{background: url(../img/bg_wood.png) 0 0 no-repeat;}
-.eval-profile-page .resume-wrap{width: 611px; height: 646px; background: url(../img/paperBg_step1.png) 0 0 no-repeat; position: absolute; right: 0; top: 10px; padding: 12px 35px 63px 65px;}
-.eval-profile-page .resume-wrap .eval-step-heading{height: 32px; padding-left: 45px; line-height: 32px; font-weight: bold; color: #c1502e;}
+.eval-profile-page .eval-wrap{width: 586px; background-position: 0 0; background-repeat: no-repeat; position: absolute; right: 8px; padding: 15px 27px 66px 47px;}
+.eval-profile-page .resume-wrap{width: 611px; height: 646px; background-image: url(../img/paperBg_step1.png); top: 10px; right: 0; padding: 12px 35px 63px 65px;}
+.eval-profile-page .report-wrap{height: 607px; background-image: url(../img/paperBg_step2.png); top: 52px;/* display: none;*/}
+.eval-profile-page .transcript-wrap{height: 563px; background-image: url(../img/paperBg_step3.png); top: 94px; }
+.eval-profile-page .reasoning-wrap{height: 519px; background-image: url(../img/paperBg_step4.png); top: 136px; /*display: none;*/}
+.eval-profile-page .eval-wrap .eval-step-heading{height: 32px; padding-left: 45px; font-weight: bold; color: #c1502e;}
+.eval-profile-page .eval-wrap .eval-step-heading span{line-height: 32px;}
+.eval-profile-page .eval-wrap .eval-step-heading .pg-inactive{display: none;}
+.eval-profile-page .eval-wrap .eval-step-text{height: calc(100% - 32px); overflow-y: auto; overflow-x: hidden;}
+.eval-profile-page .eval-wrap .resume-text{padding: 15px;}
+.eval-profile-page .report-wrap .report-text object{height: calc(100% - 5px);}
 .eval-profile-page .page-foot{width: 1003px; height: 59px; background: url(../img/bottomBand.png) 0 0 no-repeat; position: absolute; bottom: 0; left: 0; right: 0; margin: 0 auto;}
 .eval-profile-page .job-desc-wrapper{width: 453px; height: 616px; background: url(../img/tab.png) 0 0 no-repeat; position: absolute; top: 30px; left: 8px; z-index: 100; padding: 43px;}
 .eval-profile-page .job-desc-wrapper .job-desc-heading{height: 35px; font-size: 18px; font-weight: bold;padding: 6px 15px;}

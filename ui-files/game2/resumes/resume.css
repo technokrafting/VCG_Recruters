@@ -1,0 +1,13 @@
+.profile-doc .candidate-img{text-align: right;}
+.profile-doc .profile-img{width: 105px; height: 109px; background-image: url(../img/resume_pic.png); background-repeat: no-repeat; display: inline-block;}
+.profile-doc .profile-img.one{background-position: 0 0;}
+.profile-doc .profile-img.two{background-position: -105px 0;}
+.profile-doc .profile-img.three{background-position: -210px 0;}
+.profile-doc .section-wrap{margin-bottom: 10px;}
+.profile-doc .heading{font-size: 16px; font-weight: bold; border-bottom: 2px solid #000; line-height: 1.1; margin-bottom: 3px;}
+.profile-doc .experience-heading.left{display: inline-block;}
+.profile-doc .experience-heading.right{display: inline-block; float: right;}
+.profile-doc .exp-label{font-weight: bold;}
+.profile-doc .company-name{font-weight: bold;}
+.profile-doc ul{padding-left: 25px;}
+.profile-doc ul.row{padding-left: 40px;}
