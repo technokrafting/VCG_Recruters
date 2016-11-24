@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<page type="popupInfoScreen" loadIn="popup">
+
+
+	<popupHeader><![CDATA[<span id="proceed">Restaurant </span><span id="howTo">Supplies Unlimited</span>]]></popupHeader>
+	<popupBody><![CDATA[
+
+						<span class="bold">Restaurant Supplies Unlimited Accounting Department</span><br/><br/>
+						The accounting department has five full-time employees: CFO, Controller, Staff Accountant, and two accounting clerks. The CFO has signature authority on all bank accounts. The CFO and Controller both have approval authority on invoices and payments, although due to the multitude of payments, signing of AP checks is accomplished electronically. 
+						<br/>
+						<br/>
+
+						Deposits are made by the Staff Accountant or one of the clerks. Cash and checks received are processed by one of the clerks, who also record the payments to Accounts Receivable in the company’s books within three days of receipt. Accounts Payable invoices are initially processed by either of the clerks, which also includes approval by the Staff Accountant. 
+
+						<br/>
+						<br/>
+
+						Once approved, the clerks print the checks using checks from the supply room. The firm received an outside audit two years ago to satisfy a banking requirement. The culture is very friendly and familiar. There are relatively few written policies or procedures due to the small size and general trust among employees.
+
+
+				]]></popupBody>
+	
+
+	<iText><![CDATA[Select Close to proceed.]]></iText>
+	<closeButton><![CDATA[Close]]></closeButton>
+
+
+</page>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<page type="infoScreen" zone="-1">
+
+
+	<attempts>10</attempts>
+	<issuesToFind>7</issuesToFind>
+
+	<pages>
+		<page pageId="1">
+			<issues>
+				<issue issueId='issue-1' />
+				<issue issueId='issue-2' />
+				<issue issueId='issue-3' />
+			</issues>
+		</page>
+		<page pageId="2">
+			<issues>
+				<issue issueId='issue-4' />
+				<issue issueId='issue-5' />
+				<issue issueId='issue-6' />
+			</issues>
+		</page>
+		<page pageId="3">
+			<issues>
+				<issue issueId='issue-7' />
+				<issue issueId='issue-8' />
+				<issue issueId='issue-9' />
+			</issues>
+		</page>
+		<page pageId="4">
+			<issues>
+				<issue issueId='issue-10' />
+				<issue issueId='issue-11' />
+				<issue issueId='issue-12' />
+			</issues>
+		</page>
+
+	</pages>
+
+	<hints>
+		<hint pageId="1" area="top" />
+		<hint pageId="3" area="bottom" />
+	</hints>
+	
+
+	<iText><![CDATA[Select Continue to proceed.]]></iText>
+	<nextButton pageId="page1"><![CDATA[Continue]]></nextButton>
+
+
+</page>

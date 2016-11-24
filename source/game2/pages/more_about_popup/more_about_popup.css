@@ -1,0 +1,53 @@
+#mainPageDiv_more_about_popup #background
+{
+	background-image:url("images/bg.png");
+	height:590px;
+	width:1020px;
+	float:left;
+	background-repeat:no-repeat;
+	position: absolute;
+	z-index: -1;
+}
+
+
+#popupHeader {
+  color: #59595b;
+  left: 468px;
+  position: absolute;
+  width: 380px;
+}
+
+
+#mainPageDiv_more_about_popup #iText {
+    top: -15px;
+  left: -269px;
+  position: absolute;
+  width: 200px;
+}
+
+#popupFooter {
+  position: absolute;
+  top: 455px;
+  left: 740px;
+}
+
+#moreAbtTxt{
+
+	font-size: 20px;
+	margin-top: 5px;
+}
+
+
+#excellTxt{
+
+	font-size: 40px;
+}
+
+#popupBody {
+  position: absolute;
+  top: 383px;
+  left: 132px;
+  color: white;
+}
+
+

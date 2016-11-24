@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<page type="MultiMCSSRadio" zone="menuButton3">
+
+
+	<question competency="Management and Leadership Concepts"><![CDATA[Assess the organizational structure of Restaurant Supplies Unlimited and compare it to that of Adams Supply & Service. Utilizing the organizational charts identify the appropriate structure for each of the firms. Remember that you are drawing a comparison between the two.]]></question>
+
+
+	<activities>
+
+		<details>
+
+			<heading>Adams Supply and Service</heading>
+
+			<options>
+				<option id="opt1" value="0"><![CDATA[Customer structure]]></option>
+				<option id="opt2" value="1"><![CDATA[Functional structure]]></option>
+				<option id="opt3" value="0"><![CDATA[Product structure]]></option>
+				<option id="opt4" value="0"><![CDATA[Traditional hierarchical structure]]></option>
+			</options>
+		</details>
+
+		<details>
+
+			<heading>Restaurant Supplies Unlimited</heading>
+
+			<options>
+				<option id="opt5" value="1"><![CDATA[Customer structure]]></option>
+				<option id="opt6" value="0"><![CDATA[Functional structure]]></option>
+				<option id="opt7" value="0"><![CDATA[Product structure]]></option>
+				<option id="opt8" value="0"><![CDATA[Traditional hierarchical structure]]></option>
+			</options>
+		</details>
+
+
+	</activities>
+
+	
+
+</page>

@@ -1,0 +1,76 @@
+#tabContent #mainPageDiv_adams_tab5 #background
+{
+  background-image:url("");
+  height:0px;
+  width:0px;
+  float:left;
+  background-repeat:no-repeat;
+  position: absolute;
+  z-index: -1;
+}
+
+#tabContent #popupHeader {
+  position: absolute;
+  top: 402px;
+  left: 80px;
+  color: white;
+}
+
+
+
+#tabContent #mainPageDiv_adams_tab5 #iText {
+   top: -13px;
+  right: 131px;
+  position: absolute;
+  width: 200px;
+}
+
+
+#popupContent {
+  float: left;
+  margin-top: 100px;
+}
+
+.labels{position: absolute; color: #fff;}
+#john {
+  left: 330px;
+  top: 164px;
+  color: #fff;
+  text-align: center;
+}
+#exoctic {
+  top: 341px;
+  left: 78px;
+}
+#natural {
+  top: 331px;
+  left: 211px;
+  text-align: center;
+}
+#free {
+  top: 341px;
+  left: 350px;
+}
+#cheese {
+  top: 332px;
+  left: 466px;
+  text-align: center;
+}
+#sauces {
+  top: 341px;
+  right: 117px;
+}
+
+#infoGraphic {
+  background: url(images/tab2_img.png) no-repeat;
+  width: 750px;
+  height: 590px;
+  position: absolute;
+  top: 155px;
+  left: 58px;
+  right: 0;
+}
+
+
+
+

@@ -1,0 +1,107 @@
+.valueButton{
+
+	background: url('../../images/CommonSpriteSheet.png') no-repeat 0 -660px;
+	width: 245px;
+	height: 30px;
+
+}
+
+.valueButton:hover{
+
+	background: url('../../images/CommonSpriteSheet.png') no-repeat -255px -660px;
+	width: 245px;
+	height: 30px;
+
+}
+
+
+#navigateBtn{
+	background: url('../../images/CommonSpriteSheet.png') no-repeat 0 -735px;
+}
+
+#navigateBtn:hover{
+	background: url('../../images/CommonSpriteSheet.png') -100px -735px;
+	width: 90px;
+	height: 80px;
+}
+
+#howToProceedBtn:hover{
+	background: url('../../images/CommonSpriteSheet.png') -56px -825px;
+	width: 46px;
+	height: 36px;
+}
+
+
+#howToProceedBtn{
+	background: url('../../images/CommonSpriteSheet.png') no-repeat 0 -825px;
+}
+
+#educationalBtn{
+	background: url('../../images/CommonSpriteSheet.png') no-repeat 0 -871px;
+}
+
+
+#submitBtn{
+	background: url('../../images/CommonSpriteSheet.png') no-repeat 0 -200px;
+}
+
+#submitBtn:hover{
+	background: url('../../images/CommonSpriteSheet.png') no-repeat -120px -200px;
+}
+
+#submitBtn.submitDisabled{
+	background: url('../../images/CommonSpriteSheet.png') no-repeat -240px -200px;
+	pointer-events:none;
+	cursor: default;
+}
+
+#mainPageDiv_decision1 #iText {
+  position: absolute;
+  left: 714px;
+  top: 545px;
+}
+
+
+.mainNum{
+	background: url('../../images/CommonSpriteSheet.png') no-repeat -90px -500px;
+}
+
+.subLink{
+	background: url('../../images/CommonSpriteSheet.png') no-repeat -25px -545px;
+}
+
+.active{
+		background: url('../../images/CommonSpriteSheet.png') no-repeat 0px -545px;
+}
+
+#nextBtn{
+
+	background: url('../../images/CommonSpriteSheet.png') no-repeat -150px -570px;
+}
+
+#backBtn{
+	background: url('../../images/CommonSpriteSheet.png') no-repeat -50px -570px;
+}
+
+.nextBtnDisabled{
+	background: url('../../images/CommonSpriteSheet.png') no-repeat -100px -570px !important;
+
+}
+
+.backBtnDisabled{
+	background: url('../../images/CommonSpriteSheet.png') no-repeat 0 -570px !important;
+
+}
+
+.mainNumActive{
+
+	background: url('../../images/CommonSpriteSheet.png') no-repeat -40px -445px;
+	
+}
+
+.mainComplete
+{
+	background: url('../../images/CommonSpriteSheet.png') no-repeat -10px -500px;
+}
+
+

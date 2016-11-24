@@ -1,0 +1,61 @@
+#header{
+  position: absolute;
+  bottom: 14px;
+  left: 20px;
+  color: #fff;
+}
+
+
+#mainText{
+
+	font-size: 40px;
+}
+
+#subText{
+
+	font-size: 25px;
+}
+
+#tabList{margin-top:40px; float:left;width: 260px;}
+.tab{
+
+	margin-bottom: 0px;
+	color: #52075a;
+}
+
+.footer #closeButton{margin-left: 180px;}
+
+.tabText{
+  vertical-align: middle;
+  line-height: 40px;
+  margin-left: 40px;
+}
+
+.tab{
+
+	cursor: pointer;
+}
+  #contentDiv{
+  width: auto; 
+   margin-left: 0px;
+  margin-top: 0%;
+}
+#tabContent {
+   float: left;
+  padding: 30px;
+  /*padding-right:0px;*/
+  width: 702px;
+  max-width: 100%;
+}
+
+
+#tabContent #contentDiv {
+  width: 100%;
+  margin-top: 0px;
+  max-height: 470px;
+  overflow: auto;
+}
+
+#popup {
+  background-color: rgba(255, 255, 255, 1);
+}

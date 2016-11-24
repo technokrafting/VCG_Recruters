@@ -1,0 +1,210 @@
+#mainPageDiv_navigatePopup #background
+{
+  background-image:url("images/bg.png");
+  background-repeat:no-repeat;
+  height:590px;
+  width:1020px;
+  float:left;
+  position: absolute;
+  z-index: -1;
+}
+
+#mainPageDiv_navigatePopup table#navigateTable {
+  width: 600px;
+  height: 357px;
+  margin: 0 auto;
+  margin-left: 332px;
+  
+    border-right: 0px solid #9e8b71;
+  border-bottom: 0px solid #9e8b71;
+}
+
+#mainPageDiv_navigatePopup table#navigateTable td, table#navigateTable th {
+  padding: 5px;
+  padding-left: 11px;
+  text-align: left;
+  max-width: 0px;
+}
+
+#mainPageDiv_navigatePopup #iText {
+  top: -13px;
+  left: -210px;
+  position: absolute;
+  width: 200px;
+}
+
+#popupHeader {
+  color: #fff;
+  position: absolute;
+  bottom: 146px;
+  left: 104px;
+}
+
+#mainText{
+
+  font-size: 40px;
+}
+
+#subText{
+
+  font-size: 25px;
+}
+
+.quesPopupIText {
+ 
+}
+
+
+#introTab{
+
+  background-image:url("images/intro.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:40px;
+ 
+}
+
+#taskTab{
+
+  background-image:url("images/task.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:40px;
+ 
+}
+
+#scenerioTab{
+
+  background-image:url("images/scenerio.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:40px;
+ 
+}
+
+#decisionTab{
+
+  background-image:url("images/decision.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:40px;
+ 
+}
+
+
+#feedbackTab{
+
+  background-image:url("images/feedback.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:40px;
+ 
+}
+
+#proceedTab{
+
+  background-image:url("images/proceed.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:51px;
+ 
+}
+
+#navigateTab{
+
+  background-image:url("images/navigate.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:70px;
+ 
+}
+
+#oerTab{
+
+  background-image:url("images/oer.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:57px;
+ 
+}
+
+
+#screenBtnsTab{
+
+  background-image:url("images/screenBtns.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:40px;
+ 
+}
+
+#screenNumbersTab{
+
+  background-image:url("images/screenNumbers.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:40px;
+ 
+}
+
+#submitTab{
+
+  background-image:url("images/submit.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:43px;
+ 
+}
+
+#nextBackTab{
+
+  background-image:url("images/nextBack.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:50px;
+ 
+}
+
+#roundTab{
+
+  background-image:url("images/round.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:40px;
+ 
+}
+
+#resourceTab{
+
+  background-image:url("images/resource.png");
+  background-repeat:no-repeat;
+   width:280px;
+   height:113px;
+ 
+}
+
+#exitTab{
+
+  background-image:url("images/exit.png");
+  background-repeat:no-repeat;
+   width:254px;
+   height:40px;
+ 
+}
+
+
+#mainPageDiv_navigatePopup thead, tbody {
+  display: table-row-group;
+}
+
+#tableContainer{
+
+overflow-y:auto;
+max-height: 357px;
+width: 949px;
+margin-top: -30px;
+
+}
+
+
+

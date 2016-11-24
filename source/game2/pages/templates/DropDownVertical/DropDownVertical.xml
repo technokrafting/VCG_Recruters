@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<page type="DropDownVertical" zone="menuButton3" loadIn="decActContentDiv">
+
+	<question competency="Operational Assessment" ><![CDATA[<div>Using the Management Profiles for Adams Supply and Service, identify the various skills in the matrix below and then tick the relevant box, or boxes, that relate to the current skills mix of the individual team members listed. This will then enable you to assess the current overall skills mix of the management team.</div>
+
+	<div>
+	<span id="quesIText" class="quesIText"></span>
+</div>]]></question>
+
+
+	<heads>
+		<head id="1"><![CDATA[RSU]]></head>
+		<head id="2"><![CDATA[Adams]]></head>
+	</heads>
+
+	<params paramHead="">
+		<param id="a"><![CDATA[Working Capital Ratio:]]></param>
+		<param id="b"><![CDATA[Quick Ratio:]]></param>
+		<param id="c"><![CDATA[Debt-to-Equity Ratio:]]></param>
+		<param id="d"><![CDATA[Return-on-Assets:]]></param>
+		<param id="e"><![CDATA[Return-on-Equity:]]></param>
+	</params>
+
+	<dropdowns>
+		<dropdown id="1a">
+			<drops>
+				<drop value="1"><![CDATA[2.5]]></drop>
+				<drop value="0.5"><![CDATA[1.9]]></drop>
+				<drop value="0"><![CDATA[1.6]]></drop>
+			</drops>
+		</dropdown>
+		<dropdown id="1b">
+			<drops>
+				<drop value="1"><![CDATA[2]]></drop>
+				<drop value="0.5"><![CDATA[1.9]]></drop>
+				<drop value="0"><![CDATA[1.8]]></drop>
+			</drops>
+		</dropdown>
+		<dropdown id="1c">
+			<drops>
+				<drop value="1"><![CDATA[1.1]]></drop>
+				<drop value="0.5"><![CDATA[0.4]]></drop>
+				<drop value="0"><![CDATA[0.7]]></drop>
+			</drops>
+		</dropdown>
+		<dropdown id="1d">
+			<drops>
+				<drop value="1"><![CDATA[0.5]]></drop>
+				<drop value="0.5"><![CDATA[0.4]]></drop>
+				<drop value="0"><![CDATA[0.7]]></drop>
+			</drops>
+		</dropdown>
+		<dropdown id="1e">
+			<drops>
+				<drop value="1"><![CDATA[0.7]]></drop>
+				<drop value="0.5"><![CDATA[1.1]]></drop>
+				<drop value="0"><![CDATA[0.5]]></drop>
+			</drops>
+		</dropdown>
+		<dropdown id="2a">
+			<drops>
+				<drop value="1"><![CDATA[3.6]]></drop>
+				<drop value="0.5"><![CDATA[1.9]]></drop>
+				<drop value="0"><![CDATA[3.5]]></drop>
+			</drops>
+		</dropdown>
+		<dropdown id="2b">
+			<drops>
+				<drop value="1"><![CDATA[3.8]]></drop>
+				<drop value="0.5"><![CDATA[3.6]]></drop>
+				<drop value="0"><![CDATA[3.1]]></drop>
+			</drops>
+		</dropdown>
+		<dropdown id="2c">
+			<drops>
+				<drop value="1"><![CDATA[0.2]]></drop>
+				<drop value="0.5"><![CDATA[0.1]]></drop>
+				<drop value="0"><![CDATA[0.9]]></drop>
+			</drops>
+		</dropdown>
+		<dropdown id="2d">
+			<drops>
+				<drop value="1"><![CDATA[0.1]]></drop>
+				<drop value="0.5"><![CDATA[0]]></drop>
+				<drop value="0"><![CDATA[0.2]]></drop>
+			</drops>
+		</dropdown>
+		<dropdown id="2e">
+			<drops>
+				<drop value="1"><![CDATA[0]]></drop>
+				<drop value="0.5"><![CDATA[0.1]]></drop>
+				<drop value="0"><![CDATA[0.2]]></drop>
+			</drops>
+		</dropdown>
+		
+	</dropdowns>
+
+	
+	<initPopup><![CDATA[m1_c1_1a_popup]]></initPopup>
+	
+
+</page>
