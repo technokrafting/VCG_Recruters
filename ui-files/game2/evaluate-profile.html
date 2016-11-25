@@ -13,16 +13,83 @@
 		<link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="js/vendor/slick-master/slick/slick.css">
+        <link href="js/vendor/noUiSlider/nouislider.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/transcript.css">
+        <link rel="stylesheet" href="css/reasoning.css">
         <link rel="stylesheet" href="css/evaluate-profile.css">
         <link rel="stylesheet" href="job-descriptions/job-desc.css">
         <link rel="stylesheet" href="resumes/resume.css">
 	</head>
 	<body>
-		<div class="wrapper eval-profile-page step-1">
+		<div class="wrapper eval-profile-page step-4">
+			<div class="modals-wrap">
+				<div id="objectiveModal" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-body">
+								<h4 class="modal-title">Objective</h4>
+								<div class="objective-text">
+									Review job descriptions, assessment reports and make decisions based on the analysis.
+								</div>
+							</div>
+							<div class="modal-btn-wrap text-center">
+								<div role="button" class="clickable vcg-btn button-small btn-ok modal-btn text-center" data-dismiss="modal">
+									<span class="btn-text text-uppercase">OK</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="suggestionModal" class="feedbackBg-modal modal fade" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content -->
+						<div class="modal-content">
+							<div class="modal-body">
+								<div class="suggestion-text feedback-text italics">We see potential in this candidate.<br>Kindly evaluate further.</div>
+							</div>
+							<div class="modal-btn-wrap text-center">
+								<div role="button" class="vcg-btn button-small btn-ok modal-btn clickable text-center" data-backdrop="static" data-keyboard="false" data-dismiss="modal" data-toggle="modal" data-target="#nextPageModal">
+									<span class="btn-text text-uppercase">OK</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="nextPageModal" class="feedbackBg-modal modal fade" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content -->
+						<div class="modal-content">
+							<div class="modal-body">
+								<div class="save-text feedback-text italics">Your decision is saved!<br>Proceed further to <span class="page-transition page1-2">analyse reports</span><span class="page-transition page2-3">evaluate transcripts</span><span class="page-transition page3-4">reasoning and rating</span>.</div>
+							</div>
+							<div class="modal-btn-wrap text-center">
+								<div role="button" class="vcg-btn button-small btn-ok modal-btn clickable text-center" data-backdrop="static" data-keyboard="false" href="#" data-dismiss="modal">
+									<span class="btn-text text-uppercase">OK</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ratingSliderModal" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header"></div>
+							<div class="modal-body">
+								<div class="range-slider" id="ratingSlider"></div>
+							</div>
+							<div class="modal-btn-wrap text-center">
+								<div role="button" class="clickable vcg-btn button-small btn-done modal-btn text-center" data-dismiss="modal">
+									<span class="btn-text text-uppercase">Done</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="setting-div clickable"></div>
 			<div class="">
 				<div class="job-desc-wrapper">
@@ -263,30 +330,62 @@
 		<div class="transcript-doc">
 			<div class="convo-dialogue dialogue-left">
 				<div class="dialogue-image profile-1"></div>
-				<div class="dialogue-text"></div>
+				<div class="dialogue-text"><i class="fa fa-caret-left dialogue-pointer"></i>Hi..!!</div>
 			</div>
 			<div class="convo-dialogue dialogue-right">
-				<div class="dialogue-text"></div>
+				<div class="dialogue-text"><i class="fa fa-caret-right dialogue-pointer"></i>Hi..!!</div>
 				<div class="dialogue-image"></div>
 			</div>
 		</div>
 					</div>
 				</div>
 				<div class="eval-wrap reasoning-wrap">
-					<div class="eval-step-heading three italics">
+					<div class="eval-step-heading four italics">
 						<span class="pg-active">Step 4 - Reasoning and rating</span>
 					</div>
 					<div class="eval-step-text reasoning-text">
-						
+	<div class="reasoning-doc">
+		<div class="pre-text">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+			<p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+		</div>
+		<div class="option-select">
+			<div class="checkbox-holder">
+				<input type="checkbox" name="reason-choice" value="A">
+				<span class="checkbox-text"> Yes, Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+				<div class="vcg-checkbox"></div>
+			</div>
+			<div class="checkbox-holder">
+				<input type="checkbox" name="reason-choice" value="B">
+				<span class="checkbox-text"> No, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+				<div class="vcg-checkbox"></div>
+			</div>
+			<div class="checkbox-holder">
+				<input type="checkbox" name="reason-choice" value="C">
+				<span class="checkbox-text"> Contrary to popular belief, Lorem Ipsum is not simply random text.</span>
+				<div class="vcg-checkbox"></div>
+			</div>
+			<div class="checkbox-holder">
+				<input type="checkbox" name="reason-choice" value="D">
+				<span class="checkbox-text"> It has roots in a piece of classical Latin literature from 45 BC.</span>
+				<div class="vcg-checkbox"></div>
+			</div>
+		</div>
+		<div class="btn-wrap text-right">
+			<div class="vcg-btn button-wide submit text-center clickable" role="button" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#ratingSliderModal">
+				<span class="btn-text text-uppercase">Submit</span>
+			</div>
+		</div>
+	</div>
 					</div>
 				</div>
 				<div class="page-foot">
 					<div class="btn-wrapper">
-						<div class="button-wide reject text-center">
+						<div class="vcg-btn button-wide reject text-center clickable" role="button" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#suggestionModal">
 							<span class="btn-text text-uppercase">Reject</span>
 						</div>
 						<span class="italics"> or </span>
-						<div class="button-wide accept text-center">
+						<div class="vcg-btn button-wide accept text-center clickable" role="button" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#objectiveModal">
 							<span class="btn-text text-uppercase">Accept</span>
 						</div>
 					</div>
@@ -296,5 +395,38 @@
 		</div>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/vendor/noUiSlider/nouislider.min.js"></script>
+		<script>
+		$(function(){
+			$('.vcg-checkbox').click(function() {
+				var me = $(this);
+				if($('.checkbox-holder .vcg-checkbox.selected').length < 2 && !(me.hasClass('selected'))){
+					me.addClass('selected');
+					me.closest('.checkbox-holder').find('input[type="checkbox"]').trigger('click');
+				}
+				else if(me.hasClass('selected')){
+					me.removeClass('selected');
+					me.closest('.checkbox-holder').find('input[type="checkbox"]').trigger('click');
+				}
+				else{
+					return;
+				}
+			});
+			var rating = document.getElementById('ratingSlider');
+			noUiSlider.create(rating, {
+				start: [5],
+				step: 1,
+				range: {
+					min: [ 1 ],
+					max: [ 10 ]
+				},
+				pips: { // Show a scale with the slider
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			})
+		});
+		</script>
 	</body>
 </html>

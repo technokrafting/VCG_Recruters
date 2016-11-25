@@ -1,0 +1,8 @@
+.reasoning-doc{padding: 25px 15px;}
+input[type=checkbox] { -webkit-appearance: none; -moz-appearance: none; appearance: none; display: none; -o-appearance: none;}
+.checkbox-holder {position: relative; display: block; padding-left: 20px; margin-bottom: 5px;}
+.vcg-checkbox {border: none; width: 15px; height: 15px; position: absolute; top: 3px; left: 0; background-image: url('../img/radioBtnSmall.png'); background-position: 0 0; background-repeat: no-repeat;}
+.vcg-checkbox.selected {background-position: -30px 0px;}
+.checkbox-text{color: #448790;}
+.option-select{margin-bottom: 35px;}
+.vcg-btn.submit{background-image: url(../img/btn_continue.png);}

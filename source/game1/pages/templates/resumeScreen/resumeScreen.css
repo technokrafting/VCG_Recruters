@@ -87,8 +87,8 @@
 #doneModal .modal-content .done-modal-submit-btn{width: 93px; height: 44px; background: url(../../../crops/main/btn_done.png) 0 0px no-repeat; color: #fff; border: none; font-weight: bold; padding: 0px; font-size: 16px;}
 #doneModal .modal-content .done-modal-submit-btn:hover{background-position: 0 -44px;}
 #doneModal .modal-content .close-btn-wrapper{float: left;}
-#doneModal .modal-content .done-modal-close-btn{width: 99px; height: 52px; background: url(../../../crops/main/btn_goBack.png) -3px 0px no-repeat; color: #fff; border: none; font-weight: bold; padding: 0px;}
-#doneModal .modal-content .done-modal-close-btn:hover{background-position: -3px -54px;}
+#doneModal .modal-content .done-modal-close-btn{width: 97px; height: 44px; background: url(../../../crops/main/btn_back.png) 0px 0px no-repeat; color: #fff; border: none; font-weight: bold; padding: 0px;}
+#doneModal .modal-content .done-modal-close-btn:hover{background-position: 0 -44px;}
 #feedbackModal .feedback-modal-btn.continue{visibility: hidden; position: fixed; bottom: 30px; left: 0; right: 0; margin: auto; width: 117px; height: 44px; background: url(../../../crops/global/btn_continue.png) 0px 0px no-repeat; color: #fff; border: none; font-weight: bold; animation-delay: 5.8s; -webkit-animation-delay: 5.8s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
 #feedbackModal .feedback-modal-btn.continue:hover{background-position: 0 -44px;}
 #feedbackModal .feedback-modal-btn.continue .btn-text{line-height: 40px; font-size: 16px;}

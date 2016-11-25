@@ -6,6 +6,9 @@ body{width: 1014px; height: 652px; font-family: Arial;}
 .clickable{cursor: pointer;}
 .setting-div{width: 45px; height: 45px; background: url(../img/btn_setting.png) 0 0 no-repeat; z-index: 2000; position: absolute; right: 0px;}
 .setting-div:hover{background-position: -45px 0px;}
-.button-wide{width: 117px; height: 44px; background-position: 0 0; background-repeat: no-repeat; display: inline-block;}
-.button-wide:hover{background-position: 0px -44px;}
-.button-wide .btn-text{font-size: 16px; line-height: 40px; font-weight: bold; color: #fff;}
+.vcg-btn{height: 44px; background-position: 0 0; background-repeat: no-repeat; display: inline-block;}
+.button-wide{width: 117px;}
+.button-small{width: 93px; background-image: url(../img/btn_done.png);}
+.vcg-btn:hover{background-position: 0px -44px;}
+.btn-text{font-size: 16px; line-height: 40px; font-weight: bold; color: #fff;}
+.modal-content{border: none; box-shadow: none;}
