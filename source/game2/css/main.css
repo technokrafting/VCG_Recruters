@@ -3,6 +3,7 @@ body{width: 1014px; height: 652px; font-family: Arial;}
 /*.heading{font-size: 28px;}*/
 #loader{display: block; text-align: center; position: absolute; left: 0; right: 0; top: calc(50% - 25px);}
 #loader .fa.fa-spinner{font-size: 44px;}
+#popup{z-index: 1000; position: absolute; top: 0; left: 0;}
 .wrapper{width: 1014px; height: 652px; overflow: hidden; position: absolute; left: 0; right: 0; background: none;}
 .setting-div{width: 45px; height: 45px; background-image: url(../img/btn_setting.png); background-position: 0 0; background-repeat: no-repeat; z-index: 2000; position: absolute; right: 0px;}
 .setting-div:hover{background-position: -45px 0px;}
