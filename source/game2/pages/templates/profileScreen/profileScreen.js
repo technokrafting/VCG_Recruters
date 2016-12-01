@@ -15,6 +15,8 @@
 
 		var $menuPageId;
 
+		var $bgAudio;
+
 		var init = function (xml,navController,eventObj,pageId)
 		{
 
@@ -29,6 +31,11 @@
 			$eventObj = eventObj;
 
 
+
+			$bgAudio = xml.find('bgAudio').text();
+			loadBgAudio();
+
+
 			loadTemplateCss();
 
 			$menuPageId = xml.find('menuPageId').text();
@@ -41,6 +48,38 @@
 
 			initializeScreenJs();
 
+			var settingsId = xml.find('settingsPageId').text();
+			$('.setting-div').on('click',function(){
+
+				var eventObjToSend = {"pageId":settingsId};
+				$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
+
+			});
+
+		}
+
+		function loadBgAudio()
+		{
+			$eventObj.registerForEvent($eventObj.eventVariables.BG_AUDIO_LOADED,bgAudioLoaded);
+
+			var eventObjToSend = {"pageId":$pageId,"audioPath":$bgAudio};
+			$eventObj.trigger($eventObj.eventVariables.LOAD_BACKGROUND_AUDIO,eventObjToSend);
+		}
+
+		function bgAudioLoaded(eventObj)
+		{
+			var pageId = eventObj['pageId'];
+			if(pageId == $pageId)
+			{
+				var audioPath = eventObj['audioPath'];
+				if(audioPath == $bgAudio)
+				{
+					$eventObj.unRegisterEvent($eventObj.eventVariables.BG_AUDIO_LOADED,bgAudioLoaded);
+					
+					var eventObjToSend = {"pageId":$pageId,"audioPath":$bgAudio};
+					$eventObj.trigger($eventObj.eventVariables.PLAY_BACKGROUND_AUDIO,eventObjToSend);
+				}
+			}
 		}
 
 		function initAnswers(xml)
