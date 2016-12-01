@@ -99,42 +99,39 @@
 
 			console.log('profilesArr', profilesArr);
 
-			loadProfileCLicks();
+			loadProfileClicks();
 
 		}
 
 		function getData()
 		{
 			console.log("Get Data Menu");
-			$eventObj.registerForEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotPagesData);
+			$eventObj.registerForEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotProfilePagesData);
 
-			var eventObjToSend = {"pageId":$pageId,"getPageIds":[$pageId]};
+			var eventObjToSend = {"pageId":$pageId,"getPageIds":[profilesArr[0],profilesArr[1],profilesArr[2]]};
 			$eventObj.trigger($eventObj.eventVariables.GIVE_PAGE_DATA,eventObjToSend);
 		}
 
-		function gotPagesData(eventObj)
-		{
-			console.log("got Menu Page Data ",eventObj);
-			var pageId = eventObj["pageId"];
-			if(pageId == $pageId)
-			{
-				//console.log("Into If "+eventObj["pagesData"]);
+		// function gotPagesData(eventObj)
+		// {
+		// 	console.log("got Menu Page Data ",eventObj);
+		// 	var pageId = eventObj["pageId"];
+		// 	if(pageId == $pageId)
+		// 	{
+		// 		//console.log("Into If "+eventObj["pagesData"]);
 
-				$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotPagesData);
+		// 		$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotPagesData);
 
-				var pagesData = eventObj["pagesData"];
-				if(pagesData)
-				{
-					var gotDataObj = pagesData[$pageId];
+		// 		var pagesData = eventObj["pagesData"];
+		// 		if(pagesData)
+		// 		{
+		// 			var gotDataObj = pagesData[$pageId];
 
-					$eventObj.registerForEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotProfilePagesData);
+					
+		// 		}
 
-					var eventObjToSend = {"pageId":$pageId,"getPageIds":[profilesArr[0],profilesArr[1],profilesArr[2]]};
-					$eventObj.trigger($eventObj.eventVariables.GIVE_PAGE_DATA,eventObjToSend);
-				}
-
-			}
-		}
+		// 	}
+		// }
 
 		function gotProfilePagesData(eventObj)
 		{
@@ -153,13 +150,14 @@
 						{
 							var profileScrore = parseInt(gotDataObj['score']);
 
-							totalScore = totalScore + resumeScrore;
+							totalScore = totalScore + profileScrore;
 
 							console.log('Setting i '+i);
 							//$('#profile-'+(i+1)).removeClass('locked');
 
 							if(profileScrore >= 800)
-							{
+							{	
+								$('#profile-'+(i+1)).removeClass('profile-open');
 								$('#profile-'+(i+1)).addClass('profile-done');
 							}
 						}
@@ -176,7 +174,7 @@
 
 
 
-		function loadProfileCLicks()
+		function loadProfileClicks()
 		{
 				$('.profile-btn-continue .btn-text').click(function() {
 
@@ -244,7 +242,7 @@
 		function destroyPage()
 		{
 			//console.log("Into Page Destroy");
-			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotPagesData);
+			//$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotPagesData);
 			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotProfilePagesData);
 
 			var eventObjToSend = {"pageId":$pageId,"audioPath":$bgAudio};

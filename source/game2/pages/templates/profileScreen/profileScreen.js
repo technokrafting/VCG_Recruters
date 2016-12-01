@@ -4,15 +4,21 @@
 
 		var $pageId;
 		var $eventObj;
-		var $score;
+		var $navController;
+		var $score = 0;
 
 		var $currentStep = 0;
 
 		var $correctSequenceObj = {};
 
+		var $isRejected = false;
+
+		var $menuPageId;
+
 		var init = function (xml,navController,eventObj,pageId)
 		{
 
+			$navController = navController;
 
 			var mainDivId = "mainPageDiv_"+pageId;
 			var mainDiv = document.getElementById('mainPageDiv');
@@ -25,7 +31,8 @@
 
 			loadTemplateCss();
 
-			
+			$menuPageId = xml.find('menuPageId').text();
+
 			initAnswers(xml);
 				
 			initStep1();
@@ -86,9 +93,9 @@
 
 			$('.accept').on('click',function(){
 
-				if(currentObj.answer == 'yes')
+				if(currentObj.answer == 'accept')
 				{
-					$score = $score + currentObj.score;
+					$score = $score + parseInt(currentObj.score);
 				}
 				else
 				{
@@ -102,7 +109,9 @@
 
 			$('.reject').on('click',function(){
 
-				if(currentObj.answer == 'yes')
+				$isRejected = true;
+
+				if(currentObj.answer == 'accept')
 				{
 					
 					//show We see potential in the candidate. Kindly evaluate him further	
@@ -110,7 +119,7 @@
 
 				}else{
 
-					$score = $score + currentObj.score;
+					$score = $score + parseInt(currentObj.score);
 				}
 
 				initStep4();
@@ -139,9 +148,9 @@
 
 			$('.accept').on('click',function(){
 
-				if(currentObj.answer == 'yes')
+				if(currentObj.answer == 'accept')
 				{
-					$score = $score + currentObj.score;
+					$score = $score + parseInt(currentObj.score);
 				}
 				else
 				{
@@ -155,7 +164,9 @@
 
 			$('.reject').on('click',function(){
 
-				if(currentObj.answer == 'yes')
+				$isRejected = true;
+
+				if(currentObj.answer == 'accept')
 				{
 					
 					//show We see potential in the candidate. Kindly evaluate him further	
@@ -163,7 +174,7 @@
 
 				}else{
 
-					$score = $score + currentObj.score;
+					$score = $score + parseInt(currentObj.score);
 				}
 
 				initStep4();
@@ -196,9 +207,9 @@
 
 			$('.accept').on('click',function(){
 
-				if(currentObj.answer == 'yes')
+				if(currentObj.answer == 'accept')
 				{
-					$score = $score + currentObj.score;
+					$score = $score + parseInt(currentObj.score);
 				}
 				else
 				{
@@ -212,7 +223,9 @@
 
 			$('.reject').on('click',function(){
 
-				if(currentObj.answer == 'yes')
+				$isRejected = true;
+
+				if(currentObj.answer == 'accept')
 				{
 					
 					//show We see potential in the candidate. Kindly evaluate him further	
@@ -220,7 +233,7 @@
 
 				}else{
 
-					$score = $score + currentObj.score;
+					$score = $score + parseInt(currentObj.score);
 				}
 
 				initStep4();
@@ -233,8 +246,8 @@
 		function initStep4()
 		{
 
-			var currentObj = $correctSequenceObj['step3'];
-
+			var step4aObj = $correctSequenceObj['step4a'];
+			
 			$('.resume-wrap').removeClass('hide-element');
 			$('.resume-wrap .eval-step-heading .pg-active').addClass('hide-element');
 			$('.resume-wrap .eval-step-heading .pg-inactive').removeClass('hide-element');
@@ -258,8 +271,96 @@
 			$('.accept').off();
 			$('.reject').off();
 
+			$('#step-4-done-btn').on('click',function(){
+
+				var answerStr = step4aObj.answer;
+
+				var selectedStr = '';
+				$('.vcg-checkbox.selected').each(function(){
+
+					var checkId = $(this).attr('checkId');
+					selectedStr = selectedStr + checkId + ','
+					console.log('checkId ',checkId);
+				});
+
+				selectedStr = selectedStr.toString().substring(0,selectedStr.toString().lastIndexOf(','));
+
+				//console.log('Check Answer ',answerStr + ':::::::'+selectedStr);
+
+				if(answerStr == selectedStr)
+				{
+					//alert('same');
+					$score = $score + parseInt(step4aObj.score);
+				}
+
+
+				if($isRejected == false)
+				{	
+					//console.log('check-yes',$('#check-yes').hasClass('selected'));
+
+					if($('#check-yes').hasClass('selected'))
+					{
+						$('#ratingSliderModal').modal('show');
+					}
+					else
+					{
+						saveData();
+						gotoMenuPage();
+					}
+				}
+				else
+				{
+					saveData();
+					gotoMenuPage();
+				}
+				
+
+			});
+
+
+			$('#slider-done-btn').on('click',function(){
+
+
+				var rating = document.getElementById('ratingSlider');
+				var sliderVal = parseInt(rating.noUiSlider.get());
+
+				var step4bObj = $correctSequenceObj['step4b'];
+
+				var answerArr = step4bObj.answer.split(',');
+				console.log('answerArr',answerArr,sliderVal);
+
+				console.log('indexOf',answerArr.indexOf(sliderVal.toString()));
+
+				if(answerArr.indexOf(sliderVal.toString()) != -1)
+				{
+					$score = $score + parseInt(step4bObj.score);
+				}
+
+				saveData();
+				gotoMenuPage();
+
+
+			});
 			
 
+		}
+
+
+		function saveData()
+		{
+			var saveObj = {};
+			saveObj["score"] = $score;
+
+			var eventObjToSend = {"pageId":$pageId,"pageData":saveObj};
+			$eventObj.trigger($eventObj.eventVariables.SAVE_PAGE_DATA,eventObjToSend);
+
+		}
+
+		function gotoMenuPage()
+		{
+			alert('Score is '+ $score);
+
+			$navController.navigate($menuPageId);
 		}
 
 		function initializeScreenJs()
@@ -278,7 +379,7 @@
 					return;
 				}
 			});
-			
+
 			var rating = document.getElementById('ratingSlider');
 			noUiSlider.create(rating, {
 				start: [5],
@@ -295,6 +396,8 @@
 			})
 			
 		}
+
+
 
 		function loadTemplateCss()
 		{

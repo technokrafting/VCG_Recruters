@@ -28,7 +28,7 @@
 								<div class="suggestion-text feedback-text italics">We see potential in this candidate.<br>Kindly evaluate further.</div>
 							</div>
 							<div class="modal-btn-wrap text-center">
-								<div role="button" class="vcg-btn button-small btn-ok modal-btn clickable text-center" data-backdrop="static" data-keyboard="false" data-dismiss="modal" data-toggle="modal" data-target="#nextPageModal">
+								<div role="button" class="vcg-btn button-small btn-ok modal-btn clickable text-center" data-backdrop="static" data-keyboard="false" data-dismiss="modal">
 									<span class="btn-text text-uppercase">OK</span>
 								</div>
 							</div>
@@ -59,7 +59,7 @@
 								<div class="range-slider" id="ratingSlider"></div>
 							</div>
 							<div class="modal-btn-wrap text-center">
-								<div role="button" class="clickable vcg-btn button-small btn-done modal-btn text-center" data-dismiss="modal">
+								<div id='slider-done-btn' role="button" class="clickable vcg-btn button-small btn-done modal-btn text-center" data-dismiss="modal">
 									<span class="btn-text text-uppercase">Done</span>
 								</div>
 							</div>
@@ -331,26 +331,26 @@
 			<div class="checkbox-holder">
 				<input type="checkbox" name="reason-choice" value="A">
 				<span class="checkbox-text"> Yes, Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
-				<div answer='yes' class="vcg-checkbox"></div>
+				<div id='check-yes' checkId='1' class="vcg-checkbox"></div>
 			</div>
 			<div class="checkbox-holder">
 				<input type="checkbox" name="reason-choice" value="B">
 				<span class="checkbox-text"> No, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
-				<div class="vcg-checkbox"></div>
+				<div  checkId='2' class="vcg-checkbox"></div>
 			</div>
 			<div class="checkbox-holder">
 				<input type="checkbox" name="reason-choice" value="C">
 				<span class="checkbox-text"> Contrary to popular belief, Lorem Ipsum is not simply random text.</span>
-				<div answer='yes' class="vcg-checkbox"></div>
+				<div checkId='3' class="vcg-checkbox"></div>
 			</div>
 			<div class="checkbox-holder">
 				<input type="checkbox" name="reason-choice" value="D">
 				<span class="checkbox-text"> It has roots in a piece of classical Latin literature from 45 BC.</span>
-				<div class="vcg-checkbox"></div>
+				<div checkId='4' class="vcg-checkbox"></div>
 			</div>
 		</div>
 		<div class="btn-wrap text-right">
-			<div class="vcg-btn button-wide submit text-center clickable" role="button" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#ratingSliderModal">
+			<div id='step-4-done-btn' class="vcg-btn button-wide submit text-center clickable" role="button" data-backdrop="static" data-keyboard="false">
 				<span class="btn-text text-uppercase">Submit</span>
 			</div>
 		</div>
