@@ -96,13 +96,26 @@
 				if(currentObj.answer == 'accept')
 				{
 					$score = $score + parseInt(currentObj.score);
+
+					$('#nextPageModal').modal('show');
+					$('#next-done-btn').off();
+
+					$('.step1-complete').removeClass('hide-element');
+
+					$('#next-done-btn').on('click',function(){
+
+						$('.step1-complete').addClass('hide-element');
+
+						initStep2();
+
+					});
 				}
 				else
 				{
-
+					initStep2();
 				}
 
-				initStep2();
+				
 
 
 			});
@@ -151,13 +164,25 @@
 				if(currentObj.answer == 'accept')
 				{
 					$score = $score + parseInt(currentObj.score);
+
+					$('#nextPageModal').modal('show');
+					$('#next-done-btn').off();
+
+					$('.step2-complete').removeClass('hide-element');
+
+					$('#next-done-btn').on('click',function(){
+
+						$('.step2-complete').addClass('hide-element');
+
+						initStep3();
+
+					});
 				}
 				else
 				{
-
+					initStep3();
 				}
 
-				initStep3();
 
 
 			});
@@ -210,13 +235,24 @@
 				if(currentObj.answer == 'accept')
 				{
 					$score = $score + parseInt(currentObj.score);
+
+					$('#nextPageModal').modal('show');
+					$('#next-done-btn').off();
+
+					$('.step3-complete').removeClass('hide-element');
+
+					$('#next-done-btn').on('click',function(){
+
+						$('.step3-complete').addClass('hide-element');
+
+						initStep4();
+
+					});
 				}
 				else
 				{
-
+					initStep4();
 				}
-
-				initStep4();
 
 
 			});
