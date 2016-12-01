@@ -2,25 +2,9 @@
 <page type="menuScreen" zone="menuButton0">
 
 
-	<resumes>
-		<easy>
-			<resume pageId="easy_1" />
-			<resume pageId="easy_2" />
-			<resume pageId="easy_3" />
-			<resume pageId="easy_4" />
-		</easy>
-		<moderate>
-			<resume pageId="moderate_1" />
-			<resume pageId="moderate_2" />
-			<resume pageId="moderate_3" />
-			<resume pageId="moderate_4" />
-		</moderate>
-		<difficult>
-			<resume pageId="difficult_1" />
-			<resume pageId="difficult_2" />
-		</difficult>
-
-	</resumes>
+	<profile1>profile1</profile1>
+	<profile2>profile2</profile2>
+	<profile3>profile3</profile3>
 
 
 	<guidelinesPageId>guidelines</guidelinesPageId>

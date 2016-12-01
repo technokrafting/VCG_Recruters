@@ -1,44 +1,87 @@
 <div id="mainPageDiv">
 	
-		<div src='pages/menu/images/bg_wood.png' class="wrapper menu-bg image">
+		<div id="profileModal1" class="profileModal modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="profile-img profile-1"></div>
+					<div class="close-modal" role="button" data-dismiss="modal"></div>
+					<div class="modal-body">
+						<div class="profile-text">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+							<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<span type="button" class="profile-btn-continue text-uppercase text-center clickable" role="button"><span id='profile-1-btn' class="btn-text clickable">Continue</span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="profileModal2" class="profileModal modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="profile-img profile-1"></div>
+					<div class="close-modal" role="button" data-dismiss="modal"></div>
+					<div class="modal-body">
+						<div class="profile-text">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+							<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<span type="button" class="profile-btn-continue text-uppercase text-center clickable" role="button"><span id='profile-2-btn' class="btn-text clickable">Continue</span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="profileModal3" class="profileModal modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="profile-img profile-1"></div>
+					<div class="close-modal" role="button" data-dismiss="modal"></div>
+					<div class="modal-body">
+						<div class="profile-text">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+							<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<span type="button" class="profile-btn-continue text-uppercase text-center clickable" role="button"><span id='profile-3-btn' class="btn-text clickable">Continue</span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper menu-page">
 			<div class="setting-div clickable"></div>
-			<div class="final-screen">
-				<div class="medal-wrapper">
-					<div class="medal gold"></div>
-					<div class="feedback-msg">
-						<div class="feedback-title">Good Job!</div>
-						<div class="feedback-result">You have achieved a</div>
-						<div class="feedback-medal gold">Gold Medal</div>
-					</div>
-					
-					<div class="btn-wrapper">
-						<div class="final-scr-btn replay text-center clickable" role="button">
-							<span class="btn-text text-uppercase">Replay</span>
-						</div>
-						<div class="final-scr-btn exit text-center clickable" role="button">
-							<span class="btn-text text-uppercase">Exit</span>
-						</div>
-					</div>
+			<div class="profile-folder-wrapper">
+				<div id='profile-1' class="profile profile-open clickable" data-toggle="modal" data-target="#profileModal1"  data-backdrop="static" data-keyboard="false">
+					<div class="profile-num one">Profile 1</div>
+				</div>
+				<div id='profile-2' class="profile profile-open clickable" data-toggle="modal" data-target="#profileModal2"  data-backdrop="static" data-keyboard="false">
+					<div class="profile-num two">Profile 2</div>
+				</div>
+				<div id='profile-3' class="profile profile-new clickable" data-toggle="modal" data-target="#profileModal3"  data-backdrop="static" data-keyboard="false">
+					<div class="profile-num three">Profile 3</div>
 				</div>
 			</div>
-			<div class="menu-div">
-				<div class="menu-upper">
-					<h2 class="heading">Menu</h2>
-					<p class="text-content">Displayed on the right are resumes you need to review. You will be able to review only one resume at a time. Once a resume is reviewed successfully, the next resume will become accessible.</p>
-					<p class="text-content">When a resume is reviewed successfully, its icon will be marked with a check mark and stars based on the player’s performance.</p>
-					<p class="margin-below2 text-content">If a resume is not accessible, then its icon will be greyed out (inactive) and it will have a ‘lock’ icon.</p>
+			<div class="menu-band">
+				<div class="menu-left">
+					<div class="menu-heading">Menu</div>
+					<div class="menu-text">
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					</div>
 				</div>
-				<div class="menu-lower">
-					<div class="margin-below clickable menu-icon-brochure"></div>
-					<div class="text-content light-blue-text">Select the highlighted resume to begin with your review.</div>
+				<div class="menu-right">
+					<div class="brochure-icon"></div>
+					<div class="brochure-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
 				</div>
-			</div>
-			<div class="anim-div">
-				<div id='resume-1' resumeId="1" src='pages/menu/images/hand1.png' class="resume-hand image hand1 locked"></div>
-				<div id='resume-2' resumeId="2" src='pages/menu/images/hand2.png' class="resume-hand image hand2 locked"></div>
-				<div id='resume-3' resumeId="3" src='pages/menu/images/hand3.png' class="resume-hand image hand3 locked"></div>
-				<div id='resume-4' resumeId="4" src='pages/menu/images/hand4.png' class="resume-hand image hand4 locked"></div>
-				<div id='resume-5' resumeId="5" src='pages/menu/images/hand5.png' class="resume-hand image hand5 locked"></div>
 			</div>
 		</div>
 	

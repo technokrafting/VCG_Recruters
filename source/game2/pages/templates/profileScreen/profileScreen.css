@@ -1,0 +1,101 @@
+.eval-profile-page{background: url(../../../img/bg_wood.png) 0 0 no-repeat;}
+.eval-profile-page.step-1 .resume-wrap{display: block;}
+.eval-profile-page.step-1 .report-wrap, .eval-profile-page.step-1 .transcript-wrap, .eval-profile-page.step-1 .reasoning-wrap{display: none;}
+.eval-profile-page.step-1 .eval-step-heading.one .pg-active{display: block;}
+.eval-profile-page.step-1 .eval-step-heading.one .pg-inactive{display: none;}
+.eval-profile-page.step-2 .report-wrap{display: block;}
+.eval-profile-page.step-2 .transcript-wrap, .eval-profile-page.step-2 .reasoning-wrap{display: none;}
+.eval-profile-page.step-2 .eval-step-heading.one .pg-inactive{display: block;}
+.eval-profile-page.step-2 .eval-step-heading.one .pg-active, .eval-profile-page.step-2 .eval-step-heading.two .pg-inactive{display: none;}
+.eval-profile-page.step-3 .transcript-wrap{display: block;}
+.eval-profile-page.step-3 .reasoning-wrap{display: none;}
+.eval-profile-page.step-3 .eval-step-heading.three .pg-inactive, .eval-profile-page.step-3 .eval-step-heading .pg-active{display: none;}
+.eval-profile-page.step-3 .eval-step-heading .pg-inactive, .eval-profile-page.step-3 .eval-step-heading.three .pg-active{display: block;}
+.eval-profile-page.step-4 .reasoning-wrap{display: block;}
+.eval-profile-page.step-4 .eval-step-heading .pg-inactive, .eval-profile-page.step-4 .eval-step-heading.four .pg-active{display: block;}
+.eval-profile-page .eval-wrap{width: 586px; background-position: 0 0; background-repeat: no-repeat; position: absolute; right: 8px; padding: 15px 27px 66px 47px;}
+.eval-profile-page .resume-wrap{width: 611px; height: 646px; background-image: url(../../../img/paperBg_step1.png); top: 10px; right: 0; padding: 12px 35px 63px 65px;}
+.eval-profile-page .report-wrap{height: 607px; background-image: url(../../../img/paperBg_step2.png); top: 52px;/* display: none;*/}
+.eval-profile-page .transcript-wrap{height: 563px; background-image: url(../../../img/paperBg_step3.png); top: 94px; }
+.eval-profile-page .reasoning-wrap{height: 519px; background-image: url(../../../img/paperBg_step4.png); top: 136px; /*display: none;*/}
+.eval-profile-page .eval-wrap .eval-step-heading{height: 32px; padding-left: 45px; font-weight: bold; color: #c1502e;}
+.eval-profile-page .eval-wrap .eval-step-heading span{line-height: 32px;}
+.eval-profile-page .eval-wrap .eval-step-text{height: calc(100% - 32px); overflow-y: auto; overflow-x: hidden;}
+.eval-profile-page .eval-wrap .resume-text{padding: 15px;}
+.eval-profile-page .report-wrap .report-text object{height: calc(100% - 5px);}
+.eval-profile-page .page-foot{width: 1003px; height: 59px; background: url(../../../img/bottomBand.png) 0 0 no-repeat; position: absolute; bottom: 0; left: 0; right: 0; margin: 0 auto;}
+.eval-profile-page .job-desc-wrapper{width: 453px; height: 616px; background: url(../../../img/tab.png) 0 0 no-repeat; position: absolute; top: 30px; left: 8px; z-index: 100; padding: 43px;}
+.eval-profile-page .job-desc-wrapper .job-desc-heading{height: 35px; font-size: 18px; font-weight: bold;padding: 6px 15px;}
+.eval-profile-page .job-desc-wrapper .job-desc{padding: 15px; height: calc(100% - 35px); overflow-y: auto; overflow-x: hidden;}
+.eval-profile-page .btn-wrapper{display: inline-block; position: absolute; top: 10px; right: 150px; color: #fff;}
+.eval-profile-page .button-wide.accept{background-image: url(../../../img/btn_accept.png);}
+.eval-profile-page .button-wide.reject{background-image: url(../../../img/btn_reject.png);}
+
+/* Modals */
+#objectiveModal .modal-dialog{margin: 150px auto;}
+#objectiveModal .modal-content{width: 302px; height: 302px; background: url(../../../img/bluePostit.png) 0 0 no-repeat;}
+#objectiveModal .modal-content .modal-body{padding-right: 30px;}
+#objectiveModal .modal-content .modal-title{height: 40px;}
+#objectiveModal .modal-content .modal-body .objective-text{padding-top: 15px; height: 145px;}
+
+.feedbackBg-modal .modal-dialog{margin: 150px auto;}
+.feedbackBg-modal .modal-content{width: 426px; height: 224px; background: url(../../../img/bg_feedback.png) 0 0 no-repeat;}
+.feedbackBg-modal .modal-content .modal-body{padding: 28px 30px 20px 27px;}
+.feedbackBg-modal .modal-content .modal-body .feedback-text{font-size: 18px; padding: 18px 0px 0px 45px; min-height: 90px;}
+
+#nextPageModal .page-transition{display: inline-block;}
+.eval-profile-page.step-1 #nextPageModal .page2-3, .eval-profile-page.step-1 #nextPageModal .page3-4{display: none;}
+.eval-profile-page.step-2 #nextPageModal .page1-2, .eval-profile-page.step-2 #nextPageModal .page3-4{display: none;}
+.eval-profile-page.step-3 #nextPageModal .page1-2, .eval-profile-page.step-3 #nextPageModal .page2-3{display: none;}
+
+#ratingSliderModal .modal-content{padding: 10px;}
+#ratingSliderModal .modal-header{border-bottom: none;}
+#ratingSliderModal .modal-body{height: 120px; padding-top: 30px;}
+#ratingSliderModal .noUi-pips-horizontal{height: 70px;}
+
+.modal .modal-dialog .modal-content{margin: auto;}
+
+.reasoning-doc{padding: 25px 15px;}
+input[type=checkbox] { -webkit-appearance: none; -moz-appearance: none; appearance: none; display: none; -o-appearance: none;}
+.checkbox-holder {position: relative; display: block; padding-left: 20px; margin-bottom: 5px;}
+.vcg-checkbox {border: none; width: 15px; height: 15px; position: absolute; top: 3px; left: 0; background-image: url('../../../img/radioBtnSmall.png'); background-position: 0 0; background-repeat: no-repeat;}
+.vcg-checkbox.selected {background-position: -30px 0px;}
+.checkbox-text{color: #448790;}
+.option-select{margin-bottom: 35px;}
+.vcg-btn.submit{background-image: url(../../../img/btn_continue.png);}
+
+.transcript-doc{padding: 25px 15px;}
+.transcript-doc .convo-dialogue{margin-bottom: 10px;}
+.transcript-doc .dialogue-left{text-align: left;}
+.transcript-doc .dialogue-right{text-align: right;}
+.transcript-doc .convo-dialogue .dialogue-image{display: inline-block; width: 50px; height: 50px; background-image: url(../../../img/photo_transcript.png); background-repeat: no-repeat;}
+.transcript-doc .convo-dialogue .dialogue-text{display: inline-block; border-radius: 5px; padding: 10px; width: calc(85% - 60px); vertical-align: top; margin-top: 5px; position: relative;}
+.transcript-doc .dialogue-left .dialogue-image{margin-right: 10px;}
+.transcript-doc .dialogue-right .dialogue-image{margin-left: 10px; background-position: -150px 0px;}
+.transcript-doc .dialogue-left .dialogue-image.profile-1{background-position: 0 0;}
+.transcript-doc .dialogue-left .dialogue-image.profile-2{background-position: -50px 0;}
+.transcript-doc .dialogue-left .dialogue-image.profile-3{background-position: -100px 0;}
+.transcript-doc .dialogue-left .dialogue-text{background-color: #cce8fd;}
+.transcript-doc .dialogue-right .dialogue-text{background-color: #c5c5c5;}
+.transcript-doc .convo-dialogue .dialogue-text .dialogue-pointer{position: absolute; top: 3px; font-size: 18px;}
+.transcript-doc .dialogue-left .dialogue-text .dialogue-pointer{color: #cce8fd; left: -6px;}
+.transcript-doc .dialogue-right .dialogue-text .dialogue-pointer{color: #c5c5c5; right: -6px;}
+
+.profile-doc .candidate-img{text-align: right;}
+.profile-doc .profile-img{width: 105px; height: 109px; background-image: url(../../../img/resume_pic.png); background-repeat: no-repeat; display: inline-block;}
+.profile-doc .profile-img.one{background-position: 0 0;}
+.profile-doc .profile-img.two{background-position: -105px 0;}
+.profile-doc .profile-img.three{background-position: -210px 0;}
+.profile-doc .section-wrap{margin-bottom: 10px;}
+.profile-doc .heading{font-size: 16px; font-weight: bold; border-bottom: 2px solid #000; line-height: 1.1; margin-bottom: 3px;}
+.profile-doc .experience-heading.left{display: inline-block;}
+.profile-doc .experience-heading.right{display: inline-block; float: right;}
+.profile-doc .exp-label{font-weight: bold;}
+.profile-doc .company-name{font-weight: bold;}
+.profile-doc ul{padding-left: 25px;}
+.profile-doc ul.row{padding-left: 40px;}
+
+.job-desc-doc .section-wrap{margin-bottom: 15px;}
+.job-desc-doc .section-wrap .jd-role.heading{font-size: 16px;}
+.job-desc-doc .section-wrap .heading{font-weight: bold; margin-bottom: 7px;}
+.job-desc-doc .section-wrap .desc-text ul{padding-left: 25px;}

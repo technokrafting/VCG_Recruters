@@ -4,11 +4,8 @@
 
 		var $pageId;
 		var $eventObj;
-		var easyResumesArr = [];
-		var moderateResumesArr = [];
-		var difficultResumesArr = [];
-		var resumesChoosen = [];
-		var resumesCompleted = [];
+		var profilesArr = [];
+		var profilesCompleted = [];
 
 		var $navController;
 
@@ -39,13 +36,13 @@
 			renderTextElements(mainDivId,xml,eventObj,navController); //Call in utils.js
 
 
-			generateResumes(xml);
+			generateProfies(xml);
 
 			getData();
 
 
 			var guidelinesId = xml.find('guidelinesPageId').text();
-			$('.menu-icon-brochure').on('click',function(){
+			$('.brochure-icon').on('click',function(){
 
 				var eventObjToSend = {"pageId":guidelinesId};
 				$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
@@ -85,35 +82,24 @@
 			}
 		}
 
-		function generateResumes(xml)
+		function generateProfies(xml)
 		{
-			var resumes = xml.find('resumes');
+
+
+			var profile1 = xml.find('profile1');
+			var profile2 = xml.find('profile2');
+			var profile3 = xml.find('profile3');
+
+
+			profilesArr[profilesArr.length] = profile1.text();
+			profilesArr[profilesArr.length] = profile2.text();
+			profilesArr[profilesArr.length] = profile3.text();
 			
-			var easyResumes = resumes.find('easy');
 			//console.log(easyResumes);
-			easyResumes.children('resume').each(function() 
-			{
-				easyResumesArr[easyResumesArr.length] = $(this).attr('pageId');
-				//console.log('Easy Resumes', $(this).attr('pageId'));
 
-			});
+			console.log('profilesArr', profilesArr);
 
-			var moderateResumes = resumes.find('moderate');
-			moderateResumes.children('resume').each(function() 
-			{
-				moderateResumesArr[moderateResumesArr.length] = $(this).attr('pageId');
-				//console.log('Easy Resumes', $(this).attr('pageId'));
-
-			});
-
-
-			var difficultResumes = resumes.find('difficult');
-			difficultResumes.children('resume').each(function() 
-			{
-				difficultResumesArr[difficultResumesArr.length] = $(this).attr('pageId');
-				//console.log('Easy Resumes', $(this).attr('pageId'));
-
-			});
+			loadProfileCLicks();
 
 		}
 
@@ -141,116 +127,71 @@
 				{
 					var gotDataObj = pagesData[$pageId];
 
-					resumesChoosen = gotDataObj['resumesChoosen'].split(',');
+					$eventObj.registerForEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotProfilePagesData);
 
-					$eventObj.registerForEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotResumePagesData);
-
-					var eventObjToSend = {"pageId":$pageId,"getPageIds":[resumesChoosen[0],resumesChoosen[1],resumesChoosen[2],resumesChoosen[3],resumesChoosen[4]]};
+					var eventObjToSend = {"pageId":$pageId,"getPageIds":[profilesArr[0],profilesArr[1],profilesArr[2]]};
 					$eventObj.trigger($eventObj.eventVariables.GIVE_PAGE_DATA,eventObjToSend);
 				}
-				else
-				{
-					var rand1 = easyResumesArr[Math.floor(Math.random() * easyResumesArr.length)];
-					rand1 = 'easy_1';
-					
-					var rand2 = easyResumesArr[Math.floor(Math.random() * easyResumesArr.length)];
-					while(rand2 == rand1)
-					{
-						rand2 = easyResumesArr[Math.floor(Math.random() * easyResumesArr.length)];
-					}
 
-					var rand3 = moderateResumesArr[Math.floor(Math.random() * moderateResumesArr.length)];
-					var rand4 = moderateResumesArr[Math.floor(Math.random() * moderateResumesArr.length)];
-					while(rand4 == rand3)
-					{
-						rand4 = moderateResumesArr[Math.floor(Math.random() * moderateResumesArr.length)];
-					}
-					var rand5 = difficultResumesArr[Math.floor(Math.random() * difficultResumesArr.length)];
-
-					console.log(rand1,rand2,rand3,rand4,rand5);
-
-					
-
-					resumesChoosen[resumesChoosen.length] = rand1;
-					resumesChoosen[resumesChoosen.length] = rand2;
-					resumesChoosen[resumesChoosen.length] = rand3;
-					resumesChoosen[resumesChoosen.length] = rand4;
-					resumesChoosen[resumesChoosen.length] = rand5;
-
-					console.log(resumesChoosen);
-
-					loadResumePage(0);
-				}
-
-
-				saveData();
 			}
 		}
 
-		function gotResumePagesData(eventObj)
+		function gotProfilePagesData(eventObj)
 		{
-			console.log('gotResumePagesData',eventObj);
+			console.log('gotProfilePagesData',eventObj);
 			var pageId = eventObj["pageId"];
 			if(pageId == $pageId)
 			{
 				var pagesData = eventObj["pagesData"];
 				if(pagesData)
 				{	
-					for(var i=0;i<resumesChoosen.length;i++)
+					for(var i=0;i<profilesArr.length;i++)
 					{
-						var gotDataObj = pagesData[resumesChoosen[i]];
+						var gotDataObj = pagesData[profilesArr[i]];
 
 						if(gotDataObj)
 						{
-							var resumeScrore = parseInt(gotDataObj['score']);
+							var profileScrore = parseInt(gotDataObj['score']);
 
 							totalScore = totalScore + resumeScrore;
 
 							console.log('Setting i '+i);
-							$('#resume-'+(i+1)).removeClass('locked');
+							//$('#profile-'+(i+1)).removeClass('locked');
 
-							if(resumeScrore >= 800 && resumeScrore <= 899)
+							if(profileScrore >= 800)
 							{
-								$('#resume-'+(i+1)).addClass('star-1');
-							}
-
-							if(resumeScrore >= 900 && resumeScrore <= 999)
-							{
-								$('#resume-'+(i+1)).addClass('star-2');
-							}
-
-							if(resumeScrore >= 1000)
-							{
-								$('#resume-'+(i+1)).addClass('star-3');
+								$('#profile-'+(i+1)).addClass('profile-done');
 							}
 						}
 						
 					}
-
-					loadResumePage((Object.keys(pagesData).length));
 					
 				}
-				else
-				{
-					loadResumePage(0);
-				}
-				
 				
 
-				$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotResumePagesData);
+				$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotProfilePagesData);
 
 			}
 		}
 
-		function loadResumePage(index)
+
+
+		function loadProfileCLicks()
 		{
-			$('#resume-'+(index+1)).removeClass('locked');
-				$('#resume-'+(index+1)).click(function() {
+				$('.profile-btn-continue .btn-text').click(function() {
 
 					//var eventObjToSend = {"pageId":resumesChoosen[(index)]};
                    // $eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
 
-                    $navController.navigate(resumesChoosen[(index)]);
+                   
+                   var index = $(this).attr('id').toString().split('-')[1];
+
+                    index = parseInt(parseInt(index) - 1);
+
+                    console.log('index',index);
+
+                    var pageId = profilesArr[index];
+                    $navController.navigate(pageId);
 
 				});
 		}
@@ -259,11 +200,7 @@
 
 		function saveData()
 		{
-
-			var resumesChoosenStr = resumesChoosen.join();
-
 			var saveObj = {};
-			saveObj["resumesChoosen"] = resumesChoosenStr;
 			saveObj["totalScore"] = totalScore;
 
 			var eventObjToSend = {"pageId":$pageId,"pageData":saveObj};
@@ -308,41 +245,41 @@
 		{
 			//console.log("Into Page Destroy");
 			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotPagesData);
-			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotResumePagesData);
+			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotProfilePagesData);
 
 			var eventObjToSend = {"pageId":$pageId,"audioPath":$bgAudio};
 			$eventObj.trigger($eventObj.eventVariables.STOP_BACKGROUND_AUDIO,eventObjToSend);
 		}
 
-		$('#content').addClass('hide-element');
-		var imagesLoaded = 0;
+		// $('#content').addClass('hide-element');
+		// var imagesLoaded = 0;
 
-		$('.image').each(function(){
+		// $('.image').each(function(){
 
-			//console.log($('.menu-bg .anim-div .resume-hand.hand1').css('background'));
+		// 	//console.log($('.menu-bg .anim-div .resume-hand.hand1').css('background'));
 
-			var bgImg = new Image();
-			bgImg.onload = function(){
+		// 	var bgImg = new Image();
+		// 	bgImg.onload = function(){
 
-				imagesLoaded++;
-				if(imagesLoaded == $('.image').length)
-				{
-					//alert('all loaded');
-			   		App.register( {init:init,destroyPage:destroyPage});
-			   		$('#content').removeClass('hide-element');
-				}
-			   //myDiv.style.backgroundImage = 'url(' + bgImg.src + ')';
+		// 		imagesLoaded++;
+		// 		if(imagesLoaded == $('.image').length)
+		// 		{
+		// 			//alert('all loaded');
+		// 	   		App.register( {init:init,destroyPage:destroyPage});
+		// 	   		$('#content').removeClass('hide-element');
+		// 		}
+		// 	   //myDiv.style.backgroundImage = 'url(' + bgImg.src + ')';
 			   
 
-			};
+		// 	};
 
-			bgImg.src = $(this).attr('src');
+		// 	bgImg.src = $(this).attr('src');
 
-		});
+		// });
 
 		// $('#content').imagesLoaded().always(function() {
 		//   alert('images loaded');
-		//   App.register( {init:init,destroyPage:destroyPage});
+		  App.register( {init:init,destroyPage:destroyPage});
 		// });
 
 		// $('#content').waitForImages(function() {
