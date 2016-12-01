@@ -4,7 +4,7 @@ body{width: 1014px; height: 652px; font-family: Arial;}
 .italics{font-style: italic;}
 .text-white{color: white;}
 .clickable{cursor: pointer;}
-.setting-div{width: 45px; height: 45px; background: url(../img/btn_setting.png) 0 0 no-repeat; z-index: 2000; position: absolute; right: 0px;}
+.setting-div{width: 45px; height: 45px; background-image: url(../img/btn_setting.png); background-position: 0 0; background-repeat: no-repeat; z-index: 2000; position: absolute; right: 0px;}
 .setting-div:hover{background-position: -45px 0px;}
 .vcg-btn{height: 44px; background-position: 0 0; background-repeat: no-repeat; display: inline-block;}
 .button-wide{width: 117px;}

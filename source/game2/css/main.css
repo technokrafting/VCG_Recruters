@@ -1,15 +1,24 @@
 *:focus{outline: none!important;}
 body{width: 1014px; height: 652px; font-family: Arial;}
+/*.heading{font-size: 28px;}*/
+#loader{display: block; text-align: center; position: absolute; left: 0; right: 0; top: calc(50% - 25px);}
+#loader .fa.fa-spinner{font-size: 44px;}
+.wrapper{width: 1014px; height: 652px; overflow: hidden; position: absolute; left: 0; right: 0; background: none;}
+.setting-div{width: 45px; height: 45px; background-image: url(../img/btn_setting.png); background-position: 0 0; background-repeat: no-repeat; z-index: 2000; position: absolute; right: 0px;}
+.setting-div:hover{background-position: -45px 0px;}
+.italics{font-style: italic;}
 .text-white{color: white;}
+.clickable{cursor: pointer;}
 .margin-below{margin-bottom: 15px;}
 .margin-below2{margin-bottom: 20px;}
-.clickable{cursor: pointer;}
 .light-blue-text{color: #a6c8ee;}
-/*.heading{font-size: 28px;}*/
-.wrapper{width: 1014px; height: 652px; overflow: hidden; position: absolute; left: 0; right: 0; background: none;}
-.setting-div{width: 45px; height: 45px; background: url(../crops/global/btn_setting.png) 0 0 no-repeat; z-index: 2000; position: absolute; right: 0px;}
-.setting-div:hover{background-position: -45px 0px;}
 .hide-element{display:none !important;}
+.vcg-btn{height: 44px; background-position: 0 0; background-repeat: no-repeat; display: inline-block;}
+.button-wide{width: 117px;}
+.button-small{width: 93px; background-image: url(../img/btn_done.png);}
+.vcg-btn:hover{background-position: 0px -44px;}
+.btn-text{font-size: 16px; line-height: 40px; font-weight: bold; color: #fff;}
+.modal-content{border: none; box-shadow: none;}
 .infinite-glow{animation-name: infinite-glow; animation-duration: 1.5s; animation-iteration-count:infinite;}
 
 @keyframes infinite-glow{
@@ -23,6 +32,7 @@ body{width: 1014px; height: 652px; font-family: Arial;}
 	50%  {box-shadow: 0 0 10px #31c2ca inset;}
 	100% {box-shadow: none; border-radius: 5px;}
 }
+
 
 /*.splash-bg{background: url(../crops/splash/bg_splash.png) left top no-repeat; background-size: cover; overflow: hidden; padding-top: 30px;}
 .splash-bg .vcg-header-logo{width: 100%; height: 81px; overflow: hidden;}
