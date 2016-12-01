@@ -41,20 +41,13 @@
 			$menuPageId = xml.find('menuPageId').text();
 
 			initAnswers(xml);
-				
-			initStep1();
 
+			loadProfileData(xml);
+				
+		
 			renderTextElements(mainDivId,xml,eventObj,navController); //Call in utils.js
 
-			initializeScreenJs();
-
-			var settingsId = xml.find('settingsPageId').text();
-			$('.setting-div').on('click',function(){
-
-				var eventObjToSend = {"pageId":settingsId};
-				$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
-
-			});
+			
 
 		}
 
@@ -80,6 +73,38 @@
 					$eventObj.trigger($eventObj.eventVariables.PLAY_BACKGROUND_AUDIO,eventObjToSend);
 				}
 			}
+		}
+
+
+		function loadProfileData(xml)
+		{
+
+			
+			$('#profile-content-container').load("pages/"+$pageId+"/profile.html",function(){
+
+
+
+			profileLoaded(xml);
+
+			
+
+		});
+
+		}
+
+		function profileLoaded(xml)
+		{
+			initStep1();
+
+			initializeScreenJs();
+
+			var settingsId = xml.find('settingsPageId').text();
+			$('.setting-div').on('click',function(){
+
+				var eventObjToSend = {"pageId":settingsId};
+				$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
+
+			});
 		}
 
 		function initAnswers(xml)
