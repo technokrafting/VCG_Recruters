@@ -487,11 +487,6 @@
 				range: {
 					min: [ 1 ],
 					max: [ 10 ]
-				},
-				pips: { // Show a scale with the slider
-					mode: 'steps',
-					stepped: true,
-					density: 10
 				}
 			})
 			
