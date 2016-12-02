@@ -458,7 +458,7 @@
 
 		function gotoMenuPage()
 		{
-			alert('Score is '+ $score);
+			//alert('Score is '+ $score);
 
 			$navController.navigate($menuPageId);
 		}
@@ -531,6 +531,9 @@
 		function destroyPage()
 		{
 			//console.log("Into Page Destroy");
+
+			var eventObjToSend = {"pageId":$pageId,"audioPath":$bgAudio};
+			$eventObj.trigger($eventObj.eventVariables.STOP_BACKGROUND_AUDIO,eventObjToSend);
 		}
 		
 		App.register( {init:init,destroyPage:destroyPage});
