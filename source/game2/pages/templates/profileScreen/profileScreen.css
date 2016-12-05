@@ -71,3 +71,37 @@ input[type=checkbox] { -webkit-appearance: none; -moz-appearance: none; appearan
 #ratingSliderModal .noUi-base{width: 460px; margin-left: 18px;}
 #ratingSliderModal .modal-dialog{width: 821px;}
 #ratingSliderModal .modal-body{width: 801px; height: 173px; background-image: url(../../../img/photo_rating.png); background-repeat: no-repeat;}
+
+#feedbackModal .feedback-modal-btn.continue{visibility: hidden; position: fixed; bottom: 30px; left: 0; right: 0; margin: auto; width: 117px; height: 44px; background: url(../../../img/btn_continue.png) 0px 0px no-repeat; color: #fff; border: none; font-weight: bold; animation-delay: 5.8s; -webkit-animation-delay: 5.8s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+#feedbackModal .feedback-modal-btn.continue:hover{background-position: 0 -44px;}
+#feedbackModal .feedback-modal-btn.continue .btn-text{line-height: 40px; font-size: 16px;}
+#feedbackModal .modal-content{width: 403px; height: 406px; background: url(../../../img/feedback_postIt.png) 0 0 no-repeat; margin: 0 auto; padding-top: 25px;}
+#feedbackModal .modal-content .score-star{margin: 0 auto 10px;}
+#feedbackModal .modal-content .score-star .feedback-star{visibility: hidden; width: 60px; height: 56px; margin: 5px 4px; background-image: url(../../../img/stars-sprite.png); background-repeat: no-repeat; display: inline-block;/* animation-name: scale-in-out; animation-duration: 0.8s; animation-delay: 0s; animation-fill-mode: forwards; -webkit-animation-name: scale-in-out; -webkit-animation-duration: 0.8s; -webkit-animation-delay: 0s; -webkit-animation-fill-mode: forwards;*/}
+#feedbackModal .modal-content .score-star .feedback-star.one{animation-delay: 0s; -webkit-animation-delay: 0s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+#feedbackModal .modal-content .score-star .feedback-star.two{animation-delay: 0.5s; -webkit-animation-delay: 0.5s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+#feedbackModal .modal-content .score-star .feedback-star.three{animation-delay: 1s; -webkit-animation-delay: 1s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+#feedbackModal .modal-content .score-star.star-0 .feedback-star.one{background-position: 0 0px;}
+#feedbackModal .modal-content .score-star.star-0 .feedback-star.two{background-position: 0 0px;}
+#feedbackModal .modal-content .score-star.star-0 .feedback-star.three{background-position: 0 0px;}
+#feedbackModal .modal-content .score-star.star-1 .feedback-star.one{background-position: -60px 0;}
+#feedbackModal .modal-content .score-star.star-1 .feedback-star.two{background-position: 0 0px;}
+#feedbackModal .modal-content .score-star.star-1 .feedback-star.three{background-position: 0 0px;}
+#feedbackModal .modal-content .score-star.star-2 .feedback-star.one{background-position: -60px 0;}
+#feedbackModal .modal-content .score-star.star-2 .feedback-star.two{background-position: -60px 0;}
+#feedbackModal .modal-content .score-star.star-2 .feedback-star.three{background-position: 0 0px;}
+#feedbackModal .modal-content .score-star.star-3 .feedback-star.one{background-position: -60px 0;}
+#feedbackModal .modal-content .score-star.star-3 .feedback-star.two{background-position: -60px 0;}
+#feedbackModal .modal-content .score-star.star-3 .feedback-star.three{background-position: -60px 0;}
+#feedbackModal .modal-content .modal-title{font-size: 25px; font-weight: bold; margin-bottom: 5px;}
+#feedbackModal .mistakes-score-wrapper{padding: 0px 35px 0px 25px;}
+#feedbackModal .mistakes-score-wrapper .score-wrap{padding: 4px 15px; border-bottom: 1px solid #ccc; visibility: hidden;}
+#feedbackModal .mistakes-score-wrapper .score-wrap .score.labels{font-size: 16px; margin-top: 2px;}
+#feedbackModal .mistakes-score-wrapper .score-wrap .score.num{font-size: 18px; font-weight: bold;}
+#feedbackModal .mistakes-score-wrapper .score-wrap.issues{animation-delay: 1.8s; -webkit-animation-delay: 1.8s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+#feedbackModal .mistakes-score-wrapper .score-wrap.missed{animation-delay: 2.6s; -webkit-animation-delay: 2.6s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+#feedbackModal .mistakes-score-wrapper .score-wrap.current{animation-delay: 3.4s; -webkit-animation-delay: 3.4s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+#feedbackModal .mistakes-score-wrapper .score-wrap.previous{animation-delay: 4.2s; -webkit-animation-delay: 4.2s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+#feedbackModal .mistakes-score-wrapper .score-wrap.total{font-weight: bold; color: #0080ac; border-bottom: none; animation-delay: 5s; -webkit-animation-delay: 5s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+#feedbackModal .mistakes-score-wrapper .score-wrap.total .score.labels{font-size: 18px; margin-top: 5px;}
+#feedbackModal .mistakes-score-wrapper .score-wrap.total .score.num{font-size: 25px;}
