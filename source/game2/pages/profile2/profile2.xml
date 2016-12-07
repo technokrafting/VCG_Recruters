@@ -15,5 +15,6 @@
 	<bgAudio>audio/bg_splash.mp3</bgAudio>
 
 	
-
+	<nextButton pageId="menu"><![CDATA[Continue]]></nextButton>
+	
 </page>

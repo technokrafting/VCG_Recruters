@@ -17,6 +17,8 @@
 
 		var $bgAudio;
 
+		var sectionScoreHm = {};
+
 		var init = function (xml,navController,eventObj,pageId)
 		{
 
@@ -160,6 +162,7 @@
 				if(currentObj.answer == 'accept')
 				{
 					$score = $score + parseInt(currentObj.score);
+					sectionScoreHm['step1'] = parseInt(currentObj.score);
 
 					$('#nextPageModal').modal('show');
 					$('#next-done-btn').off();
@@ -197,6 +200,7 @@
 				}else{
 
 					$score = $score + parseInt(currentObj.score);
+					sectionScoreHm['step1'] = parseInt(currentObj.score);
 				}
 
 				initStep4();
@@ -228,6 +232,7 @@
 				if(currentObj.answer == 'accept')
 				{
 					$score = $score + parseInt(currentObj.score);
+					sectionScoreHm['step2'] = parseInt(currentObj.score);
 
 					$('#nextPageModal').modal('show');
 					$('#next-done-btn').off();
@@ -264,6 +269,7 @@
 				}else{
 
 					$score = $score + parseInt(currentObj.score);
+					sectionScoreHm['step2'] = parseInt(currentObj.score);
 				}
 
 				initStep4();
@@ -299,6 +305,7 @@
 				if(currentObj.answer == 'accept')
 				{
 					$score = $score + parseInt(currentObj.score);
+					sectionScoreHm['step3'] = parseInt(currentObj.score);
 
 					$('#nextPageModal').modal('show');
 					$('#next-done-btn').off();
@@ -334,6 +341,7 @@
 				}else{
 
 					$score = $score + parseInt(currentObj.score);
+					sectionScoreHm['step3'] = parseInt(currentObj.score);
 				}
 
 				initStep4();
@@ -391,6 +399,7 @@
 				{
 					//alert('same');
 					$score = $score + parseInt(step4aObj.score);
+					sectionScoreHm['step4a'] = parseInt(step4aObj.score);
 				}
 
 
@@ -405,13 +414,15 @@
 					else
 					{
 						saveData();
-						gotoMenuPage();
+						showFeedback();
+						//gotoMenuPage();
 					}
 				}
 				else
 				{
 					saveData();
-					gotoMenuPage();
+					showFeedback();
+					//gotoMenuPage();
 				}
 				
 
@@ -434,10 +445,12 @@
 				if(answerArr.indexOf(sliderVal.toString()) != -1)
 				{
 					$score = $score + parseInt(step4bObj.score);
+					sectionScoreHm['step4b'] = parseInt(step4bObj.score);
 				}
 
 				saveData();
-				gotoMenuPage();
+				showFeedback();
+				//gotoMenuPage();
 
 
 			});
@@ -454,6 +467,93 @@
 			var eventObjToSend = {"pageId":$pageId,"pageData":saveObj};
 			$eventObj.trigger($eventObj.eventVariables.SAVE_PAGE_DATA,eventObjToSend);
 
+		}
+
+		function showFeedback()
+		{
+
+
+			if($score < 800)
+			{
+				$('.score-star').addClass('star-0');
+				$('.congrats').addClass('hide-element');
+			}
+
+			if($score >= 800 && $score <= 899)
+			{
+				$('.score-star').addClass('star-1');
+				$('.hard-luck').addClass('hide-element');
+			}
+
+			if($score >= 900 && $score <= 999)
+			{
+				$('.score-star').addClass('star-2');
+				$('.hard-luck').addClass('hide-element');
+			}
+
+			if($score >= 1000)
+			{
+				$('.score-star').addClass('star-3');
+				$('.hard-luck').addClass('hide-element');
+			}
+
+
+			var step1Score = 'N.A';
+			var step2Score = 'N.A';
+			var step3Score = 'N.A';
+			var step4aScore = 'N.A';
+			var step4bScore = 'N.A';
+
+			if(sectionScoreHm['step1'])
+			{
+				step1Score = sectionScoreHm['step1'];
+			}
+			if(sectionScoreHm['step2'])
+			{
+				step2Score = sectionScoreHm['step2'];
+			}
+			if(sectionScoreHm['step3'])
+			{
+				step3Score = sectionScoreHm['step3'];
+			}
+			if(sectionScoreHm['step4a'])
+			{
+				step4aScore = sectionScoreHm['step4a'];
+			}
+			if(sectionScoreHm['step4b'])
+			{
+				step4bScore = sectionScoreHm['step4b'];
+			}
+
+			console.log('sectionScoreHm',sectionScoreHm);
+
+
+			$('#resume-score').html(step1Score);
+			$('#report-score').html(step2Score);
+			$('#transcript-score').html(step3Score);
+			if(step4aScore == 'N.A' && step4bScore == 'N.A')
+			{
+				$('#candidate-score').html(step4aScore);
+			}
+			else
+			{
+				if(step4aScore == 'N.A')
+				{
+					step4aScore = 0;
+					
+				}
+				else
+				{
+					step4bScore = 0;
+				}
+
+				$('#candidate-score').html((parseInt(step4aScore) + parseInt(step4bScore)));
+			}
+			
+			$('#total-score').html($score);
+
+
+			$('#feedbackModal').modal('show');
 		}
 
 		function gotoMenuPage()
