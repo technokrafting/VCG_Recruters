@@ -142,7 +142,9 @@
 				var pagesData = eventObj["pagesData"];
 				if(pagesData)
 				{	
-					for(var i=0;i<profilesArr.length;i++)
+
+					var i = 0;
+					for(i=0;i<profilesArr.length;i++)
 					{
 						var gotDataObj = pagesData[profilesArr[i]];
 
@@ -162,6 +164,13 @@
 							}
 						}
 						
+					}
+
+					//var completedProfilesCount = Object.keys(pagesData).length;
+
+					if(totalScore >= 2400)
+					{
+						showFinalFeedback();
 					}
 					
 				}
@@ -193,6 +202,42 @@
 
 				});
 		}
+
+		function showFinalFeedback()
+		{
+			if(totalScore >= 2400 && totalScore <= 2579)
+			{
+				$('.feedback-medal').addClass('bronze');
+				$('.feedback-medal').html('Bronze Medal');
+			}
+
+			if(totalScore >= 2580 && totalScore <= 2849)
+			{
+				$('.feedback-medal').addClass('silver');
+				$('.feedback-medal').html('Silver Medal');
+			}
+
+			if(totalScore >= 2850 && totalScore <= 3000)
+			{
+				$('.feedback-medal').addClass('gold');
+				$('.feedback-medal').html('Gold Medal');
+			}
+
+
+			$('.final-screen').css('display','block');
+
+			$('.exit').on('click',function(){
+
+				window.close();
+			});
+
+			// $('.replay').on('click',function(){
+
+			// 	var eventObjToSend = {"pageId":'page1'};
+			// 	$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
+
+			// });
+		}	
 
 
 
