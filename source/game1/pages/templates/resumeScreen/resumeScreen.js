@@ -86,17 +86,13 @@
 			$completedAttempts = 0;
 			$totalIssueIdentified = 0;
 
-			
-
 			setIssueText();
 
 			setProgressBar();
 
 			setScore();
 
-
 			loadResume();
-
 
 			var guidelinesPageId = xml.find('guidelinesPageId').text();
 			$('#resume-guidelines-btn').on('click',function(){
@@ -137,20 +133,11 @@
 
 		function loadResume()
 		{
-
-			
 			$('#resume-content-container').load("pages/"+$pageId+"/resume.html",function(){
-
-
-
 			loadResumeData();
-
-			
-
 		});
 
 		}
-
 
 		function loadResumeData()
 		{
@@ -174,7 +161,6 @@
 					else
 					{
 						tempArr = [];
-
 					}
 
 					tempArr[tempArr.length] = index;
