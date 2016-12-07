@@ -224,9 +224,10 @@
 			}
 
 
-			$('.final-screen').css('display','block');
+			$('.menu-page').addClass('final');
 
 			$('.exit').on('click',function(){
+				$('.menu-page').removeClass('final');
 
 				window.close();
 			});
