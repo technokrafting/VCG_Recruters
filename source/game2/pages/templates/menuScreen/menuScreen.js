@@ -207,18 +207,21 @@
 		{
 			if(totalScore >= 2400 && totalScore <= 2579)
 			{
+				$('.medal-wrapper .medal').addClass('bronze');
 				$('.feedback-medal').addClass('bronze');
 				$('.feedback-medal').html('Bronze Medal');
 			}
 
 			if(totalScore >= 2580 && totalScore <= 2849)
 			{
+				$('.medal-wrapper .medal').addClass('silver');
 				$('.feedback-medal').addClass('silver');
 				$('.feedback-medal').html('Silver Medal');
 			}
 
 			if(totalScore >= 2850 && totalScore <= 3000)
 			{
+				$('.medal-wrapper .medal').addClass('gold');
 				$('.feedback-medal').addClass('gold');
 				$('.feedback-medal').html('Gold Medal');
 			}
