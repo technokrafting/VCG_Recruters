@@ -12,7 +12,7 @@
 #mainPageDiv_guidelines .guidelines-wrapper .guideline-slide{width: 609px; height: 604px; background: url(images/bg_guidlines.png) 0 0 no-repeat; padding: 25px 40px;}
 #mainPageDiv_guidelines .guidelines-btn{width: 101px; height: 30px; background-image: url(images/btn-showMore.png); background-position: 0 0; background-repeat: no-repeat; position: absolute; bottom: 25px; right: 40px;}
 #mainPageDiv_guidelines .guidelines-btn:hover{background-position: 0 -30px;}
-#mainPageDiv_guidelines .guidelines-btn .btn-text{font-weight: bold; color: #fff; line-height: 28px;}
+#mainPageDiv_guidelines .guidelines-btn .btn-text{font-size: 14px; font-weight: bold; color: #fff; line-height: 28px;}
 #mainPageDiv_guidelines .guidelines-wrapper .guideline-slide .guidelines-visual{margin: 20px auto 0px; display: block;}
 #mainPageDiv_guidelines .checklist {list-style: none; padding: 0;}
 
