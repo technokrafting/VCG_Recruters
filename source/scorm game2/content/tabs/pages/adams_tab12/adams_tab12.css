@@ -1,0 +1,38 @@
+#tabContent #mainPageDiv_adams_tab12 #background
+{
+  background-image:url("");
+  height:0px;
+  width:0px;
+  float:left;
+  background-repeat:no-repeat;
+  position: absolute;
+  z-index: -1;
+}
+
+#tabContent #popupHeader {
+  position: absolute;
+  top: 402px;
+  left: 80px;
+  color: white;
+}
+
+
+
+#tabContent #mainPageDiv_adams_tab12 #iText {
+   top: -13px;
+  right: 131px;
+  position: absolute;
+  width: 200px;
+}
+
+
+#popupContent {
+  float: left;
+  margin-top: 100px;
+}
+
+
+
+
+
+

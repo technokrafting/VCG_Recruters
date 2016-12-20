@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<page type="contentScreen" loadIn="tabContent">
+
+
+	<header></header>
+	<body></body>
+
+	<components>
+		<text id="john" class="labels">
+			<![CDATA[<span><b>John & Betsy Smith</b></span><br/>Joint-CEOs]]>
+		</text>
+		<text id="exoctic" class="labels">
+			<![CDATA[Fast Food<br/>Outlets]]>
+		</text>
+		<text id="natural" class="labels">
+			<![CDATA[Hotels<br/> and Outside<br/>Catering]]>
+		</text>
+		<text id="free" class="labels">
+			<![CDATA[Small &<br/>Medium-sized<br/>Restaurants]]>
+		</text>
+		<text id="cheese" class="labels">
+			<![CDATA[Key Accounts]]>
+		</text>
+		<text id="sauces" class="labels">
+			<![CDATA[Large<br/>Commercial<br/>Catering]]>
+		</text>
+		<bg id="infoGraphic" class="labels">
+			
+		</bg>
+
+	</components>
+
+
+
+</page>

@@ -1,0 +1,101 @@
+
+
+#activityDiv{
+
+margin-top: 50px;
+
+}
+
+#tabular
+{
+	top:140px;
+	left: 4.65%;
+	position: absolute;
+}
+
+
+
+td {
+  width: 71px;
+  padding: 5px;
+}
+
+.headTh:first-child {
+  width: 156px;
+}
+
+.dataTd:first-child {
+  width: 159px;
+}
+
+th{
+	width: 72px;
+}
+
+
+#paramTd{
+
+	width: 100px;
+}
+
+.headTh{
+
+}
+
+
+.checkBox{
+
+	cursor: pointer;
+	margin-left: 35%;
+	  top: 0px;
+  	left: -1px;
+  	position: relative;
+}
+
+.checkActive{
+	cursor: pointer;
+}
+
+#actTable{
+
+	width: 910px;
+	border-bottom: 0px solid #9e8b71;
+	border-right: 0px solid #9e8b71;
+}
+
+#dataTable {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  border-top: 0px solid #9e8b71;
+  border-right: 0px solid #9e8b71; */
+}
+
+#dataTableDiv {
+  width: 927px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 295px;
+  display: block;
+}
+
+thead, tbody { 
+	display: block; 
+	
+}
+
+table {
+  border-left: solid 1px #9e8b71;
+  border-spacing: 0;
+  border-top: 1px solid #9e8b71;
+  border-right: 1px solid #9e8b71;
+  border-bottom: 1px solid #9e8b71;
+}
+
+.tableRow:last-child .dataTd {
+ border-bottom: 0px solid #9e8b71;
+}
+
+.profDetails{
+  cursor: pointer;
+}
+

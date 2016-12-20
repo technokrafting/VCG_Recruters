@@ -1,0 +1,98 @@
+#mainPageDiv_oer #background
+{
+	background-image:url("../../images/popup_bg.png");
+	height:590px;
+	width:1020px;
+	float:left;
+	background-repeat:no-repeat;
+	position: absolute;
+	z-index: -1;
+}
+
+
+#popupHeader {
+  position: absolute;
+  top: 414px;
+  left: 80px;
+  color: white;
+}
+
+
+#mainPageDiv_oer #iText {
+   top: -13px;
+  left: -460px;
+  position: absolute;
+  width: 200px;
+}
+
+#howTo{
+
+	font-size: 20px;
+	margin-top: 5px;
+}
+
+
+#proceed{
+
+	font-size: 40px;
+}
+
+#popupBody{
+
+  
+  width: 603px;
+  position: absolute;
+  left: 362px;
+
+}
+
+#oerTableDiv{
+
+  overflow-y: auto;
+  max-height: 314px;
+
+}
+
+
+#popupContent {
+  float: left;
+  width: 55%;
+  margin-left: 370px;
+  margin-top: 100px;
+}
+
+#oerTable
+{
+  width:585px;
+  border-right: solid 0px #9e8b71;
+  border-top: solid 0px #9e8b71;
+}
+
+#oerTable td{
+  width:585px;
+}
+
+#oerTable td, #oerTable th {
+  border-right: solid 1px #9e8b71;
+  padding: 10px;
+
+}
+
+#oerTable tr:last-child td{
+  border-bottom: solid 0px #9e8b71;
+}
+
+
+#oerTableHeader{
+
+  width:585px;
+  border-right: solid 0px #9e8b71;
+  border-bottom: solid 0px #9e8b71;
+
+}
+
+#oerTableHeader th{
+  width:268px;
+  font-weight: bold;
+  padding: 10px;
+}

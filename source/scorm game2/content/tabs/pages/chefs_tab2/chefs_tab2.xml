@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<page type="contentScreen" loadIn="tabContent">
+
+
+	<header></header>
+	<body></body>
+
+	<components>
+		<text id="john" class="labels">
+			<![CDATA[<span><b>Pia Romano</b></span><br/>CEO]]>
+		</text>
+		<text id="exoctic" class="labels">
+			<![CDATA[Exoctic Games]]>
+		</text>
+		<text id="natural" class="labels">
+			<![CDATA[Natural Meats]]>
+		</text>
+		<text id="free" class="labels">
+			<![CDATA[Free Range<br/>Poultry]]>
+		</text>
+		<text id="cheese" class="labels">
+			<![CDATA[Cheese and<br/>Other Dairy]]>
+		</text>
+		<text id="sauces" class="labels">
+			<![CDATA[Sauces and<br/>Vinegar]]>
+		</text>
+		<bg id="infoGraphic" class="labels">
+			
+		</bg>
+
+	</components>
+
+
+
+</page>

@@ -1,0 +1,55 @@
+#background
+{
+	background-image:url("images/bg.jpg");
+	height:590px;
+}
+
+#header
+{
+	font-size:45px;
+	font-weight:bold;
+	color:#54075b;
+}
+
+#body
+{
+
+	margin-top:5px;
+	width:505px;
+
+}
+
+#linkButton
+{
+	margin-top:50px;
+	cursor: pointer;
+}
+
+#linkButtonText
+{
+	color:#54075b;
+}
+
+#linkButtonImage
+{
+	float:left;
+	background:url('../../images/CommonSpriteSheet.png') no-repeat 0 -928px;
+	width:70px;
+	height:70px;
+	margin-left:190px;
+	margin-top:-45px;
+}
+
+#linkButton:hover #linkButtonImage{
+
+	background:url('../../images/CommonSpriteSheet.png') no-repeat -80px -928px;
+	width: 70px;
+	height: 70px;
+}
+
+
+#contentDiv{
+
+	  margin-top: 10%;
+
+};

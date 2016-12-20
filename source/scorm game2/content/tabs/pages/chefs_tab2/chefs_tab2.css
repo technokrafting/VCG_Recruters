@@ -1,0 +1,76 @@
+#tabContent #mainPageDiv_chefs_tab2 #background
+{
+  background-image:url("");
+  height:0px;
+  width:0px;
+  float:left;
+  background-repeat:no-repeat;
+  position: absolute;
+  z-index: -1;
+}
+
+#tabContent #popupHeader {
+  position: absolute;
+  top: 402px;
+  left: 80px;
+  color: white;
+}
+
+
+
+#tabContent #mainPageDiv_chefs_tab2 #iText {
+   top: -13px;
+  right: 131px;
+  position: absolute;
+  width: 200px;
+}
+
+
+#popupContent {
+  float: left;
+  margin-top: 100px;
+}
+
+.labels{position: absolute; color: #fff;}
+#john {
+  left: 334px;
+  top: 172px;
+  color: #fff;
+  text-align: center;
+}
+#exoctic {
+  top: 341px;
+  left: 67px;
+}
+#natural {
+  top: 341px;
+  left: 200px;
+}
+#free{
+  top: 332px;
+  left: 338px;
+  text-align: center;
+}
+#cheese{
+  top: 332px;
+  left: 470px;
+  text-align: center;
+}
+#sauces{
+  top: 332px;
+  left: 601px;
+  text-align: center;
+}
+
+#infoGraphic {
+  background: url(images/tab2_img.png) no-repeat;
+  width: 750px;
+  height: 590px;
+  position: absolute;
+  top: 155px;
+  left: 58px;
+  right: 0;
+}
+
+
+

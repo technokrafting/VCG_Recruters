@@ -1,0 +1,29 @@
+#popupContent{
+
+float:left;
+margin-left:0px;
+margin-top:0%;
+
+}
+
+#popupHeader
+{
+	color:#3c3b3c;
+}
+
+
+#popupFooter {
+  position: absolute;
+  top: 505px;
+  left: 820px;
+}
+
+.quesPopupIText {
+  position: absolute;
+  left: -450px;
+}
+
+.cover.current{
+	box-shadow: rgb(199, 208, 216) 0px 0px 6px 0px;
+}
+

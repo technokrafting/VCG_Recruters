@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page type="profileScreen" zone="menuButton0">
+
+
+	
+		<step1 score='300'>accept</step1>
+		<step2 score='300'>accept</step2>
+		<step3 score='200'>accept</step3>
+		<step4a score='100'>1,2</step4a>
+		<step4b score='100'>3,4,5</step4b>
+
+
+	<menuPageId>menu</menuPageId>
+	<settingsPageId>settings</settingsPageId>
+	<bgAudio>audio/bg_splash.mp3</bgAudio>
+
+	<nextButton pageId="menu"><![CDATA[Continue]]></nextButton>
+
+	
+
+</page>

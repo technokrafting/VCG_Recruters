@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<page type="feedback" zone="menuButton4">
+
+	<header><![CDATA[<div id="mentorImg"></div>]]></header>
+
+	<iText><![CDATA[Select Replay to reattempt the simulation or select X in the top right corner to quit.]]></iText>
+	<nextButton><![CDATA[Replay]]></nextButton>
+	<exitButton><![CDATA[Exit]]></exitButton>
+	<oerLabel pageId="oer"><![CDATA[Resources]]></oerLabel>
+	
+	<cycles>
+		<cycle pageId="decision_cycle1" reservedPageId="decision_cycle1_res" passingPer="80">
+
+			<competencies>
+				<competency type="Analysis of Financial Statements" attemptPer="50">
+
+					<evaluationRange>
+
+						<range start="0" end="49">
+							<text><![CDATA[Financial statement analysis questions, if answered, were done so with major errors. More attention and understanding are needed in several areas, including financial statements and ratios.<br/><br/>
+
+								Review the following Online Learning Resources to know more about Analysis of Financial Statements:
+
+							]]></text>
+							<oerLinks>
+								<link name="Planning Financial Statements and Projections Data"><![CDATA[http://www.bizfilings.com/toolkit/sbg/startup/planning/planning-financial-statements.aspx]]></link>
+								<link name="Analyzing Your Financial Ratios"><![CDATA[http://www.bbt.com/bbtdotcom/business/small-business-resource-center/growing-a-business/financial-ratios.page]]></link>
+								<link name="Financial Statements Tutorial"><![CDATA[http://www.jsu.edu/ccba/fea/docs/financial_stament_review.pdf]]></link>
+								<link name="YouTube: Cash Flow Statements"><![CDATA[https://www.youtube.com/watch?v=RodmSJqlxEE]]></link>
+								<link name="YouTube: The Basics of Cash Flow Analysis"><![CDATA[https://www.youtube.com/watch?v=ZrSwmVUelDY]]></link>
+								<link name="Guide to Financial Statements"><![CDATA[https://www.baruch.cuny.edu/tutorials/statements/]]></link>
+							</oerLinks>
+						</range>
+
+
+						<range start="50" end="79">
+							<text><![CDATA[Financial statement analysis questions were answered satisfactorily, but with some errors. Your responses indicate general understanding of financial statements, but with some misconceptions/confusions.<br/><br/>
+
+								Review the following Online Learning Resources to know more about Analysis of Financial Statements:
+
+							]]></text>
+							<oerLinks>
+								<link name="Planning Financial Statements and Projections Data"><![CDATA[http://www.bizfilings.com/toolkit/sbg/startup/planning/planning-financial-statements.aspx]]></link>
+								<link name="Analyzing Your Financial Ratios"><![CDATA[http://www.bbt.com/bbtdotcom/business/small-business-resource-center/growing-a-business/financial-ratios.page]]></link>
+								<link name="Financial Statements Tutorial"><![CDATA[http://www.jsu.edu/ccba/fea/docs/financial_stament_review.pdf]]></link>
+								<link name="YouTube: Cash Flow Statements"><![CDATA[https://www.youtube.com/watch?v=RodmSJqlxEE]]></link>
+								<link name="YouTube: The Basics of Cash Flow Analysis"><![CDATA[https://www.youtube.com/watch?v=ZrSwmVUelDY]]></link>
+								<link name="Guide to Financial Statements"><![CDATA[https://www.baruch.cuny.edu/tutorials/statements/]]></link>
+							</oerLinks>
+						</range>
+
+						<range start="80" end="100">
+							<text><![CDATA[You answered all financial statement analysis questions correctly. Your responses indicate an understanding of financial statements.
+							]]></text>
+						</range>
+
+					</evaluationRange>
+
+				</competency>
+
+				<competency type="Basic Accounting Concepts" attemptPer="25">
+
+					<evaluationRange>
+						<range start="0" end="49">
+							<text><![CDATA[Basic accounting concepts questions, if answered, were done so with major errors. More attention and understanding are needed in several areas, including accounting methods.<br/><br/>
+
+								Review the following Online Learning Resources to know more about Basic Accounting concepts:
+							]]></text>
+							<oerLinks>
+								<link name="Accounting Coach"><![CDATA[http://www.accountingcoach.com/]]></link>
+								<link name="Accounting Basics for Students"><![CDATA[http://www.accounting-basics-for-students.com/]]></link>
+								<link name="Khan Academy: Accounting and Financial Statements"><![CDATA[https://www.khanacademy.org/economics-finance-domain/core-finance/accounting-and-financial-stateme]]></link>
+
+							</oerLinks>
+						</range>
+
+						<range start="50" end="79">
+							<text><![CDATA[Basic accounting concepts questions were answered satisfactorily, but with some errors. Your responses indicate general understanding of accounting concepts, but with some misconceptions/confusions.<br/><br/>
+
+								Review the following Online Learning Resources to know more about Basic Accounting concepts:
+							]]></text>
+							<oerLinks>
+								<link name="Accounting Coach"><![CDATA[http://www.accountingcoach.com/]]></link>
+								<link name="Accounting Basics for Students"><![CDATA[http://www.accounting-basics-for-students.com/]]></link>
+								<link name="Khan Academy: Accounting and Financial Statements"><![CDATA[https://www.khanacademy.org/economics-finance-domain/core-finance/accounting-and-financial-stateme]]></link>
+
+							</oerLinks>
+						</range>
+						
+						<range start="80" end="100">
+							<text><![CDATA[You answered all basic accounting questions correctly. Your responses indicate an understanding of basic accounting concepts.
+							]]></text>
+						</range>
+
+					</evaluationRange>
+
+				</competency>
+
+				<competency type="Basic Principles of Finance" attemptPer="25">
+
+					<evaluationRange>
+						<range start="0" end="49">
+							<text><![CDATA[Basic principles of finance questions, if answered, were done so with major errors. More attention and understanding are needed in several areas, including calculating acquisition prices and assessing controls and risks.<br/><br/>
+
+								Review the following Online Learning Resources to know more about Basic Principles of Finance:
+							]]></text>
+							<oerLinks>
+								<link name="Merger Model Overview"><![CDATA[https://breakingintowallstreet.com/biws/demonstration-portal-files/Financial-Modeling-Fundamental2/BIWS-Merger-Model-Quick-Reference.pdf]]></link>
+								<link name="Gross Margin Ratio"><![CDATA[http://www.myaccountingcourse.com/financial-ratios/gross-margin-ratio]]></link>
+								<link name="YouTube: Weighted Average Cost of Capital (WACC)"><![CDATA[https://www.youtube.com/watch?v=46oLXwClvkw]]></link>
+								<link name="Khan Academy: Stock and Bonds"><![CDATA[https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds]]></link>
+								
+							</oerLinks>
+						</range>
+
+						<range start="50" end="79">
+							<text><![CDATA[Basic principles of finance questions were answered satisfactorily, but with some errors. Your responses indicate general understanding of the principles of finance, but with some misconceptions/confusions.<br/><br/>
+
+								Review the following Online Learning Resources to know more about Basic Principles of Finance:
+							]]></text>
+							<oerLinks>
+								<link name="Merger Model Overview"><![CDATA[https://breakingintowallstreet.com/biws/demonstration-portal-files/Financial-Modeling-Fundamental2/BIWS-Merger-Model-Quick-Reference.pdf]]></link>
+								<link name="Gross Margin Ratio"><![CDATA[http://www.myaccountingcourse.com/financial-ratios/gross-margin-ratio]]></link>
+								<link name="YouTube: Weighted Average Cost of Capital (WACC)"><![CDATA[https://www.youtube.com/watch?v=46oLXwClvkw]]></link>
+								<link name="Khan Academy: Stock and Bonds"><![CDATA[https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds]]></link>
+							</oerLinks>
+						</range>
+
+						<range start="80" end="100">
+							<text><![CDATA[You answered all basic finance questions correctly. Your responses indicate an understanding of the basic principles of finance.
+							]]></text>
+						</range>
+
+					</evaluationRange>
+
+				</competency>
+
+
+
+
+			</competencies>
+
+		</cycle>
+
+
+
+
+
+		<cycle pageId="decision_cycle2" reservedPageId="decision_cycle2_res" passingPer="80">
+
+			<competencies>
+				<competency type="Analysis of Financial Statements" attemptPer="50">
+
+					<evaluationRange>
+
+						<range start="0" end="49">
+							<text><![CDATA[Financial statement analysis questions, if answered, were done so with major errors. More attention and understanding are needed in several areas, including financial statements and ratios.<br/><br/>
+
+								Review the following Online Learning Resources to know more about Analysis of Financial Statements:
+
+							]]></text>
+							<oerLinks>
+								<link name="Planning Financial Statements and Projections Data"><![CDATA[http://www.bizfilings.com/toolkit/sbg/startup/planning/planning-financial-statements.aspx]]></link>
+								<link name="Analyzing Your Financial Ratios"><![CDATA[http://www.bbt.com/bbtdotcom/business/small-business-resource-center/growing-a-business/financial-ratios.page]]></link>
+								<link name="Financial Statements Tutorial"><![CDATA[http://www.jsu.edu/ccba/fea/docs/financial_stament_review.pdf]]></link>
+								<link name="YouTube: Cash Flow Statements"><![CDATA[https://www.youtube.com/watch?v=RodmSJqlxEE]]></link>
+								<link name="YouTube: The Basics of Cash Flow Analysis"><![CDATA[https://www.youtube.com/watch?v=ZrSwmVUelDY]]></link>
+								<link name="Guide to Financial Statements"><![CDATA[https://www.baruch.cuny.edu/tutorials/statements/]]></link>
+							</oerLinks>
+						</range>
+
+
+						<range start="50" end="79">
+							<text><![CDATA[Financial statement analysis questions were answered satisfactorily, but with some errors. Your responses indicate general understanding of financial statements, but with some misconceptions/confusions.<br/><br/>
+
+								Review the following Online Learning Resources to know more about Analysis of Financial Statements:
+
+							]]></text>
+							<oerLinks>
+								<link name="Planning Financial Statements and Projections Data"><![CDATA[http://www.bizfilings.com/toolkit/sbg/startup/planning/planning-financial-statements.aspx]]></link>
+								<link name="Analyzing Your Financial Ratios"><![CDATA[http://www.bbt.com/bbtdotcom/business/small-business-resource-center/growing-a-business/financial-ratios.page]]></link>
+								<link name="Financial Statements Tutorial"><![CDATA[http://www.jsu.edu/ccba/fea/docs/financial_stament_review.pdf]]></link>
+								<link name="YouTube: Cash Flow Statements"><![CDATA[https://www.youtube.com/watch?v=RodmSJqlxEE]]></link>
+								<link name="YouTube: The Basics of Cash Flow Analysis"><![CDATA[https://www.youtube.com/watch?v=ZrSwmVUelDY]]></link>
+								<link name="Guide to Financial Statements"><![CDATA[https://www.baruch.cuny.edu/tutorials/statements/]]></link>
+							</oerLinks>
+						</range>
+
+						<range start="80" end="100">
+							<text><![CDATA[You answered all financial statement analysis questions correctly. Your responses indicate an understanding of financial statements.
+							]]></text>
+						</range>
+
+					</evaluationRange>
+
+				</competency>
+
+				<competency type="Basic Accounting Concepts" attemptPer="25">
+
+					<evaluationRange>
+						<range start="0" end="49">
+							<text><![CDATA[Basic accounting concepts questions, if answered, were done so with major errors. More attention and understanding are needed in several areas, including accounting methods.<br/><br/>
+
+								Review the following Online Learning Resources to know more about Basic Accounting concepts:
+							]]></text>
+							<oerLinks>
+								<link name="Accounting Coach"><![CDATA[http://www.accountingcoach.com/]]></link>
+								<link name="Accounting Basics for Students"><![CDATA[http://www.accounting-basics-for-students.com/]]></link>
+								<link name="Khan Academy: Accounting and Financial Statements"><![CDATA[https://www.khanacademy.org/economics-finance-domain/core-finance/accounting-and-financial-stateme]]></link>
+
+							</oerLinks>
+						</range>
+
+						<range start="50" end="79">
+							<text><![CDATA[Basic accounting concepts questions were answered satisfactorily, but with some errors. Your responses indicate general understanding of accounting concepts, but with some misconceptions/confusions.<br/><br/>
+
+								Review the following Online Learning Resources to know more about Basic Accounting concepts:
+							]]></text>
+							<oerLinks>
+								<link name="Accounting Coach"><![CDATA[http://www.accountingcoach.com/]]></link>
+								<link name="Accounting Basics for Students"><![CDATA[http://www.accounting-basics-for-students.com/]]></link>
+								<link name="Khan Academy: Accounting and Financial Statements"><![CDATA[https://www.khanacademy.org/economics-finance-domain/core-finance/accounting-and-financial-stateme]]></link>
+
+							</oerLinks>
+						</range>
+						
+						<range start="80" end="100">
+							<text><![CDATA[You answered all basic accounting questions correctly. Your responses indicate an understanding of basic accounting concepts.
+							]]></text>
+						</range>
+
+					</evaluationRange>
+
+				</competency>
+
+				<competency type="Basic Principles of Finance" attemptPer="25">
+
+					<evaluationRange>
+						<range start="0" end="49">
+							<text><![CDATA[Basic principles of finance questions, if answered, were done so with major errors. More attention and understanding are needed in several areas, including calculating acquisition prices and assessing controls and risks.<br/><br/>
+
+								Review the following Online Learning Resources to know more about Basic Principles of Finance:
+							]]></text>
+							<oerLinks>
+								<link name="Merger Model Overview"><![CDATA[https://breakingintowallstreet.com/biws/demonstration-portal-files/Financial-Modeling-Fundamental2/BIWS-Merger-Model-Quick-Reference.pdf]]></link>
+								<link name="Gross Margin Ratio"><![CDATA[http://www.myaccountingcourse.com/financial-ratios/gross-margin-ratio]]></link>
+								<link name="YouTube: Weighted Average Cost of Capital (WACC)"><![CDATA[https://www.youtube.com/watch?v=46oLXwClvkw]]></link>
+								<link name="Khan Academy: Stock and Bonds"><![CDATA[https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds]]></link>
+								
+							</oerLinks>
+						</range>
+
+						<range start="50" end="79">
+							<text><![CDATA[Basic principles of finance questions were answered satisfactorily, but with some errors. Your responses indicate general understanding of the principles of finance, but with some misconceptions/confusions.<br/><br/>
+
+								Review the following Online Learning Resources to know more about Basic Principles of Finance:
+							]]></text>
+							<oerLinks>
+								<link name="Merger Model Overview"><![CDATA[https://breakingintowallstreet.com/biws/demonstration-portal-files/Financial-Modeling-Fundamental2/BIWS-Merger-Model-Quick-Reference.pdf]]></link>
+								<link name="Gross Margin Ratio"><![CDATA[http://www.myaccountingcourse.com/financial-ratios/gross-margin-ratio]]></link>
+								<link name="YouTube: Weighted Average Cost of Capital (WACC)"><![CDATA[https://www.youtube.com/watch?v=46oLXwClvkw]]></link>
+								<link name="Khan Academy: Stock and Bonds"><![CDATA[https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds]]></link>
+							</oerLinks>
+						</range>
+
+						<range start="80" end="100">
+							<text><![CDATA[You answered all basic finance questions correctly. Your responses indicate an understanding of the basic principles of finance.
+							]]></text>
+						</range>
+
+					</evaluationRange>
+
+				</competency>
+
+
+
+			</competencies>
+
+		</cycle>
+
+
+
+	</cycles>
+
+	<iTexts>
+		<iText id="first_failed"><![CDATA[Select Replay to reattempt the simulation or select X in the top right corner to quit.]]></iText>
+		<iText id="second_failed"><![CDATA[Select Continue to reattempt the simulation or select X in the top right corner to quit.]]></iText>
+		<iText id="first_passed"><![CDATA[Select Continue to move forward or select X in the top right corner to quit.]]></iText>
+		<iText id="second_passed"><![CDATA[Select Continue to move forward or select X in the top right corner to quit.]]></iText>
+		<iText id="complete"><![CDATA[Thank you for taking the course. Select X in the top right corner to quit.]]></iText>
+	</iTexts>
+
+	<feedbackRange>
+		<range start="0" end="49">
+			<![CDATA[You could do better.]]>
+		</range>
+		<range start="50" end="79">
+			<![CDATA[Okay!]]>
+		</range>
+		<range start="80" end="100">
+			<![CDATA[Good job!]]>
+		</range>
+
+	</feedbackRange>
+
+
+</page>
