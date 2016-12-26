@@ -60,11 +60,11 @@
 		{
 			if($audioOff == true)
 			{
-				$('.audio span').html('Audio On');
+				$('.audio span').html('Music On');
 				$('.audio').on('click',function(){
 
 					$audioOff = false;
-					$('.audio span').html('Audio Off');
+					$('.audio span').html('Music Off');
 					var eventObjToSend = {"pageId":$pageId};
 					$eventObj.trigger($eventObj.eventVariables.SET_AUDIO_ON,eventObjToSend);
 
@@ -73,11 +73,11 @@
 			}
 			else
 			{
-				$('.audio span').html('Audio Off');
+				$('.audio span').html('Music Off');
 				$('.audio').on('click',function(){
 
 					$audioOff = true;
-					$('.audio span').html('Audio On');
+					$('.audio span').html('Music On');
 					var eventObjToSend = {"pageId":$pageId};
 					$eventObj.trigger($eventObj.eventVariables.SET_AUDIO_OFF,eventObjToSend);
 

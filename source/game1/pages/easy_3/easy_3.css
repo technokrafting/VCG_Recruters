@@ -8,3 +8,5 @@ div.error-wrap{display: block;}
 .info-section .list-heading{color: rgb(114,124,163); font-family: 'Bookman Old Style'; font-weight: bold;}
 .info-section .list-subheading{color: rgb(114,124,163); font-family: 'Bookman Old Style';}
 div.incorrect{display: inline-block;}
+.info-section .experience-heading.left{display: inline-block;}
+.info-section .experience-heading.right{display: inline-block; float: right;}
