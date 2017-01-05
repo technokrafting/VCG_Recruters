@@ -120,7 +120,7 @@
 			{
 				console.log('Into passed',parseInt(LMSGetValue('cmi.score.raw')),isNaN(parseInt(LMSGetValue('cmi.score.raw'))));
 
-				LMSSetValue("cmi.completion_status",'complete');
+				LMSSetValue("cmi.completion_status",'completed');
 				LMSSetValue("cmi.success_status", "passed");
 
 				if(isNaN(parseInt(LMSGetValue('cmi.score.raw'))) == true)

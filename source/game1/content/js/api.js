@@ -120,7 +120,7 @@
 			{
 				console.log('Into passed',parseInt(LMSGetValue('cmi.score.raw')),isNaN(parseInt(LMSGetValue('cmi.score.raw'))));
 
-				LMSSetValue("cmi.completion_status",'complete');
+				LMSSetValue("cmi.completion_status",'completed');
 				LMSSetValue("cmi.success_status", "passed");
 
 				if(isNaN(parseInt(LMSGetValue('cmi.score.raw'))) == true)
@@ -129,12 +129,12 @@
 					LMSSetValue('cmi.score.raw',0);
 				}
 
-				console.log('After Set Raw',parseInt(LMSGetValue('cmi.score.raw')),parseFloat(($score/3000)));
+				console.log('After Set Raw',parseInt(LMSGetValue('cmi.score.raw')),parseFloat(($score/5000)));
 
 				if(parseInt(LMSGetValue('cmi.score.raw')) < parseInt($score))
 				{
 					LMSSetValue("cmi.score.raw", parseInt($score));
-					LMSSetValue("cmi.score.scaled", parseFloat(($score/3000)));
+					LMSSetValue("cmi.score.scaled", parseFloat(($score/5000)));
 				}
 
 				LMSSetValue('cmi.suspend_data','');
