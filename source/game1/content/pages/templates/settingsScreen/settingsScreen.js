@@ -127,7 +127,33 @@
 			//console.log("Into Page Destroy");
 		}
 		
-		App.register( {init:init,destroyPage:destroyPage});
+		$('#mainPageDiv #content').addClass('hide-element');
+		var imagesLoaded = 0;
+
+		//alert('Page Load Start '+$('#mainPageDiv .image').length);
+
+		$('#mainPageDiv .image').each(function(){
+
+			//console.log($('.menu-bg .anim-div .resume-hand.hand1').css('background'));
+
+			var bgImg = new Image();
+			bgImg.onload = function(){
+
+				imagesLoaded++;
+				if(imagesLoaded == $('#mainPageDiv .image').length)
+				{
+					//console.log('all loaded');
+			   		App.register( {init:init,destroyPage:destroyPage});
+			   		$('#mainPageDiv #content').removeClass('hide-element');
+				}
+			   //myDiv.style.backgroundImage = 'url(' + bgImg.src + ')';
+			   
+
+			};
+
+			bgImg.src = $(this).attr('src');
+
+		});
 
 
 })();

@@ -896,8 +896,34 @@
 			// /$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_CURRENT_SCORE,onCurrentScoreReceived);
 			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotMenuPageData);
 		}
+
+		$('#content').addClass('hide-element');
+		var imagesLoaded = 0;
+
+		$('.image').each(function(){
+
+			//console.log($('.menu-bg .anim-div .resume-hand.hand1').css('background'));
+
+			var bgImg = new Image();
+			bgImg.onload = function(){
+
+				imagesLoaded++;
+				if(imagesLoaded == $('.image').length)
+				{
+					//alert('all loaded');
+			   		App.register( {init:init,destroyPage:destroyPage});
+			   		$('#content').removeClass('hide-element');
+				}
+			   //myDiv.style.backgroundImage = 'url(' + bgImg.src + ')';
+			   
+
+			};
+
+			bgImg.src = $(this).attr('src');
+
+		});
 		
-		App.register( {init:init,destroyPage:destroyPage});
+		//App.register( {init:init,destroyPage:destroyPage});
 
 
 })();
