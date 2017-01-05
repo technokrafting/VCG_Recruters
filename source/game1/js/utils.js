@@ -1,6 +1,6 @@
 function loadXml(url,successFunction)
 {
-	$.ajax({
+    $.ajax({
     type: "GET",
     url: url,
     dataType: "xml",
@@ -8,42 +8,42 @@ function loadXml(url,successFunction)
 
         successFunction(xml);
     }
-	});
+    });
 }
 
 function loadAndParseXml(url,successFunction,pageId,callback)
 {
     //console.log(pageId+" loadAndParseXml Utils "+url);
-	$.ajax({
+    $.ajax({
     type: "GET",
     url: url+"?"+(new Date()),
     dataType: "xml",
     success: function (xml) {
 
             //console.log(" Xml Loaded "+xml);
-			
-			 var xml = $(xml);
-		  
-			successFunction(xml,pageId,callback);
-		}
-	});
+            
+             var xml = $(xml);
+          
+            successFunction(xml,pageId,callback);
+        }
+    });
 }
 
 function checkFile(url,callBackFunction)
 {
-	$.ajax({
+    $.ajax({
     type: "GET",
     url: url,
-	async: false,
+    async: false,
     success: function (xml) {
 
         callBackFunction(true);
     },
-	error: function (xml) {
+    error: function (xml) {
 
         callBackFunction(false);
     }
-	});
+    });
 }
 
 function renderTextElements(divId,xml,event,navigator)
@@ -176,14 +176,29 @@ function Timer(){
         if (h < 10) h = "0" + h;
         if (m < 10) m = "0" + m;
         if (s < 10) s = "0" + s;
-        return h + ":" + m + ":" + s;
+
+        var pythonDate = 'PT'+h+'H'+m+'M'+s+'S'; 
+
+        console.log('Sending Time ',pythonDate);
+        return pythonDate;
 
     }
 
     this.setTimeInFormat = function(timeInHHMMSS)
     {
-        //console.log("setTimeInFormat "+timeInHHMMSS);
-        var hms = timeInHHMMSS;   // your input string
+        console.log("setTimeInFormat "+timeInHHMMSS);
+
+        timeInHHMMSS = timeInHHMMSS.substring(2,timeInHHMMSS.length);
+
+        console.log('Got PT String',timeInHHMMSS);
+
+        var hh = timeInHHMMSS.substring(0,timeInHHMMSS.indexOf('H'));
+        var mm = timeInHHMMSS.substring(timeInHHMMSS.indexOf('H')+1,timeInHHMMSS.indexOf('M'));
+        var ss = timeInHHMMSS.substring(timeInHHMMSS.indexOf('M')+1,timeInHHMMSS.length-1);
+
+        console.log('Calculated Time',hh,mm,ss);
+
+        var hms = hh+":"+mm+":"+ss;   // your input string
         var a = hms.toString().split(':'); // split it at the colons
 
         // minutes are worth 60 seconds. Hours are worth 60 minutes.

@@ -151,7 +151,7 @@
 				else
 				{
 					var rand1 = easyResumesArr[Math.floor(Math.random() * easyResumesArr.length)];
-					rand1 = 'easy_1';
+					//rand1 = 'easy_1';
 					
 					var rand2 = easyResumesArr[Math.floor(Math.random() * easyResumesArr.length)];
 					while(rand2 == rand1)
@@ -180,10 +180,16 @@
 					console.log(resumesChoosen);
 
 					loadResumePage(0);
+
+					//totalScore = 5000;
+					//showFinalFeedback();
+
+					saveData();
+
 				}
 
 
-				saveData();
+				
 			}
 		}
 
@@ -227,7 +233,18 @@
 						
 					}
 
-					loadResumePage((Object.keys(pagesData).length));
+					if(Object.keys(pagesData).length == resumesChoosen.length)
+					{
+						showFinalFeedback();
+
+						var eventObjToSend = {"score":totalScore};
+						$eventObj.trigger($eventObj.eventVariables.SET_USER_SCORE,eventObjToSend);
+					}
+					else
+					{
+						loadResumePage((Object.keys(pagesData).length));
+					}
+					
 					
 				}
 				else
@@ -235,8 +252,9 @@
 					loadResumePage(0);
 				}
 				
-				
 
+				saveData();
+				
 				$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotResumePagesData);
 
 			}
@@ -244,6 +262,8 @@
 
 		function loadResumePage(index)
 		{
+
+			
 			$('#resume-'+(index+1)).removeClass('locked');
 				$('#resume-'+(index+1)).click(function() {
 
@@ -254,6 +274,57 @@
 
 				});
 		}
+
+
+		function sendCurrentScore(obj)
+		{
+			console.log('sendCurrentScore');
+			var eventObjToSend = {"totalScore":totalScore};
+			$eventObj.trigger($eventObj.eventVariables.TAKE_CURRENT_SCORE,eventObjToSend);
+		}
+
+		function showFinalFeedback()
+		{
+
+			console.log('showFinalFeedback');
+			if(totalScore >= 4000 && totalScore < 4500)
+			{
+				$('.medal-wrapper .medal').addClass('bronze');
+				$('.feedback-medal').addClass('bronze');
+				$('.feedback-medal').html('Bronze Medal');
+			}
+
+			if(totalScore >= 4500 && totalScore < 5000)
+			{
+				$('.medal-wrapper .medal').addClass('silver');
+				$('.feedback-medal').addClass('silver');
+				$('.feedback-medal').html('Silver Medal');
+			}
+
+			if(totalScore >= 5000)
+			{
+				$('.medal-wrapper .medal').addClass('gold');
+				$('.feedback-medal').addClass('gold');
+				$('.feedback-medal').html('Gold Medal');
+			}
+
+
+			$('.wrapper.menu-bg').addClass('final');
+			$('.final-screen').removeClass('hidden');
+
+			$('.exit').on('click',function(){
+				$('.menu-page').removeClass('final');
+
+				window.close();
+			});
+
+			// $('.replay').on('click',function(){
+
+			// 	var eventObjToSend = {"pageId":'page1'};
+			// 	$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
+
+			// });
+		}	
 
 
 

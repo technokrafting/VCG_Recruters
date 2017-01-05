@@ -1,5 +1,5 @@
 /* Menu Page */
-.menu-bg .final-screen{display: none;}
+/*/.menu-bg .final-screen{display: none;}*/
 .menu-bg{background: url(images/bg_wood.png) left top no-repeat; background-size: initial; overflow: hidden; z-index: 0;}
 .menu-bg .menu-div{width: 464px; height: 100%; padding: 75px 30px; color: #fff; background: url(images/bluePatch.png) top left no-repeat; z-index: 10; display: inline-block; top: 0; position: absolute;}
 .menu-div .heading{margin-bottom: 20px;}

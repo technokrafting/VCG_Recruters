@@ -23,9 +23,12 @@
 		var $previousScore = 0;
 		var $bgAudio;
 
+		var $menuPageId;
+
 
 		var init = function (xml,navController,eventObj,pageId)
 		{
+
 
 
 			var mainDivId = "mainPageDiv_"+pageId;
@@ -35,7 +38,8 @@
 			$pageId = pageId;
 
 			$eventObj = eventObj;
-
+			
+			
 
 			$bgAudio = xml.find('bgAudio').text();
 			loadBgAudio();
@@ -48,10 +52,29 @@
 			$progressBar = $('.progress-bg');
 			$scoreBoard = $('.score-count');
 
+			$menuPageId = xml.find('menuageId').text();
+
 			
 
 			renderData(xml);
+
+			$eventObj.registerForEvent($eventObj.eventVariables.TAKE_CURRENT_SCORE,onCurrentScoreReceived);
+
+			console.log('Triggering GIVE_CURRENT_SCORE');
+			var eventObjToSend = {"pageId":$pageId};
+
+			$eventObj.trigger($eventObj.eventVariables.GIVE_CURRENT_SCORE,eventObjToSend);
 			
+
+		}
+
+		function onCurrentScoreReceived(eventObj)
+		{
+			$previousScore = eventObj['totalScore'];
+
+			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_CURRENT_SCORE,onCurrentScoreReceived);
+
+			console.log('onCurrentScoreReceived',$previousScore);
 
 		}
 
@@ -246,7 +269,7 @@
 
 			  	 $issuesToIdentifyHm[index] = tempObj;
 
-			  	// $('#incorrect-'+index).addClass('red-text-bg');
+			  	$('#incorrect-'+index).addClass('red-text-bg');
 
 			  }
 

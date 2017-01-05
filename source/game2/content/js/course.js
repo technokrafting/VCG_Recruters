@@ -18,9 +18,6 @@ var App = (function() {
 
 	var $pageData = {};
 
-
-	var $isAPiReady = false;
-
 	$(document).ready(function() {
 
 		$ui = $("#ui");
@@ -28,17 +25,9 @@ var App = (function() {
 		$popup = $("#popup");
 		$loader = $("#loader");
 
-		console.log("Window "+$(window));
+		//console.log("Got Popup Obj "+$popup);
 
 		loadUI();
-
-		// window.onbeforeunload=function(e){
-
-		// 	 givePageDataForBookmark();
-  //   		//return "Are you sure to leave this page?";
-		// }
-
-		
 		
 
 	});
@@ -52,16 +41,7 @@ var App = (function() {
 
 		// 		});
 
-		//$isAPiReady = true;
-		if($isAPiReady == true)
-		{
-			loadPage("menu");
-		}
-		else
-		{
-			loadPage("menu");
-		}
-		
+		loadPage("menu");
 		
 
 	}
@@ -152,6 +132,11 @@ var App = (function() {
 	{
 		$pageData = eventObj['pagesData'];
 
+		delete $pageData["decision_cycle1"];
+		delete $pageData["decision_cycle1_res"];
+		delete $pageData["decision_cycle2"];
+		delete $pageData["decision_cycle2_res"];
+
 	}
 
 
@@ -161,13 +146,7 @@ var App = (function() {
 		//console.log("Got Pages Data");
 		//console.log(JSON.stringify($pageData));
 
-		$eventObj.trigger($eventObj.eventVariables.SAVE_DATA_TO_API,eventObjToSend);
-	}
-
-	function courseExit(obj)
-	{
-		console.log('Into courseExit');
-		givePageDataForBookmark();
+		$eventObj.trigger($eventObj.eventVariables.TAKE_PAGE_DATA_FOR_BOOKMARK,eventObjToSend);
 	}
 
 	function savePageData(eventObj)
@@ -253,10 +232,7 @@ var App = (function() {
 	var registerApiObj = function(apiObj){
 
 		$api = apiObj;
-		if($api.init($eventObj) == true)
-		{
-			$isAPiReady = true;
-		}
+		$api.init($eventObj);
 	}
 
 	var registerAudioObj = function(audioObj){
@@ -274,8 +250,6 @@ var App = (function() {
 		$eventObj.registerForEvent($eventObj.eventVariables.SAVE_PAGE_DATA,savePageData);
 		$eventObj.registerForEvent($eventObj.eventVariables.GIVE_PAGE_DATA,givePageData);
 		$eventObj.registerForEvent($eventObj.eventVariables.TAKE_PAGES_DATA_FROM_BOOKMARK,takePageDataFromBookmark);
-
-		$eventObj.registerForEvent($eventObj.eventVariables.COURSE_EXIT,courseExit);
 		
 		//console.log("registerEventObj "+ $eventObj);
 

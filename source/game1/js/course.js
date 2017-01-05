@@ -41,7 +41,7 @@ var App = (function() {
 
 		// 		});
 
-		loadPage("page1");
+		loadPage("menu");
 		
 
 	}

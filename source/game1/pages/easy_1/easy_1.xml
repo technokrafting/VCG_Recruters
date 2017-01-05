@@ -14,4 +14,6 @@
 
 	<bgAudio>audio/bg_resume.mp3</bgAudio>
 
+	<menuageId>menu</menuageId>
+
 </page>
