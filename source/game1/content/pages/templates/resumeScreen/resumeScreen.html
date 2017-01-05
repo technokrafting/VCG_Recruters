@@ -1,0 +1,173 @@
+<div id="mainPageDiv">
+
+		<div id="feedbackModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-body text-center">
+						<div class="score-star">
+							<div class="feedback-star one bounceIn"></div>
+							<div class="feedback-star two bounceIn"></div>
+							<div class="feedback-star three bounceIn"></div>
+						</div>
+						<h3 class="modal-title">
+							<span class="congrats">Congratulations!</span>
+							<span class="hard-luck">Hard Luck!</span>
+						</h3>
+						<div class="mistakes-score-wrapper">
+							<div class="row score-wrap issues bounceIn">
+								<div class="score labels col-xs-6 text-right">Issues identified</div>
+								<div class="score num col-xs-6 text-left"><span id='issues-identified' class="identified">5</span><span> out of </span><span id='total-issues' class="issues-total">7</span></div>
+							</div>
+							<div class="row score-wrap missed bounceIn">
+								<div class="score labels col-xs-6 text-right">Missed Attempts</div>
+								<div id="missed-attempts" class="score num col-xs-6 text-left">2</div>
+							</div>
+							<div class="row score-wrap current bounceIn">
+								<div class="score labels col-xs-6 text-right">Current Score</div>
+								<div id="current-score" class="score num col-xs-6 text-left">2500</div>
+							</div>
+							<div class="row score-wrap previous bounceIn">
+								<div class="score labels col-xs-6 text-right">Previous Score</div>
+								<div id="previous-score" class="score num col-xs-6 text-left">1000</div>
+							</div>
+							<div class="row score-wrap total bounceIn">
+								<div class="score labels col-xs-6 text-right">Total Score</div>
+								<div id="total-score" class="score num col-xs-6 text-left">3500</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="feedback-modal-btn continue text-center clickable bounceIn" role="button">
+					<span id="nextButton" class="btn-text text-uppercase next-text-block">Continue</span>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper main-page-bg resume">
+			<div class="setting-div clickable"></div>
+			<div class="bg-dark-tint"></div>
+			<div class="left-panel">
+				<div class="left-panel-wrapper ink-remaining-wrapper">
+					<div class="text-content text-right text-uppercase ink-label desc">Ink Remaining</div>
+					<div class="icon-marker"></div>
+					<div class="progress-bg"></div>
+				</div>
+				<div class="left-panel-wrapper score-wrapper">
+					<div class="text-content text-center text-uppercase score-label desc">Score</div>
+					<div class="score-bg text-content"><span class="score-count">2500</span></div>
+				</div>
+				<div class="left-panel-wrapper issues-found-wrapper">
+					<div class="text-content text-center text-uppercase issues-label desc">Issues Identified</div>
+					<div class="issue-content-wrap text-center">
+						<span class="issues-warning"></span>
+						<span id="issue-count-text" class="count text-content text-white">0/7</span>
+					</div>
+				</div>
+				<div class="left-panel-wrapper text-center pages-wrapper">
+					<div class="text-content text-uppercase pages-label desc">Pages</div>
+					<div class="page-indicator-wrapper">
+						<div class="pages-bg page1 page-up hide-element"><span class="page-num">1</span></div>
+						<div class="pages-bg page2 page-blank hide-element"><span class="page-num">2</span></div>
+						<div class="pages-bg page3 page-blank hide-element"><span class="page-num">3</span></div>
+						<div class="pages-bg page4 page-down hide-element"><span class="page-num">4</span></div>
+					</div>
+				</div>
+				<div class="left-panel-wrapper text-center hint-wrapper">
+					<div class="text-content text-uppercase hint-label desc">Hint Available</div>
+					<div class="hint-btn"></div>
+				</div>
+				<div class="left-panel-wrapper text-center guidelines-wrapper">
+					<button id="resume-guidelines-btn" class="guidelines-btn text-uppercase">View Guidelines</button>
+				</div>
+			</div>
+			<div class="main-content">
+				<div class="info-bg-tint">
+					<div class="label-arrow-bg"></div>
+					<div class="arrow-desc-wrapper">
+						<div class="arrow-desc ink">
+							<div class="arrow-desc-title">Ink Remaining</div>
+							<div class="arrow-desc-text">This counter indicates the number of attempts left to identify the issues in a resume out of the total attempts allowed.</div>
+						</div>
+						<div class="arrow-desc score">
+							<div class="arrow-desc-title">Score Counter</div>
+							<div class="arrow-desc-text">This counter indicates the score in real time based on the number of issues identified.</div>
+						</div>
+						<div class="arrow-desc issues-found">
+							<div class="arrow-desc-title">Issues found indicator</div>
+							<div class="arrow-desc-text">This counter indicates the number of issues identified of the total numbers of issues.</div>
+						</div>
+						<div class="arrow-desc current-location">
+							<div class="arrow-desc-title">Location Indicator</div>
+							<div class="arrow-desc-text">This section displays the pages of the resume being reviewed and the completion status of each page. You can also toggle between the pages by clicking on them.</div>
+						</div>
+						<div class="arrow-desc hint">
+							<div class="arrow-desc-title">Hints</div>
+							<div class="arrow-desc-text">This panel displays the hint icons. You can click the icons to reveal the hints. Remember, only one hint per resume is allowed, which is applicable for clickable errors only.</div>
+						</div>
+						<div class="arrow-desc guidelines">
+							<div class="arrow-desc-title">Guidelines</div>
+							<div class="arrow-desc-text">You can read through the Review Guidelines by clicking this button any time during the game session.</div>
+						</div>
+					</div>
+					<div class="note challenge-note">
+						<div class="challenge-title">Challenge</div>
+						<span class="challenge-text">Read the resume carefully and identify the issues you see in it.</span>
+						<div class="challenge-text">Click the relevant text to mark the issues in the resume and then click Done.</div>
+						<div class="challenge-continue-btn text-center clickable infinite-glow" role="button"><span class="challenge-continue-text text-uppercase">Continue</span></div>
+					</div>
+				</div>
+				<div class="resume-div">
+					<div class="paper-fold"></div>
+					<div class="resume-content">
+						<div class="ok-popout text-center hide-element"><span class="ok-text">This is OK</span></div>
+						<div class="click-mark-circle hide-element"></div>
+						<div class="hint-box-top hide-element"></div>
+						<div class="hint-box-bottom hide-element"></div>
+						<div class="answer-exclamation issues-warning hide-element"></div>
+						<div id="resume-content-container"></div>
+						
+					</div>
+				</div>
+				<!-- <div class="note challenge-note"></div> -->
+				<span id='done-btn' type="button" class="btn-done text-uppercase text-center clickable" role="button" data-backdrop="static" data-keyboard="false" href="#" data-toggle="modal" data-target="#doneModal"><span class="btn-text">Done</span></span>
+			</div>
+		</div>
+
+		<div src='crops/menu/bg_wood.png' class="image" />
+<div src='crops/howToPlay/bg_tint.png' class="image" />
+<div src='crops/main/bg_leftPanel.png' class="image" />
+<div src='crops/main/inkSlot.png' class="image" />
+<div src='crops/main/icon_marker.png' class="image" />
+<div src='crops/main/inkBar.png' class="image" />
+<div src='crops/main/ScoreDisplay.png' class="image" />
+
+<div src='crops/main/Icon_issue.png' class="image" />
+<div src='crops/main/pageStatusSmall.png' class="image" />
+<div src='crops/main/MagnifyingGlass.png' class="image" />
+<div src='crops/menu/btn_guidlines.png' class="image" />
+<div src='crops/howToPlay/pointers.png' class="image" />
+<div src='crops/howToPlay/bluePostit.png' class="image" />
+<div src='crops/global/btn_continue.png' class="image" />
+
+<div src='crops/main/bg_paper.png' class="image" />
+<div src='crops/main/bg_paper_corner.png' class="image" />
+<div src='crops/main/eval_pointer.png' class="image" />
+<div src='crops/main/pointer_ok.png' class="image" />
+<div src='crops/main/click_marker.png' class="image" />
+<div src='crops/main/Icon_hintOnPage.png' class="image" />
+
+<div src='crops/main/btn_done.png' class="image" />
+<div src='crops/main/notePad.png' class="image" />
+<div src='crops/main/radioBtn.png' class="image" />
+<div src='crops/main/btn_back.png' class="image" />
+<div src='crops/main/feedback_postIt.png' class="image" />
+<div src='crops/main/stars-sprite.png' class="image" />
+
+
+</div>
+
+
+
+
+
+ <script src="pages/templates/resumeScreen/resumeScreen.js"></script>
