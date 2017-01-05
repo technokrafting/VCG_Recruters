@@ -54,28 +54,32 @@
 
 			$menuPageId = xml.find('menuageId').text();
 
+
+			$eventObj.registerForEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotMenuPageData);
+
+			var eventObjToSend = {"pageId":$pageId,"getPageIds":[$menuPageId]};
+			$eventObj.trigger($eventObj.eventVariables.GIVE_PAGE_DATA,eventObjToSend);
 			
 
 			renderData(xml);
 
-			$eventObj.registerForEvent($eventObj.eventVariables.TAKE_CURRENT_SCORE,onCurrentScoreReceived);
-
-			console.log('Triggering GIVE_CURRENT_SCORE');
-			var eventObjToSend = {"pageId":$pageId};
-
-			$eventObj.trigger($eventObj.eventVariables.GIVE_CURRENT_SCORE,eventObjToSend);
-			
-
 		}
 
-		function onCurrentScoreReceived(eventObj)
+		function gotMenuPageData(eventObj)
 		{
-			$previousScore = eventObj['totalScore'];
+			var pageId = eventObj["pageId"];
+			if(pageId == $pageId)
+			{
+				$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotMenuPageData);
+				var pagesData = eventObj["pagesData"];
 
-			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_CURRENT_SCORE,onCurrentScoreReceived);
+				var gotDataObj = pagesData[$menuPageId];
 
-			console.log('onCurrentScoreReceived',$previousScore);
+				console.log('Got Total Score',gotDataObj['totalScore']);
 
+				$previousScore = parseInt(gotDataObj['totalScore']);
+				
+			}
 		}
 
 		function loadBgAudio()
@@ -887,6 +891,10 @@
 			//console.log("Into Page Destroy");
 			var eventObjToSend = {"pageId":$pageId,"audioPath":$bgAudio};
 			$eventObj.trigger($eventObj.eventVariables.STOP_BACKGROUND_AUDIO,eventObjToSend);
+
+
+			// /$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_CURRENT_SCORE,onCurrentScoreReceived);
+			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotMenuPageData);
 		}
 		
 		App.register( {init:init,destroyPage:destroyPage});
