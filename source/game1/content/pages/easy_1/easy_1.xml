@@ -3,7 +3,7 @@
 
 
 	<attempts>10</attempts>
-	<issuesToFind>12</issuesToFind>
+	<issuesToFind>7</issuesToFind>
 	<resumeHtml>resume.html</resumeHtml>
 
 	<guidelinesPageId>guidelines</guidelinesPageId>
