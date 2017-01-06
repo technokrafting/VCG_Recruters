@@ -1,5 +1,8 @@
 *:focus{outline: none!important;}
 body{width: 1014px; height: 652px; font-family: Arial;}
+#loader .spinner-wrap{display: block; text-align: center; position: absolute; left: 0; right: 0; z-index: 20000; top: calc(50% - 25px);}
+#loader .spinner-wrap .fa.fa-spinner{font-size: 44px; color: #fff;}
+#loader .spinner-bg{position: fixed; height: 100%; z-index: 1950; width: 100%; pointer-events: none; background-color: rgba(0,0,0,0.5);}
 .text-white{color: white;}
 .margin-below{margin-bottom: 15px;}
 .margin-below2{margin-bottom: 20px;}
