@@ -55,11 +55,11 @@ var App = (function() {
 		//$isAPiReady = true;
 		if($isAPiReady == true)
 		{
-			loadPage("menu");
+			loadPage("page1");
 		}
 		else
 		{
-			loadPage("menu");
+			loadPage("page1");
 		}
 		
 		
@@ -81,6 +81,8 @@ var App = (function() {
 		{
 			case undefined:
 				//console.log("Into undefined Loading");
+
+				$content.hide();
 				$currentPageId = pageId;
 				$currentPageType = pageNode.attr("type");
 				
@@ -89,8 +91,8 @@ var App = (function() {
 					var eventObjToSend = {"pageId":pageId};
 		            $eventObj.trigger($eventObj.eventVariables.PAGE_LOADED,eventObjToSend);
 
-		            $content.fadeIn(1000);
-					$loader.hide();
+		            //$content.fadeIn(1000);
+					//$loader.hide();
 
 				});
 
@@ -99,6 +101,8 @@ var App = (function() {
 		}
 
 		var pageType = pageNode.attr("type");
+
+		$('#'+$currentLoadedPageType).hide();
 		$('#'+$currentLoadedPageType).load('pages/templates/'+pageType+"/"+pageType+".html",function(){
 
 			if(callback)
@@ -110,8 +114,8 @@ var App = (function() {
 		       
 			}
 
-			$loader.hide();
-			$('#'+$currentLoadedPageType).fadeIn(1000);
+			//$loader.hide();
+			//$('#'+$currentLoadedPageType).fadeIn(1000);
 			
 
 		});
@@ -235,6 +239,26 @@ var App = (function() {
 		pageObj.init($currentPageXml,controller,$eventObj,$lastPageLoadedId);
 	};
 
+	function pageInit(eventObj)
+	{
+		switch($currentLoadedPageType)
+		{
+			case undefined:
+					//$content.hide();
+					$content.fadeIn(1000);
+					$loader.hide();
+			break;
+
+			default:
+
+				$('#'+$currentLoadedPageType).fadeIn(1000);
+				$loader.hide();
+				
+			break;
+
+		}
+	}
+
 
 	var registerUiObj = function(uiObj) {
 		$uiObj = uiObj;
@@ -276,6 +300,7 @@ var App = (function() {
 		$eventObj.registerForEvent($eventObj.eventVariables.TAKE_PAGES_DATA_FROM_BOOKMARK,takePageDataFromBookmark);
 
 		$eventObj.registerForEvent($eventObj.eventVariables.COURSE_EXIT,courseExit);
+		$eventObj.registerForEvent($eventObj.eventVariables.PAGE_INIT,pageInit);
 		
 		//console.log("registerEventObj "+ $eventObj);
 

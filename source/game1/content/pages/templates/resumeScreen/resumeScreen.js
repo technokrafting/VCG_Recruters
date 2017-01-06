@@ -893,7 +893,10 @@
 			link.media = 'all';
 			mainPageDiv.appendChild(link);
 
-			$('#content').removeClass('hide-element');
+			//$('#content').removeClass('hide-element');
+
+			var eventObjToSend = {"pageId":$pageId};
+			$eventObj.trigger($eventObj.eventVariables.PAGE_INIT,eventObjToSend);
 
 		}
 
@@ -909,7 +912,7 @@
 			$eventObj.unRegisterEvent($eventObj.eventVariables.TAKE_PAGE_DATA,gotMenuPageData);
 		}
 
-		$('#content').addClass('hide-element');
+		//$('#content').addClass('hide-element');
 		var imagesLoaded = 0;
 
 		$('.image').each(function(){

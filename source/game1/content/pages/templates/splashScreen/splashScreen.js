@@ -69,6 +69,9 @@
 
 			initPage();
 
+			var eventObjToSend = {"pageId":$pageId};
+			$eventObj.trigger($eventObj.eventVariables.PAGE_INIT,eventObjToSend);
+
 
 		}
 

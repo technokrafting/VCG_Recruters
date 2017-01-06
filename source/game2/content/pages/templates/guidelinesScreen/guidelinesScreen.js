@@ -13,11 +13,11 @@
 			mainDiv.id = mainDivId;
 			
 			$pageId = pageId;
+			$eventObj = eventObj;
+
 			loadTemplateCss();
 
 			renderTextElements(mainDivId,xml,eventObj,navController); //Call in utils.js
-
-			$eventObj = eventObj;
 
 			
 			$( "#closeButton" ).click(function() {
@@ -63,6 +63,11 @@
 
 			setDelay(1,function(){initPage();});
 			
+
+			var eventObjToSend = {"pageId":$pageId};
+			$eventObj.trigger($eventObj.eventVariables.PAGE_INIT,eventObjToSend);
+
+
 			//initPage();
 			console.log("after init page");
 		}

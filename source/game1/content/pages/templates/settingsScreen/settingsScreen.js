@@ -14,11 +14,13 @@
 			mainDiv.id = mainDivId;
 			
 			$pageId = pageId;
+			$eventObj = eventObj;
+
 			loadTemplateCss();
 
 			renderTextElements(mainDivId,xml,eventObj,navController); //Call in utils.js
 
-			$eventObj = eventObj;
+			
 
 			
 			$( "#closeButton" ).click(function() {
@@ -97,7 +99,10 @@
 			link.media = 'all';
 			mainPageDiv.appendChild(link);
 
-			$('#mainPageDiv_'+$pageId).removeClass('hide-element');
+			//$('#mainPageDiv_'+$pageId).removeClass('hide-element');
+
+			var eventObjToSend = {"pageId":$pageId};
+			$eventObj.trigger($eventObj.eventVariables.PAGE_INIT,eventObjToSend);
 
 			checkFile("pages/"+$pageId+"/"+$pageId+".css",cssCallback);
 
@@ -129,7 +134,7 @@
 			//console.log("Into Page Destroy");
 		}
 		
-		$('#mainPageDiv').addClass('hide-element');
+		//$('#mainPageDiv').addClass('hide-element');
 		var imagesLoaded = 0;
 
 		//alert('Page Load Start '+$('#mainPageDiv .image').length);

@@ -606,7 +606,10 @@
 
 			checkFile("pages/"+$pageId+"/"+$pageId+".css",cssCallback);
 
-			$('#content').removeClass('hide-element');
+			//$('#content').removeClass('hide-element');
+
+			var eventObjToSend = {"pageId":$pageId};
+			$eventObj.trigger($eventObj.eventVariables.PAGE_INIT,eventObjToSend);
 
 
 		}
@@ -640,7 +643,7 @@
 			$eventObj.trigger($eventObj.eventVariables.STOP_BACKGROUND_AUDIO,eventObjToSend);
 		}
 		
-		$('#content').addClass('hide-element');
+		//$('#content').addClass('hide-element');
 		var imagesLoaded = 0;
 
 		$('.image').each(function(){
@@ -655,7 +658,7 @@
 				{
 					//alert('all loaded');
 			   		App.register( {init:init,destroyPage:destroyPage});
-			   		//$('#content').removeClass('hide-element');
+			   		////$('#content').removeClass('hide-element');
 				}
 			   //myDiv.style.backgroundImage = 'url(' + bgImg.src + ')';
 			   

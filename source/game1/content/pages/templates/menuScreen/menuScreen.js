@@ -372,7 +372,10 @@
 			link.media = 'all';
 			mainPageDiv.appendChild(link);
 
-			$('#content').removeClass('hide-element');
+			//$('#content').removeClass('hide-element');
+
+			var eventObjToSend = {"pageId":$pageId};
+			$eventObj.trigger($eventObj.eventVariables.PAGE_INIT,eventObjToSend);
 
 		}
 
@@ -387,7 +390,7 @@
 			$eventObj.trigger($eventObj.eventVariables.STOP_BACKGROUND_AUDIO,eventObjToSend);
 		}
 
-		$('#content').addClass('hide-element');
+		//$('#content').addClass('hide-element');
 		var imagesLoaded = 0;
 
 		$('.image').each(function(){
