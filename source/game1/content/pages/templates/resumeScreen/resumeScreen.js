@@ -561,7 +561,15 @@
 
 			$('#current-score').html(intScore);
 
-			$('#total-score').html(($previousScore+intScore));
+			if(intScore >= 800)
+			{
+				$('#total-score').html(($previousScore+intScore));
+			}
+			else
+			{
+				$('#total-score').html(($previousScore));
+			}
+			
 
 		}
 
