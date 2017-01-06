@@ -372,6 +372,8 @@
 			link.media = 'all';
 			mainPageDiv.appendChild(link);
 
+			$('#content').removeClass('hide-element');
+
 		}
 
 
@@ -400,7 +402,7 @@
 				{
 					//alert('all loaded');
 			   		App.register( {init:init,destroyPage:destroyPage});
-			   		$('#content').removeClass('hide-element');
+			   		
 				}
 			   //myDiv.style.backgroundImage = 'url(' + bgImg.src + ')';
 			   

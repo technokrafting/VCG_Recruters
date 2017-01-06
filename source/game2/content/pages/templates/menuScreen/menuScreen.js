@@ -188,7 +188,7 @@
 
 		function loadProfileClicks()
 		{
-				$('.profile-btn-continue .btn-text').click(function() {
+				$('.profile-btn-continue').click(function() {
 
 					//var eventObjToSend = {"pageId":resumesChoosen[(index)]};
                    // $eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
@@ -288,6 +288,8 @@
 			link.media = 'all';
 			mainPageDiv.appendChild(link);
 
+			$('#content').removeClass('hide-element');
+
 		}
 
 
@@ -301,42 +303,31 @@
 			$eventObj.trigger($eventObj.eventVariables.STOP_BACKGROUND_AUDIO,eventObjToSend);
 		}
 
-		// $('#content').addClass('hide-element');
-		// var imagesLoaded = 0;
+		$('#content').addClass('hide-element');
+		var imagesLoaded = 0;
 
-		// $('.image').each(function(){
+		$('.image').each(function(){
 
-		// 	//console.log($('.menu-bg .anim-div .resume-hand.hand1').css('background'));
+			//console.log($('.menu-bg .anim-div .resume-hand.hand1').css('background'));
 
-		// 	var bgImg = new Image();
-		// 	bgImg.onload = function(){
+			var bgImg = new Image();
+			bgImg.onload = function(){
 
-		// 		imagesLoaded++;
-		// 		if(imagesLoaded == $('.image').length)
-		// 		{
-		// 			//alert('all loaded');
-		// 	   		App.register( {init:init,destroyPage:destroyPage});
-		// 	   		$('#content').removeClass('hide-element');
-		// 		}
-		// 	   //myDiv.style.backgroundImage = 'url(' + bgImg.src + ')';
+				imagesLoaded++;
+				if(imagesLoaded == $('.image').length)
+				{
+					//alert('all loaded');
+			   		App.register( {init:init,destroyPage:destroyPage});
+			   		//$('#content').removeClass('hide-element');
+				}
+			   //myDiv.style.backgroundImage = 'url(' + bgImg.src + ')';
 			   
 
-		// 	};
+			};
 
-		// 	bgImg.src = $(this).attr('src');
+			bgImg.src = $(this).attr('src');
 
-		// });
-
-		// $('#content').imagesLoaded().always(function() {
-		//   alert('images loaded');
-		  App.register( {init:init,destroyPage:destroyPage});
-		// });
-
-		// $('#content').waitForImages(function() {
-		// 	alert('images loaded');
-		//     
-		// });
-
+		});
 		
 		
 

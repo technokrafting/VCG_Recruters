@@ -97,6 +97,8 @@
 			link.media = 'all';
 			mainPageDiv.appendChild(link);
 
+			$('#mainPageDiv_'+$pageId).removeClass('hide-element');
+
 			checkFile("pages/"+$pageId+"/"+$pageId+".css",cssCallback);
 
 		}
@@ -127,7 +129,32 @@
 			//console.log("Into Page Destroy");
 		}
 		
-		App.register( {init:init,destroyPage:destroyPage});
+		$('#mainPageDiv').addClass('hide-element');
+		var imagesLoaded = 0;
+
+		//alert('Page Load Start '+$('#mainPageDiv .image').length);
+
+		$('#mainPageDiv .image').each(function(){
+
+			//console.log($('.menu-bg .anim-div .resume-hand.hand1').css('background'));
+
+			var bgImg = new Image();
+			bgImg.onload = function(){
+
+				imagesLoaded++;
+				if(imagesLoaded == $('#mainPageDiv .image').length)
+				{
+					//console.log('all loaded');
+			   		App.register( {init:init,destroyPage:destroyPage});
+				}
+			   //myDiv.style.backgroundImage = 'url(' + bgImg.src + ')';
+			   
+
+			};
+
+			bgImg.src = $(this).attr('src');
+
+		});
 
 
 })();

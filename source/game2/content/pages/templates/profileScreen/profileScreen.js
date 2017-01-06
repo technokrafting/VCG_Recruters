@@ -606,6 +606,8 @@
 
 			checkFile("pages/"+$pageId+"/"+$pageId+".css",cssCallback);
 
+			$('#content').removeClass('hide-element');
+
 
 		}
 
@@ -625,6 +627,8 @@
 			link.media = 'all';
 			mainPageDiv.appendChild(link);
 
+
+
 		}
 
 
@@ -636,7 +640,32 @@
 			$eventObj.trigger($eventObj.eventVariables.STOP_BACKGROUND_AUDIO,eventObjToSend);
 		}
 		
-		App.register( {init:init,destroyPage:destroyPage});
+		$('#content').addClass('hide-element');
+		var imagesLoaded = 0;
+
+		$('.image').each(function(){
+
+			//console.log($('.menu-bg .anim-div .resume-hand.hand1').css('background'));
+
+			var bgImg = new Image();
+			bgImg.onload = function(){
+
+				imagesLoaded++;
+				if(imagesLoaded == $('.image').length)
+				{
+					//alert('all loaded');
+			   		App.register( {init:init,destroyPage:destroyPage});
+			   		//$('#content').removeClass('hide-element');
+				}
+			   //myDiv.style.backgroundImage = 'url(' + bgImg.src + ')';
+			   
+
+			};
+
+			bgImg.src = $(this).attr('src');
+
+		});
+		
 
 
 })();
