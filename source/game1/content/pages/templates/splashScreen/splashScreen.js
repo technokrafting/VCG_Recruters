@@ -69,9 +69,6 @@
 
 			initPage();
 
-			var eventObjToSend = {"pageId":$pageId};
-			$eventObj.trigger($eventObj.eventVariables.PAGE_INIT,eventObjToSend);
-
 
 		}
 
@@ -118,6 +115,10 @@
 		}
 
 		function splashSequence(){
+
+			var eventObjToSend = {"pageId":$pageId};
+			$eventObj.trigger($eventObj.eventVariables.PAGE_INIT,eventObjToSend);
+			
 				var i = 1;
 				
 				var t = setInterval(function(){
