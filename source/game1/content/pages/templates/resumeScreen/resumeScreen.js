@@ -63,8 +63,6 @@
 
 			renderData(xml);
 
-			loadTemplateCss();
-
 		}
 
 		function gotMenuPageData(eventObj)
@@ -430,7 +428,8 @@
 			});
 
 			
-
+			loadTemplateCss();
+			
 		}
 
 

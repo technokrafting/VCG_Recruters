@@ -38,8 +38,6 @@
 			loadBgAudio();
 
 
-			loadTemplateCss();
-
 			$menuPageId = xml.find('menuPageId').text();
 
 			initAnswers(xml);
@@ -107,6 +105,9 @@
 				$eventObj.trigger($eventObj.eventVariables.LOAD_PAGE,eventObjToSend);
 
 			});
+
+			loadTemplateCss();
+			
 		}
 
 		function initAnswers(xml)
