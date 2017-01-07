@@ -412,7 +412,7 @@
 
 			});
 
-			loadPageSizeData();
+			
 
 
 			$('.main-page-bg').removeClass('resume');
@@ -429,6 +429,8 @@
 
 			
 			loadTemplateCss();
+
+			
 			
 		}
 
@@ -461,6 +463,11 @@
 
 		function loadPageSizeData()
 		{
+
+			var eventObjToSend = {"pageId":$pageId};
+			$eventObj.trigger($eventObj.eventVariables.PAGE_INIT,eventObjToSend);
+
+			
 			var resumeHeight = $('#resume-content-container').css('height');
 
 			console.log('resumeHeight',resumeHeight);
@@ -515,7 +522,8 @@
 
 			});
 
-			//console.log('numofPages',numofPages,resumeHeight,$pageBreak);
+			console.log('numofPages',numofPages,resumeHeight,$pageBreak);
+
 		}
 
 
@@ -892,10 +900,9 @@
 			link.media = 'all';
 			mainPageDiv.appendChild(link);
 
-			//$('#content').removeClass('hide-element');
+			loadPageSizeData();
 
-			var eventObjToSend = {"pageId":$pageId};
-			$eventObj.trigger($eventObj.eventVariables.PAGE_INIT,eventObjToSend);
+			//$('#content').removeClass('hide-element');
 
 		}
 
