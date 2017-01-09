@@ -7,6 +7,7 @@ body{width: 1014px; height: 652px; font-family: Arial;}
 .margin-below{margin-bottom: 15px;}
 .margin-below2{margin-bottom: 20px;}
 .clickable{cursor: pointer;}
+.text-bold{font-weight: bold;}
 .light-blue-text{color: #a6c8ee;}
 /*.heading{font-size: 28px;}*/
 .wrapper{width: 1014px; height: 652px; overflow: hidden; position: absolute; left: 0; right: 0; background: none;}
