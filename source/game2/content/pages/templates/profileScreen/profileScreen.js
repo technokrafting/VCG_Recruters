@@ -581,16 +581,17 @@
 				}
 			});
 
-			var rating = document.getElementById('ratingSlider');
-			noUiSlider.create(rating, {
-				start: [5],
-				step: 1,
-				range: {
-					min: [ 1 ],
-					max: [ 10 ]
-				}
-			})
-			
+			var rating = document.getElementsByClassName('range-slider');
+			for (i=0;i<rating.length;i++){
+				noUiSlider.create(rating[i], {
+					start: [5],
+					step: 1,
+					range: {
+						min: [ 1 ],
+						max: [ 10 ]
+					}
+				})
+			}
 		}
 
 

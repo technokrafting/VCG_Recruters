@@ -23,6 +23,7 @@ body{width: 1014px; height: 652px; font-family: Arial;}
 .modal-content{border: none; box-shadow: none;}
 .modal-backdrop{pointer-events: none;}
 .infinite-glow{animation-name: infinite-glow; animation-duration: 1.5s; animation-iteration-count:infinite;}
+.mozilla #mainPageDiv_guidelines .guidelines-wrapper #guidelines-carousel{position: static;}
 
 @keyframes infinite-glow{
 	0%   {box-shadow: none; border-radius: 5px;}

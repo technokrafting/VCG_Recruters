@@ -374,6 +374,13 @@ function clearConsole()
 	$consoleArr = [];
 }
 
+//Check browser
+var browser = navigator.userAgent;
+//alert(browser)
+if (browser.indexOf("Firefox") >= 0 && browser.indexOf("Chrome") < 0){
+	$("body").addClass("mozilla");
+}
+
 $('#globalConsoleButton').click(function() {
 
 	//$content.removeClass().empty();

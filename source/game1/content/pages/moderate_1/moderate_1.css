@@ -1,7 +1,8 @@
 .info-section{margin-bottom: 10px;}
 div.error-wrap{display: block;}
 .same-info-section-ul{margin-bottom: 0px;}
-.error-wrap .explanation{background-color: transparent; position: absolute; width: 220px; color: #ffffff; top: -45px; z-index: 250; text-align: center;}
+.error-wrap .explanation{background-color: transparent; position: absolute; width: 220px; color: #ffffff; top: -45px; left: -30px; z-index: 250; text-align: center;}
+.error-wrap .explanation.down{bottom: 45px;}
 .error-wrap .explanation .exp-text{background-color: #12234a; padding: 2px 7px; font-size: 14px; font-family: 'Arial';}
 .explanation .popout-tip{width: 22px; height: 20px; bottom: -20px; left: 50px; background: url(../../crops/main/pointer_issue_tip.png) 0 0 no-repeat; transform: translateX(-55px); display: inline-block;}
 .info-section .section-heading{font-weight: bold; font-size: 18px; color: rgb(159, 184, 205); font-family: 'Bookman Old Style';}

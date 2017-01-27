@@ -95,13 +95,13 @@
 			//var animTime = 8400;
 				//console.log($('.anim-div .splash-animation'))
 				var loaded = 0;
-				for(var i=1; i<=100;i++){
+				for(var i=1; i<=150;i++){
 					var img = new Image();
 					
 					img.onload = function(){
 						console.log("loaded", loaded);
 						loaded++;
-						if(loaded== 100){
+						if(loaded == 150){
 							//console.log("rubn")
 							splashSequence();
 						}

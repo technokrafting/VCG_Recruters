@@ -72,6 +72,10 @@ input[type=checkbox] { -webkit-appearance: none; -moz-appearance: none; appearan
 #ratingSliderModal .modal-dialog{width: 821px;}
 #ratingSliderModal .modal-body{width: 801px; height: 173px; background-image: url(../../../img/photo_rating.png); background-repeat: no-repeat;}
 
+.slider-wrap .rating-slider{background-image: url(../../../img/slider-base1.png); background-repeat: no-repeat; height: 30px; background-size: cover; width: 475px; border-radius: 20px; border: 4px solid #fff; box-shadow: 0px 0px 6px -1px #999; margin: 0px auto 25px; /*position: absolute; bottom: 25px; left: 125px;*/}
+.slider-wrap .noUi-horizontal .noUi-handle{background-image: url(../../../img/slider_rating.png); background-size: contain; width: 44px; height: 55px; top: -17px; left: -16px; border: none; background-color: transparent; box-shadow: none;}
+.slider-wrap .noUi-base{width: 378px; margin-left: 39px;}
+
 #feedbackModal .feedback-modal-btn.continue{visibility: hidden; position: fixed; bottom: 30px; left: 0; right: 0; margin: auto; width: 117px; height: 44px; background: url(../../../img/btn_continue.png) 0px 0px no-repeat; color: #fff; border: none; font-weight: bold; animation-delay: 5.8s; -webkit-animation-delay: 5.8s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
 #feedbackModal .feedback-modal-btn.continue:hover{background-position: 0 -44px;}
 #feedbackModal .feedback-modal-btn.continue .btn-text{line-height: 40px; font-size: 16px;}
