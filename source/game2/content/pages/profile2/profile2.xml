@@ -6,8 +6,8 @@
 		<step1 score='300'>accept</step1>
 		<step2 score='300'>accept</step2>
 		<step3 score='200'>reject</step3>
-		<step4a score='100'>1,2</step4a>
-		<step4b score='100'>3,4,5</step4b>
+		<step4a score='200'>5</step4a>
+		<step4b score='0'>3,4,5</step4b>
 
 
 	<menuPageId>menu</menuPageId>

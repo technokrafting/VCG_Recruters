@@ -398,35 +398,48 @@
 
 				//console.log('Check Answer ',answerStr + ':::::::'+selectedStr);
 
-				if(answerStr == selectedStr  || true)
-				{
-					//alert('same');
-					$score = $score + 200//parseInt(step4aObj.score);
-					sectionScoreHm['step4a'] = 200// parseInt(step4aObj.score);
-				}
+				// if(answerStr == selectedStr  || true)
+				// {
+				// 	//alert('same');
+				// 	$score = $score + 200//parseInt(step4aObj.score);
+				// 	sectionScoreHm['step4a'] = 200// parseInt(step4aObj.score);
+				// }
 
 
-				if($isRejected == false)
-				{	
-					//console.log('check-yes',$('#check-yes').hasClass('selected'));
+				var rating1 = document.getElementById('ratingSlider1');
+				var rating2 = document.getElementById('ratingSlider2');
+				var rating3 = document.getElementById('ratingSlider3');
 
-					if($('#check-yes').hasClass('selected'))
-					{
-						$('#ratingSliderModal').modal('show');
-					}
-					else
-					{
-						saveData();
-						showFeedback();		/*Commeneted for step 4 cosmetics*/
-						//gotoMenuPage();
-					}
-				}
-				else
-				{
-					saveData();
-					showFeedback();		/*<---Commeneted for step 4 cosmetics*/
-					//gotoMenuPage();
-				}
+				var averageRating = 0;
+				averageRating = Math.round((parseInt(rating1.noUiSlider.get())+parseInt(rating2.noUiSlider.get())+parseInt(rating3.noUiSlider.get()))/3)
+
+				var rating = document.getElementById('ratingSliderAvg');
+				rating.noUiSlider.set(averageRating);
+
+
+				$('#ratingSliderModal').modal('show');
+
+				// if($isRejected == false)
+				// {	
+				// 	//console.log('check-yes',$('#check-yes').hasClass('selected'));
+
+				// 	if($('#check-yes').hasClass('selected'))
+				// 	{
+				// 		$('#ratingSliderModal').modal('show');
+				// 	}
+				// 	else
+				// 	{
+				// 		saveData();
+				// 		showFeedback();		/*Commeneted for step 4 cosmetics*/
+				// 		//gotoMenuPage();
+				// 	}
+				// }
+				// else
+				// {
+				// 	saveData();
+				// 	showFeedback();		/*<---Commeneted for step 4 cosmetics*/
+				// 	//gotoMenuPage();
+				// }
 				
 
 			});
@@ -435,21 +448,21 @@
 			$('#slider-done-btn').on('click',function(){
 
 
-				/*var rating = document.getElementById('ratingSlider');
+				var rating = document.getElementById('ratingSliderAvg');
 				var sliderVal = parseInt(rating.noUiSlider.get());
 
-				var step4bObj = $correctSequenceObj['step4b'];
+				var step4aObj = $correctSequenceObj['step4a'];
 
-				var answerArr = step4bObj.answer.split(',');
-				console.log('answerArr',answerArr,sliderVal);
+				// var answerArr = step4bObj.answer.split(',');
+				// console.log('answerArr',answerArr,sliderVal);
 
-				console.log('indexOf',answerArr.indexOf(sliderVal.toString()));
+				console.log('Checking',sliderVal,parseInt(step4aObj.answer));
 
-				if(answerArr.indexOf(sliderVal.toString()) != -1)
+				if(sliderVal >= parseInt(step4aObj.answer))
 				{
-					$score = $score + parseInt(step4bObj.score);
-					sectionScoreHm['step4b'] = parseInt(step4bObj.score);
-				}*/
+					$score = $score + parseInt(step4aObj.score);
+					sectionScoreHm['step4a'] = parseInt(step4aObj.score);
+				}
 				/* <---Commeneted for step 4 cosmetics*/
 
 				saveData();
