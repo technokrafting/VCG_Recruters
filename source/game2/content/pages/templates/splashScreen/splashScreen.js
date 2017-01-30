@@ -124,7 +124,7 @@
 				var t = setInterval(function(){
 					
 					//console.log('i = ',i);
-					if(i > 99){
+					if(i > 149){
 						clearInterval(t);
 						$('.enter-btn-wrap').addClass('appear');
 					}

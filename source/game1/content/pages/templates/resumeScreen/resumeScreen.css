@@ -57,10 +57,12 @@
 .red-text-bg .text-highlight{background-color: #eac7c7; padding: 1px 3px;}
 .element-click{border: 1px dashed #b10000;}
 .error-wrap{position: relative; display: inline-block;}
-.error-wrap .explanation{visibility:hidden; position: absolute; background-color: #12234a; width: 220px; color: #ffffff; top: -45px; z-index: 250; text-align: center; padding: 2px 7px;}
+.error-wrap .explanation{visibility:hidden; position: absolute; background-color: transparent; width: 220px; color: #ffffff; top: -45px; z-index: 250; text-align: center; padding: 2px 7px;}
+.error-wrap .explanation .exp-text{background-color: #12234a; padding: 2px 7px; font-size: 14px; font-family: 'Arial';}
+.error-wrap .explanation .popout-tip{width: 22px; height: 20px; bottom: -20px; left: 50px; background: url(../../../crops/main/pointer_issue_tip.png) 0 0 no-repeat; transform: translateX(-55px); display: inline-block;}
 .error-wrap .explanation.right0{left: initial; right: 0px;}
 .error-wrap .explanation.right0 .popout-tip{transform: translateX(55px); background: url(../../../crops/main/pointer_issue_tip_flip.png) 0 0 no-repeat;}
-.error-wrap .explanation.down {top: initial; bottom: -40px;}
+.error-wrap .explanation.down {top: initial; bottom: -40px; left: 0;}
 .error-wrap .explanation.down .popout-tip{top: -18px; left: 20px; transform: rotate(180deg); position: absolute; background: url(../../../crops/main/pointer_issue_tip_flip.png) 0 0 no-repeat;}
 .fade-in-out{animation: fade-in-out 4s 1 forwards; -webkit-animation: fade-in-out 4s 1 forwards;}
 .main-page-bg .main-content{width: 820px; height: 100%; position: absolute; left: 195px; top: 0; padding: 4px 10px 25px;}

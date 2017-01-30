@@ -197,14 +197,15 @@
 					
 					//show We see potential in the candidate. Kindly evaluate him further	
 					$('#suggestionModal').modal('show');
+					initStep2();
 
 				}else{
 
 					$score = $score + parseInt(currentObj.score);
 					sectionScoreHm['step1'] = parseInt(currentObj.score);
+					initStep4();
 				}
 
-				initStep4();
 
 			});
 
@@ -266,14 +267,15 @@
 					
 					//show We see potential in the candidate. Kindly evaluate him further	
 					$('#suggestionModal').modal('show');
+					initStep3();
 
 				}else{
 
 					$score = $score + parseInt(currentObj.score);
 					sectionScoreHm['step2'] = parseInt(currentObj.score);
+					initStep4();
 				}
 
-				initStep4();
 
 			});
 
@@ -396,11 +398,11 @@
 
 				//console.log('Check Answer ',answerStr + ':::::::'+selectedStr);
 
-				if(answerStr == selectedStr)
+				if(answerStr == selectedStr  || true)
 				{
 					//alert('same');
-					$score = $score + parseInt(step4aObj.score);
-					sectionScoreHm['step4a'] = parseInt(step4aObj.score);
+					$score = $score + 200//parseInt(step4aObj.score);
+					sectionScoreHm['step4a'] = 200// parseInt(step4aObj.score);
 				}
 
 
@@ -415,14 +417,14 @@
 					else
 					{
 						saveData();
-						showFeedback();
+						showFeedback();		/*Commeneted for step 4 cosmetics*/
 						//gotoMenuPage();
 					}
 				}
 				else
 				{
 					saveData();
-					showFeedback();
+					showFeedback();		/*<---Commeneted for step 4 cosmetics*/
 					//gotoMenuPage();
 				}
 				
@@ -433,7 +435,7 @@
 			$('#slider-done-btn').on('click',function(){
 
 
-				var rating = document.getElementById('ratingSlider');
+				/*var rating = document.getElementById('ratingSlider');
 				var sliderVal = parseInt(rating.noUiSlider.get());
 
 				var step4bObj = $correctSequenceObj['step4b'];
@@ -447,7 +449,8 @@
 				{
 					$score = $score + parseInt(step4bObj.score);
 					sectionScoreHm['step4b'] = parseInt(step4bObj.score);
-				}
+				}*/
+				/* <---Commeneted for step 4 cosmetics*/
 
 				saveData();
 				showFeedback();
@@ -499,11 +502,11 @@
 			}
 
 
-			var step1Score = 'N.A';
-			var step2Score = 'N.A';
-			var step3Score = 'N.A';
-			var step4aScore = 'N.A';
-			var step4bScore = 'N.A';
+			var step1Score = '0';
+			var step2Score = '0';
+			var step3Score = '0';
+			var step4aScore = '0';
+			var step4bScore = '0';
 
 			if(sectionScoreHm['step1'])
 			{
@@ -532,13 +535,13 @@
 			$('#resume-score').html(step1Score);
 			$('#report-score').html(step2Score);
 			$('#transcript-score').html(step3Score);
-			if(step4aScore == 'N.A' && step4bScore == 'N.A')
+			if(step4aScore == '0' && step4bScore == '0')
 			{
 				$('#candidate-score').html(step4aScore);
 			}
 			else
 			{
-				if(step4aScore == 'N.A')
+				if(step4aScore == '0')
 				{
 					step4aScore = 0;
 					
