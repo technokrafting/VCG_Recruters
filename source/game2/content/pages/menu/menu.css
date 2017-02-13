@@ -8,9 +8,9 @@
 .menu-page .profile-folder-wrapper .profile .profile-num{position: absolute; top: 75px; left: 55px; font-size: 22px; font-weight: normal; color: #8d5500;}
 .menu-page .profile-folder-wrapper .profile.profile-done .profile-num{display: none;}
 .menu-page .menu-band{background: url(../../img/menu_bluePatch.png) 0 0 no-repeat; width: 100%; height: 187px; position: absolute; bottom: 0; color:#fff;}
-.menu-page .menu-band .menu-left{width: 700px; height: 100%; display: inline-block; float: left; padding: 25px;}
+.menu-page .menu-band .menu-left{width: 735px; height: 100%; display: inline-block; float: left; padding: 20px 25px;}
 .menu-page .menu-band .menu-right{width: 265px; height: 100%; display: inline-block; float: right; position: relative; padding:25px;}
-.menu-page .menu-band .menu-left .menu-heading{font-size: 32px; font-weight: bold;}
+.menu-page .menu-band .menu-left .menu-heading{font-size: 32px; font-weight: bold; line-height: 1.1; margin-bottom: 7px;}
 .menu-page .menu-band .menu-right .vcg-icon{width: 205px; height: 81px; display: block; position: absolute; top: 45px; left: 0; right: 0; margin: 0 auto; background: url(../../img/vcg-logo.jpg) 0 0 no-repeat;}
 .menu-page .menu-band .menu-right .brochure-text{margin-top: 75px;}
 .modal-content{border: none; box-shadow: none;}
@@ -33,6 +33,7 @@
 
 
 /* Final Screen */
+.menu-page.final .profile-folder-wrapper, .menu-page.final .menu-band{display: none;}
 .menu-page.final .final-screen{display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: rgba(0,0,0,0.85); z-index: 1000;}
 .menu-page.final .final-screen .medal-wrapper{width: 513px; height: 239px; position: absolute; right: 0; top: calc(50% - 119px); background: url(../../img/bg_medal.png) 0 0 no-repeat;}
 .menu-page.final .final-screen .medal-wrapper .medal{width: 170px; height: 247px; position: absolute; top: -25px;}
