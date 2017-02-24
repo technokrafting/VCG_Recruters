@@ -95,14 +95,17 @@
 			//var animTime = 8400;
 				//console.log($('.anim-div .splash-animation'))
 				var loaded = 0;
+				var imgArr = [];
 				for(var i=1; i<=150;i++){
 					var img = new Image();
-					
+
+					imgArr.push(img);					
 					img.onload = function(){
 						console.log("loaded", loaded);
 						loaded++;
 						if(loaded == 150){
 							//console.log("rubn")
+								console.log("splash images loaded!")
 							splashSequence();
 						}
 					}
@@ -134,7 +137,7 @@
 
 						i++;
 					}
-				}, 80);
+				}, 72);
 			}
 
 

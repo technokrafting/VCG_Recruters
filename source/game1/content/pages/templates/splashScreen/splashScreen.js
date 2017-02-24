@@ -95,18 +95,20 @@
 			//var animTime = 8400;
 				//console.log($('.anim-div .splash-animation'))
 				var loaded = 0;
+				var imgArr = [];
 				for(var i=1; i<=100;i++){
 					var img = new Image();
-					
+					imgArr.push(img);
 					img.onload = function(){
 						console.log("loaded", loaded);
 						loaded++;
 						if(loaded== 100){
-							//console.log("rubn")
+							console.log("splash images loaded!")
 							splashSequence();
 						}
 					}
 					img.src = "crops/splash/splashLogo_sprite/"+i+".png";
+
 					$('.anim-div .splash-animation').append(img);
 				}
 				
@@ -134,7 +136,7 @@
 
 						i++;
 					}
-				}, 80);
+				}, 72);
 			}
 
 
